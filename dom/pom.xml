@@ -17,18 +17,18 @@ Copyright 2014~2015 Dan Haywood
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.isisaddons.module.xxx</groupId>
-    <artifactId>isis-module-xxx-dom</artifactId>
+    <groupId>org.isisaddons.module.shell</groupId>
+    <artifactId>isis-module-shell-dom</artifactId>
     <version>1.11.0-SNAPSHOT</version>
 
     <packaging>jar</packaging>
 
-    <name>Isis Addons Xxx Module DOM</name>
+    <name>Isis Addons Shell Module DOM</name>
     <description>
-        A module providing xxx.
+        A module providing shell.
     </description>
 
-    <url>https://github.com/isisaddons/isis-module-xxx</url>
+    <url>https://github.com/isisaddons/isis-module-shell</url>
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -37,9 +37,9 @@ Copyright 2014~2015 Dan Haywood
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:git@github.com:isisaddons/isis-module-xxx.git</connection>
-        <developerConnection>scm:git:git@github.com:isisaddons/isis-module-xxx.git</developerConnection>
-        <url>git@github.com:isisaddons/isis-module-xxx.git</url>
+        <connection>scm:git:git@github.com:isisaddons/isis-module-shell.git</connection>
+        <developerConnection>scm:git:git@github.com:isisaddons/isis-module-shell.git</developerConnection>
+        <url>git@github.com:isisaddons/isis-module-shell.git</url>
     </scm>
     <developers>
         <developer>
@@ -258,7 +258,7 @@ Copyright 2014~2015 Dan Haywood
                         <dependencies>
                             <dependency>
                                 <groupId>${project.groupId}</groupId>
-                                <artifactId>isis-module-xxx-dom</artifactId>
+                                <artifactId>isis-module-shell-dom</artifactId>
                                 <version>${project.version}</version>
                             </dependency>
                             <!--

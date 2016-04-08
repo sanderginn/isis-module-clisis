@@ -17,11 +17,11 @@ language governing permissions and limitations under the License.
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.isisaddons.module.xxx</groupId>
-    <artifactId>isis-module-xxx</artifactId>
+    <groupId>org.isisaddons.module.shell</groupId>
+    <artifactId>isis-module-shell</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>Isis Addons Xxx Module</name>
+    <name>Isis Addons Shell Module</name>
 
     <packaging>pom</packaging>
 
@@ -32,7 +32,7 @@ language governing permissions and limitations under the License.
     <properties>
         <isis.version>1.10.0</isis.version>
 
-        <isis-module-xxx.version>1.11.0-SNAPSHOT</isis-module-xxx.version>
+        <isis-module-shell.version>1.11.0-SNAPSHOT</isis-module-shell.version>
         <assertj-core.version>2.0.0</assertj-core.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -333,27 +333,27 @@ language governing permissions and limitations under the License.
             <!-- this project's own modules -->
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>isis-module-xxx-dom</artifactId>
-                <version>${isis-module-xxx.version}</version>
+                <artifactId>isis-module-shell-dom</artifactId>
+                <version>${isis-module-shell.version}</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>isis-module-xxx-fixture</artifactId>
+                <artifactId>isis-module-shell-fixture</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>isis-module-xxx-app</artifactId>
+                <artifactId>isis-module-shell-app</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>isis-module-xxx-integtests</artifactId>
+                <artifactId>isis-module-shell-integtests</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>isis-module-xxx-webapp</artifactId>
+                <artifactId>isis-module-shell-webapp</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
