@@ -52,7 +52,7 @@ Copyright 2014~2015 Dan Haywood
         <dependency>
             <groupId>org.isisaddons.module.shell</groupId>
             <artifactId>isis-module-shell-dom</artifactId>
-            <version>1.11.0-SNAPSHOT</version>
+            <version>1.13.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
