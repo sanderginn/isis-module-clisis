@@ -1,5 +1,5 @@
 app.factory('services', ['$http', function($http) {
-  return $http.get('http://localhost:8080/restful/services')
+  return $http.get('/restful/services')
     .success(function(data) {
       return data;
     })

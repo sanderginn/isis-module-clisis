@@ -4,6 +4,6 @@ app.directive('serviceInfo', function() {
     scope: {
       info: '='
     },
-    template: '<p>{{info.title}}</p>'
+    template: '<a href="#/services/{{$index}}"><h3>{{info.title}}</h3></a>'
   };
 });
