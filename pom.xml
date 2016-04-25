@@ -333,26 +333,6 @@ language governing permissions and limitations under the License.
             <!-- this project's own modules -->
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>isis-module-shell-dom</artifactId>
-                <version>${isis-module-shell.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>isis-module-shell-fixture</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>isis-module-shell-app</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>isis-module-shell-integtests</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
                 <artifactId>isis-module-shell-webapp</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
@@ -401,10 +381,6 @@ language governing permissions and limitations under the License.
     </profiles>
 
     <modules>
-        <module>app</module>
-        <module>dom</module>
-        <module>fixture</module>
-        <module>integtests</module>
         <module>webapp</module>
     </modules>
 
