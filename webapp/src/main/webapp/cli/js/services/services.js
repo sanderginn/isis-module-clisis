@@ -1,9 +1,12 @@
-app.factory('services', ['$http', function($http) {
-  return $http.get('/restful/services')
-    .success(function(data) {
-      return data;
-    })
-    .error(function(err) {
-      return err;
-    });
+app.factory('services', ['$http', function ($http) {
+  return {
+    getServices: function () {
+      return $http.get('/restful/services')
+        .then(function (data) {
+          return data;
+        }, function (error) {
+          console.log('Services error: ', err);
+        });
+    }
+  }
 }]);
