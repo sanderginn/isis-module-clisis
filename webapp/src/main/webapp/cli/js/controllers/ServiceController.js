@@ -8,14 +8,15 @@ app.controller('ServiceController',
 
     // service title and actions
     $scope.data = services.getServices().then(function(servicesResponse) {
-      return actions.getActions(servicesResponse.data.value[$stateParams.id].href);
+      return actions.getActions(servicesResponse.data.value[$stateParams.serviceId].href);
     }).then(function(data) {
       $scope.data = data.data;
+      $scope.serviceId = $stateParams.serviceId;
     });
 
     $rootScope.$on('$stateChangeSuccess', function(event, to, toParams, from, fromParams) {
       //save the previous state in a rootScope variable so that it's accessible from everywhere
       $rootScope.previousState = from;
-      console.log(from);
+      //console.log(from);
     });
 }]);
