@@ -24,6 +24,11 @@ app.config(
       controller: 'ActionController as ctrl',
       templateUrl: 'views/action.html'
     })
+    .state('object', {
+      url: '/objects/:objectType/:objectId',
+      controller: 'ObjectController as ctrl',
+      templateUrl: 'views/object.html'
+    })
     .state('login', {
       url: '/login',
       templateUrl: 'views/login.html',
