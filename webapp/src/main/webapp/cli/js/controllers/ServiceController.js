@@ -1,13 +1,9 @@
 app.controller('ServiceController',
-  ['$rootScope', '$scope', 'services', 'actions', '$stateParams', 'PreferencesService',
-  function($rootScope, $scope, services, actions, $stateParams, PreferencesService) {
-
-    var ctrl = this;
-    ctrl.preferences = PreferencesService.preferences;
-    ctrl.service = {};
+  ['$rootScope', '$scope', 'services', 'actions', '$stateParams',
+  function($rootScope, $scope, services, actions, $stateParams) {
 
     // service title and actions
-    $scope.data = services.getServices().then(function(servicesResponse) {
+    services.getServices().then(function(servicesResponse) {
       return actions.getActions(servicesResponse.data.value[$stateParams.serviceId].href);
     }).then(function(data) {
       $scope.data = data.data;

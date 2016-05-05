@@ -1,1 +1,22 @@
-<h3>Hi, I'm an object!</h3>
+<h3>{{domainType}}:{{instanceId}}, {{title}}</h3>
+
+<b>Properties:</b>
+<br>
+<div ng-repeat="(property, data) in properties">
+    {{data.id}}: {{data.value}}
+</div>
+<br>
+<b>Collections:</b>
+<br>
+<div ng-repeat="(collection, data) in collections">
+    <i>{{collection}}:</i><br>
+    <span ng-repeat="object in data">
+        <a ng-href="#/objects/{{object.objectType}}/{{object.objectId}}">{{object.title}}</a><br>
+    </span><br>
+</div>
+<br>
+<b>Actions:</b>
+<br>
+<div ng-repeat="(action, data) in actions">
+    <a ng-href="#/objects/{{domainType}}/{{instanceId}}/actions/{{data.id}}">{{data.id}}</a>
+</div>

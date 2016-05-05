@@ -19,7 +19,7 @@ app.config(
       controller: 'ServiceController as ctrl',
       templateUrl: 'views/service.html'
     })
-    .state('action', {
+    .state('serviceAction', {
       url: '/services/:serviceId/:actionId',
       controller: 'ActionController as ctrl',
       templateUrl: 'views/action.html'
@@ -28,6 +28,11 @@ app.config(
       url: '/objects/:objectType/:objectId',
       controller: 'ObjectController as ctrl',
       templateUrl: 'views/object.html'
+    })
+    .state('objectAction', {
+      url: '/objects/:objectType/:objectId/actions/:actionId',
+      controller: 'ActionController as ctrl',
+      templateUrl: 'views/action.html'
     })
     .state('login', {
       url: '/login',
