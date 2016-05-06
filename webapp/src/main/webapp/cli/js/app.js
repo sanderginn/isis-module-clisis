@@ -1,3 +1,8 @@
+var input = {
+  controller: 'InputController as ctrl',
+  templateUrl: 'views/input.html'
+};
+
 var app = angular.module("clisis", ['ngResource', 'http-auth-interceptor', "ui.router", 'clisis.services.preferences', 'clisis.services.authentication']);
 
 app.value('AppConfig', {
@@ -7,41 +12,85 @@ app.value('AppConfig', {
 
 app.config(
   ["$stateProvider", "$urlRouterProvider",
-    function($stateProvider, $urlRouterProvider) {
-  $stateProvider
-    .state('home', {
-      url: '/',
-      controller: 'HomeController as ctrl',
-      templateUrl: 'views/home.html'
-    })
-    .state('services', {
-      url: '/services/:serviceId',
-      controller: 'ServiceController as ctrl',
-      templateUrl: 'views/service.html'
-    })
-    .state('serviceAction', {
-      url: '/services/:serviceId/:actionId',
-      controller: 'ActionController as ctrl',
-      templateUrl: 'views/action.html'
-    })
-    .state('object', {
-      url: '/objects/:objectType/:objectId',
-      controller: 'ObjectController as ctrl',
-      templateUrl: 'views/object.html'
-    })
-    .state('objectAction', {
-      url: '/objects/:objectType/:objectId/actions/:actionId',
-      controller: 'ActionController as ctrl',
-      templateUrl: 'views/action.html'
-    })
-    .state('login', {
-      url: '/login',
-      templateUrl: 'views/login.html',
-      controller: 'LoginController as ctrl'
-    });
+    function ($stateProvider, $urlRouterProvider) {
+      $stateProvider
+        .state('base', {
+          abstract: true,
+          views: {
+            "": {
+              templateUrl: 'views/base.html'
+            }
+          }
+        })
+        .state('base.home', {
+          url: '/',
+          views: {
+            input: input,
 
-    $urlRouterProvider.otherwise(function ($injector, $location) {
-      var $state = $injector.get("$state");
-      $state.go("home");
-    });
-}]);
+            output: {
+              controller: 'HomeController as ctrl',
+              templateUrl: 'views/home.html'
+            }
+          }
+        })
+        .state('base.services', {
+          url: '/services/:serviceId',
+          views: {
+            input: input,
+
+            output: {
+              controller: 'ServiceController as ctrl',
+              templateUrl: 'views/service.html'
+            }
+          }
+        })
+        .state('base.serviceAction', {
+          url: '/services/:serviceId/:actionId',
+          views: {
+            input: input,
+
+            output: {
+              controller: 'ActionController as ctrl',
+              templateUrl: 'views/action.html'
+            }
+          }
+        })
+        .state('base.object', {
+          url: '/objects/:objectType/:objectId',
+          views: {
+            input: input,
+
+            output: {
+              controller: 'ObjectController as ctrl',
+              templateUrl: 'views/object.html'
+            }
+          }
+        })
+        .state('base.objectAction', {
+          url: '/objects/:objectType/:objectId/actions/:actionId',
+          views: {
+            input: input,
+
+            output: {
+              controller: 'ActionController as ctrl',
+              templateUrl: 'views/action.html'
+            }
+          }
+        })
+        .state('base.login', {
+          url: '/login',
+          views: {
+            input: {
+              templateUrl: 'views/login.html',
+              controller: 'LoginController as ctrl'
+            },
+
+            output: {}
+          }
+        });
+
+      $urlRouterProvider.otherwise(function ($injector, $location) {
+        var $state = $injector.get("$state");
+        $state.go("base.home");
+      });
+    }]);

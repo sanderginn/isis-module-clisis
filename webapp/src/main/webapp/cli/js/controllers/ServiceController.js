@@ -13,6 +13,5 @@ app.controller('ServiceController',
     $rootScope.$on('$stateChangeSuccess', function(event, to, toParams, from, fromParams) {
       //save the previous state in a rootScope variable so that it's accessible from everywhere
       $rootScope.previousState = from;
-      //console.log(from);
     });
 }]);

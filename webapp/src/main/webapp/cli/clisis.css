@@ -1,0 +1,55 @@
+body {
+    background-color: black;
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+/* remove input field highlight */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.clisis-wrapper {
+    width: 75%;
+    margin: 10% auto;
+}
+
+    .clisis-wrapper .clisis-input {
+        width: 25%;
+        float: left;
+        margin-right: 5%;
+    }
+
+        .clisis-wrapper .clisis-input .clisis-input-field {
+            width: 100%;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 16pt;
+            color: white;
+            border: 1px white solid;
+            background-color: black;
+        }
+
+    .clisis-wrapper .clisis-output {
+        width: 70%;
+
+        float: right;
+        word-wrap: break-word;
+    }
+
+        .clisis-wrapper .clisis-output-view {
+            border: solid white 1px;
+            padding: 5px;
+        }
+
+    .clisis-wrapper .clisis-header {
+        font-size: 16pt;
+        font-weight: bold;
+        text-align: center;
+    }

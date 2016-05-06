@@ -15,9 +15,9 @@ angular.module(
               var $state = $injector.get("$state");
               var AuthService = $injector.get("AuthService");
 
-              if ($state.current.name !== "login") {
+              if ($state.current.name !== "base.login") {
                 AuthService.logout();
-                $state.go('login', {}, {reload: true});
+                $state.go('base.login', {}, {reload: true});
               }
             }
 

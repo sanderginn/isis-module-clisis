@@ -20,7 +20,7 @@ app.controller('LoginController',
               ctrl.credentials.username = null;
               ctrl.credentials.password = null;
               ctrl.error = undefined;
-              $state.go('home', {}, {reload: true});
+              $state.go('base.home', {}, {reload: true});
             }, function (err) {
               ctrl.credentials.username = null;
               ctrl.credentials.password = null;
@@ -37,7 +37,7 @@ app.controller('LoginController',
 
         AuthService.login(username, null, basicAuth).then(
           function (authenticated) {
-            $state.go('home', {}, {reload: true});
+            $state.go('base.home', {}, {reload: true});
           }, function (err) {
             AuthService.deleteCachedUserCredentials();
           });
