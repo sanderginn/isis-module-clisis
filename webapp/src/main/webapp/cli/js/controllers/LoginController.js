@@ -10,6 +10,9 @@ app.controller('LoginController',
         password: null
       };
 
+      // put focus on username field
+      document.querySelector("#clisis-username").focus();
+
       ctrl.login =
         function (data) {
           var username = ctrl.credentials.username;
@@ -20,7 +23,7 @@ app.controller('LoginController',
               ctrl.credentials.username = null;
               ctrl.credentials.password = null;
               ctrl.error = undefined;
-              $state.go('base.home', {}, {reload: true});
+              $state.go('base.noOutput', {}, {reload: true});
             }, function (err) {
               ctrl.credentials.username = null;
               ctrl.credentials.password = null;
@@ -37,7 +40,7 @@ app.controller('LoginController',
 
         AuthService.login(username, null, basicAuth).then(
           function (authenticated) {
-            $state.go('base.home', {}, {reload: true});
+            $state.go('base.noOutput', {}, {reload: true});
           }, function (err) {
             AuthService.deleteCachedUserCredentials();
           });

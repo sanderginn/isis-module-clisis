@@ -1,7 +1,6 @@
 app.factory('actions', ['$http', '$q', 'services', '$resource', function ($http, $q, services, $resource) {
   var obj = {
 
-    //return {
     getActions: function (serviceHref) {
       var deferred = $q.defer();
 

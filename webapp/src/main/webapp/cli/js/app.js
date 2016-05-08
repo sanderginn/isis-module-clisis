@@ -22,6 +22,15 @@ app.config(
             }
           }
         })
+        .state('base.noOutput', {
+          url: '/',
+          views: {
+            input: input,
+
+            // change in final version
+            output: {controller: 'HomeController as ctrl', templateUrl: 'views/home.html'}
+          }
+        })
         .state('base.home', {
           url: '/',
           views: {
@@ -86,6 +95,17 @@ app.config(
             },
 
             output: {}
+          }
+        })
+        .state('base.error', {
+          url: '/error',
+          views: {
+            input: input,
+
+            output: {
+              controller: 'ErrorController as ctrl',
+              templateUrl: 'views/error.html'
+            }
           }
         });
 

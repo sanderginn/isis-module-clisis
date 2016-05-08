@@ -1,6 +1,7 @@
-app.controller('HomeController', ['$scope', 'services',
-  function($scope, services) {
-  services.getServices().then(function(data) {
-    $scope.services = data.data.value;
-  })
-}]);
+app.controller('HomeController', ['$scope', 'services', '$rootScope',
+  function ($scope, services, $rootScope) {
+    services.getServices().then(function (data) {
+      $scope.services = data.data.value;
+      $rootScope.services = angular.copy($scope.services);
+    });
+  }]);

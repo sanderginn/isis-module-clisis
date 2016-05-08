@@ -3,12 +3,13 @@
 </div>
 
 <p class="clisis-header">Login</p>
-<div class="list list-inset">
-    <label class="item item-input">
-        <input type="text" placeholder="Username" ng-model="ctrl.credentials.username" >
-    </label>
-    <label class="item item-input">
-        <input type="password" placeholder="Password" ng-model="ctrl.credentials.password">
-    </label>
+<div class="clisis-login-wrapper">
+    <label class="clisis-login-label">Username: </label>
+    <input type="text" id="clisis-username" ng-enter ng-model="ctrl.credentials.username" class="clisis-input-field-login clisis-input-field">
 </div>
-<button class="button button-block button-calm" ng-click="ctrl.login()">Login</button>
+<div class="clisis-login-wrapper">
+    <label class="clisis-login-label">Password: </label>
+    <input type="password" id="clisis-password" ng-enter="ctrl.login()" ng-model="ctrl.credentials.password" class="clisis-input-field-login clisis-input-field">
+</div>
+
+<!--<button ng-click="ctrl.login()">Login</button>-->

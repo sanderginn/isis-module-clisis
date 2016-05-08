@@ -2,6 +2,7 @@ body {
     background-color: black;
     font-family: "Courier New", Courier, monospace;
     color: white;
+    -webkit-user-select: none;
 }
 
 a {
@@ -35,6 +36,22 @@ button:focus {
             border: 1px white solid;
             background-color: black;
         }
+
+        .clisis-wrapper .clisis-input .clisis-login-wrapper {
+            display: inline-block;
+        }
+
+            .clisis-wrapper .clisis-input .clisis-login-wrapper .clisis-input-field-login {
+                width: 55% !important;
+                float: right;
+            }
+
+            .clisis-wrapper .clisis-input .clisis-login-wrapper .clisis-login-label {
+                /*width: 25%;*/
+                margin-right: 5%;
+                float: left;
+                font-size: 16pt;
+            }
 
     .clisis-wrapper .clisis-output {
         width: 70%;
