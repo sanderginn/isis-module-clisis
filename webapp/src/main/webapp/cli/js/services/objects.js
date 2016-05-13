@@ -1,5 +1,5 @@
-app.factory('objects', ['$resource', '$q',
-  function ($resource, $q) {
+app.factory('objects', ['$resource', '$q', 'errorService',
+  function ($resource, $q, errorService) {
     var obj = {
       getObject: function (objectType, objectId) {
         var objectHref = obj.buildObjectHref(objectType, objectId);
@@ -21,6 +21,13 @@ app.factory('objects', ['$resource', '$q',
 
         $resource(collectionHref).get().$promise.then(function (collectionResponse) {
           deferred.resolve(collectionResponse);
+        }, function (error) {
+          // try again
+          if (error.status === 500) {
+            console.log(error);
+            console.log('500, retrying');
+            deferred.reject(error);
+          }
         });
 
         return deferred.promise;

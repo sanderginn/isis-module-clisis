@@ -1,6 +1,10 @@
 app.controller('ObjectController',
-  ['$scope', '$stateParams', 'objects', '$q',
-    function ($scope, $stateParams, objects, $q) {
+  ['$scope', '$stateParams', 'objects', '$q', '$rootScope', 'rootScopeSanitiser', 'errorService',
+    function ($scope, $stateParams, objects, $q, $rootScope, rootScopeSanitiser, errorService) {
+      $scope.showProperties = false;
+      $scope.showCollections = false;
+      $scope.showActions = false;
+
       objects.getObject($stateParams.objectType, $stateParams.objectId).then(function (objectResponse) {
         $scope.domainType = objectResponse.domainType;
         $scope.instanceId = objectResponse.instanceId;
@@ -20,7 +24,7 @@ app.controller('ObjectController',
           } else if (objectResponse.members[member].memberType === "action") {
             $scope.actions[member] = objectResponse.members[member];
           } else {
-            console.log("Unknown memberType: ", member.memberType);
+            errorService.throwError("Unknown memberType " + member.memberType);
           }
         }
 
@@ -32,8 +36,38 @@ app.controller('ObjectController',
               $scope.collections[collectionResponses[collectionResponse].id][col].objectId = objects.getObjectId($scope.collections[collectionResponses[collectionResponse].id][col].href);
             }
           }
+          $rootScope.collections = angular.copy($scope.collections);
         });
+
+        $rootScope.domainType = angular.copy($scope.domainType);
+        $rootScope.instanceId = angular.copy($scope.instanceId);
+        $rootScope.title = angular.copy($scope.title);
+
+        $rootScope.properties = angular.copy($scope.properties);
+        $rootScope.actions = angular.copy($scope.actions);
+        rootScopeSanitiser.sanitiseRootScope(['domainType', 'instanceId', 'title', 'properties', 'collections', 'actions', 'services']);
+
       });
 
-      console.log($scope);
+      $scope.typeOf = function(val) {
+        return typeof val;
+      };
+
+      $scope.$on('$showProperties', function() {
+        $scope.showProperties = true;
+        $scope.showCollections = false;
+        $scope.showActions = false;
+      });
+
+      $scope.$on('$showCollections', function() {
+        $scope.showCollections = true;
+        $scope.showProperties = false;
+        $scope.showActions = false;
+      });
+
+      $scope.$on('$showActions', function() {
+        $scope.showActions = true;
+        $scope.showProperties = false;
+        $scope.showCollections = false;
+      });
     }]);

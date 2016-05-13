@@ -3,11 +3,13 @@ var input = {
   templateUrl: 'views/input.html'
 };
 
+var welcomeTemplate = "<h3>Welcome to CLIsis.</h3>";
+
 var app = angular.module("clisis", ['ngResource', 'http-auth-interceptor', "ui.router", 'clisis.services.preferences', 'clisis.services.authentication']);
 
 app.value('AppConfig', {
   appPrefix: 'clisis',
-  baseUrl: "http://127.0.0.1:8080"   // TODO: move to preferences service ?
+  baseUrl: "http://127.0.0.1:8080"
 });
 
 app.config(
@@ -27,12 +29,14 @@ app.config(
           views: {
             input: input,
 
-            // change in final version
-            output: {controller: 'HomeController as ctrl', templateUrl: 'views/home.html'}
+            output: {
+              controller: 'HomeController as ctrl',
+              template: welcomeTemplate + "<p>Type 'help' for available commands.</p>"
+            }
           }
         })
         .state('base.home', {
-          url: '/',
+          url: '/services',
           views: {
             input: input,
 
@@ -54,13 +58,29 @@ app.config(
           }
         })
         .state('base.serviceAction', {
-          url: '/services/:serviceId/:actionId',
+          url: '/services/:serviceId/:actionId/invoke',
+          params: {
+            params: null
+          },
           views: {
             input: input,
 
             output: {
-              controller: 'ActionController as ctrl',
-              templateUrl: 'views/action.html'
+              controller: 'ActionController as ctrl'
+            }
+          }
+        })
+        .state('base.serviceActionParams', {
+          url: '/services/:serviceId/:actionId',
+          params: {
+            parameters: null
+          },
+          views: {
+            input: input,
+
+            output: {
+              controller: 'ActionParamController as ctrl',
+              templateUrl: 'views/actionParams.html'
             }
           }
         })
@@ -76,13 +96,43 @@ app.config(
           }
         })
         .state('base.objectAction', {
-          url: '/objects/:objectType/:objectId/actions/:actionId',
+          url: '/objects/:objectType/:objectId/actions/:actionId/invoke',
+          params: {
+            params: null
+          },
           views: {
             input: input,
 
             output: {
-              controller: 'ActionController as ctrl',
-              templateUrl: 'views/action.html'
+              controller: 'ActionController as ctrl'
+            }
+          }
+        })
+        .state('base.objectActionParams', {
+          url: '/objects/:objectType/:objectId/actions/:actionId',
+          params: {
+            parameters: null
+          },
+          views: {
+            input: input,
+
+            output: {
+              controller: 'ActionParamController as ctrl',
+              templateUrl: 'views/actionParams.html'
+            }
+          }
+        })
+        .state('base.collection', {
+          url: '/collection',
+          params: {
+            actionResults: null
+          },
+          views: {
+            input: input,
+
+            output: {
+              controller: 'CollectionsController as ctrl',
+              templateUrl: 'views/collection.html'
             }
           }
         })
@@ -94,17 +144,32 @@ app.config(
               controller: 'LoginController as ctrl'
             },
 
-            output: {}
+            output: {
+              template: welcomeTemplate
+            }
           }
         })
         .state('base.error', {
           url: '/error',
+          params: {
+            errorMessage: ""
+          },
           views: {
             input: input,
 
             output: {
               controller: 'ErrorController as ctrl',
               templateUrl: 'views/error.html'
+            }
+          }
+        })
+        .state('base.help', {
+          url: '/help',
+          views: {
+            input: input,
+
+            output: {
+              templateUrl: 'views/help.html'
             }
           }
         });

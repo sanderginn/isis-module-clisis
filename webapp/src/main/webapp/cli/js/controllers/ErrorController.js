@@ -1,6 +1,5 @@
 app.controller('ErrorController',
-  ['$rootScope', '$scope',
-    function ($rootScope, $scope) {
-      $scope.errormessage = $rootScope.errorMessage;
-      $rootScope.errorMessage = "";
+  ['$scope', '$stateParams',
+    function ($scope, $stateParams) {
+      $scope.errormessage = $stateParams.errorMessage;
     }]);

@@ -47,7 +47,6 @@ button:focus {
             }
 
             .clisis-wrapper .clisis-input .clisis-login-wrapper .clisis-login-label {
-                /*width: 25%;*/
                 margin-right: 5%;
                 float: left;
                 font-size: 16pt;
@@ -60,13 +59,30 @@ button:focus {
         word-wrap: break-word;
     }
 
-        .clisis-wrapper .clisis-output-view {
+        .clisis-wrapper .clisis-output .clisis-output-view {
             border: solid white 1px;
-            padding: 5px;
+            padding: 0px 10px 18px 10px;
+            max-height: 50vh;
+            min-height: 24px;
+            overflow: scroll;
         }
 
     .clisis-wrapper .clisis-header {
         font-size: 16pt;
         font-weight: bold;
         text-align: center;
+    }
+
+    .clisis-wrapper .clisis-border {
+        border: solid white 1px;
+        padding: 5px;
+        margin-right: -4px;
+    }
+
+    .clisis-wrapper .clisis-help li {
+        margin-bottom: 5px;
+    }
+
+    .clisis-wrapper .clisis-param-choices {
+        margin: 5px 0px -12px 10px;
     }

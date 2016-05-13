@@ -1,5 +1,7 @@
-<h3>{{data.title}}</h3>
-<p>Actions:</p>
-<div class="item" ng-repeat="(action, id) in data.members">
-    <a ng-href="#/services/{{serviceId}}/{{action}}"><h3>{{action}}</h3></a>
+<h3>{{title}} menu</h3>
+<div ng-show="show">
+    <p>Actions:</p>
+    <ul>
+        <li ng-repeat="(action, id) in actions">{{action}}</li>
+    </ul>
 </div>

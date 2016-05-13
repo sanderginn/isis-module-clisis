@@ -1,4 +1,9 @@
-<h3>Action results:</h3>
-<div ng-repeat="actionResult in actionResults">
-    <a ng-href="#/objects/{{actionResult.objectType}}/{{actionResult.objectId}}">{{actionResult.title}}</a>
+<div>
+    <h3>Action returned {{actionResults.length}}
+        <span ng-show="actionResults.length === 1">result</span>
+        <span ng-show="!(actionResults.length === 1)">results</span>
+    </h3>
+    <div ng-repeat="actionResult in actionResults">
+        <a ng-href="#/objects/{{actionResult.objectType}}/{{actionResult.objectId}}">{{actionResult.title}}</a>
+    </div>
 </div>

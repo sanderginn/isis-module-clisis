@@ -1,6 +1,4 @@
-<div class="header">
-    <h1>List of services:</h1>
-</div>
-<div class="item" ng-repeat="service in services">
-    <a ng-href="#/services/{{$index}}"><h3>{{service.title}}</h3></a>
-</div>
+<h3>Menus:</h3>
+<ul>
+    <li ng-repeat="service in services">{{service.title}}</li>
+</ul>

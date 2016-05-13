@@ -1,22 +1,25 @@
 <h3>{{domainType}}:{{instanceId}}, {{title}}</h3>
 
-<b>Properties:</b>
-<br>
-<div ng-repeat="(property, data) in properties">
-    {{data.id}}: {{data.value}}
+<div ng-show="showProperties">
+    <b>Properties:</b>
+    <ul>
+        <li ng-repeat="(property, data) in properties">
+            <span ng-if="typeOf(data.value) != 'object'">{{data.id}}: {{data.value}}</span>
+            <span ng-if="typeOf(data.value) == 'object'">{{data.id}}: {{data.value.title}}</span>
+        </li>
+    </ul>
 </div>
-<br>
-<b>Collections:</b>
-<br>
-<div ng-repeat="(collection, data) in collections">
-    <i>{{collection}}:</i><br>
-    <span ng-repeat="object in data">
-        <a ng-href="#/objects/{{object.objectType}}/{{object.objectId}}">{{object.title}}</a><br>
-    </span><br>
+
+<div ng-show="showCollections">
+    <b>Collections:</b>
+    <ul>
+        <li ng-repeat="(collection, data) in collections">{{collection}} (items: {{data.length}})</li>
+    </ul>
 </div>
-<br>
-<b>Actions:</b>
-<br>
-<div ng-repeat="(action, data) in actions">
-    <a ng-href="#/objects/{{domainType}}/{{instanceId}}/actions/{{data.id}}">{{data.id}}</a>
+
+<div ng-show="showActions">
+    <b>Actions:</b>
+    <ul>
+        <li ng-repeat="(action, data) in actions">{{data.id}}</li>
+    </ul>
 </div>

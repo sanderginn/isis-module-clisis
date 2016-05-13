@@ -2,14 +2,16 @@
     {{ctrl.error}}
 </div>
 
-<p class="clisis-header">Login</p>
-<div class="clisis-login-wrapper">
-    <label class="clisis-login-label">Username: </label>
-    <input type="text" id="clisis-username" ng-enter ng-model="ctrl.credentials.username" class="clisis-input-field-login clisis-input-field">
-</div>
-<div class="clisis-login-wrapper">
-    <label class="clisis-login-label">Password: </label>
-    <input type="password" id="clisis-password" ng-enter="ctrl.login()" ng-model="ctrl.credentials.password" class="clisis-input-field-login clisis-input-field">
+<div class="clisis-border">
+    <p class="clisis-header">Login</p>
+    <div class="clisis-login-wrapper">
+        <label class="clisis-login-label">Username: </label>
+        <input type="text" id="clisis-username" ng-enter ng-model="ctrl.credentials.username" class="clisis-input-field-login clisis-input-field">
+    </div>
+    <div class="clisis-login-wrapper">
+        <label class="clisis-login-label">Password: </label>
+        <input type="password" id="clisis-password" ng-enter="ctrl.login()" ng-model="ctrl.credentials.password" class="clisis-input-field-login clisis-input-field">
+    </div>
 </div>
 
 <!--<button ng-click="ctrl.login()">Login</button>-->
