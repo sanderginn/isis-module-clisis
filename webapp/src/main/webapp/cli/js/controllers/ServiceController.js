@@ -1,6 +1,6 @@
 app.controller('ServiceController',
-  ['$rootScope', '$scope', 'services', 'actions', '$stateParams', 'rootScopeSanitiser',
-  function($rootScope, $scope, services, actions, $stateParams, rootScopeSanitiser) {
+  ['$rootScope', '$scope', 'services', 'actions', '$stateParams', 'rootScopeSanitiser', 'speechService', '$timeout',
+  function($rootScope, $scope, services, actions, $stateParams, rootScopeSanitiser, speechService, $timeout) {
     $scope.show = false;
 
     // service title and actions
@@ -18,5 +18,14 @@ app.controller('ServiceController',
 
     $scope.$on('$showActions', function() {
       $scope.show = true;
+      speechService.speak("Output: " + document.getElementById("service-actions").innerText);
+    });
+
+    $scope.$watch('title', function(newValue, oldValue) {
+      if (newValue !== oldValue) {
+        $timeout(function() {
+          speechService.speak("Output: " + document.getElementById('clisis-output').innerText);
+        }, 0);
+      }
     });
 }]);

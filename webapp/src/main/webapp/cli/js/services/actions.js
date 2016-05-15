@@ -52,6 +52,8 @@ app.factory('actions', ['$http', '$q', 'services', '$resource', 'errorService',
             actionInvocation = $resource(objectActionHref + '/invoke?:queryString');
             actionInvocation.get({queryString: JSON.stringify(parameters)}, function (data) {
               deferred.resolve(data.$promise);
+            }, function(err) {
+              errorService.throwError(JSON.stringify(err));
             });
           } else {
             actionInvocation = $resource(objectActionHref + '/invoke');

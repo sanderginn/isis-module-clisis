@@ -1,6 +1,6 @@
 app.controller('ObjectController',
-  ['$scope', '$stateParams', 'objects', '$q', '$rootScope', 'rootScopeSanitiser', 'errorService',
-    function ($scope, $stateParams, objects, $q, $rootScope, rootScopeSanitiser, errorService) {
+  ['$scope', '$stateParams', 'objects', '$q', '$rootScope', 'rootScopeSanitiser', 'errorService', '$timeout', 'speechService',
+    function ($scope, $stateParams, objects, $q, $rootScope, rootScopeSanitiser, errorService, $timeout, speechService) {
       $scope.showProperties = false;
       $scope.showCollections = false;
       $scope.showActions = false;
@@ -37,6 +37,8 @@ app.controller('ObjectController',
             }
           }
           $rootScope.collections = angular.copy($scope.collections);
+        }, function (err) {
+          errorService.throwError(err.data["x-ro-invalidReason"]);
         });
 
         $rootScope.domainType = angular.copy($scope.domainType);
@@ -57,17 +59,28 @@ app.controller('ObjectController',
         $scope.showProperties = true;
         $scope.showCollections = false;
         $scope.showActions = false;
+        speechService.speak("Output: " + document.getElementById("object-properties").innerText);
       });
 
       $scope.$on('$showCollections', function() {
         $scope.showCollections = true;
         $scope.showProperties = false;
         $scope.showActions = false;
+        speechService.speak("Output: " + document.getElementById("object-collections").innerText);
       });
 
       $scope.$on('$showActions', function() {
         $scope.showActions = true;
         $scope.showProperties = false;
         $scope.showCollections = false;
+        speechService.speak("Output: " + document.getElementById("object-actions").innerText);
+      });
+
+      $scope.$watch('title', function(oldValue, newValue) {
+        if (oldValue !== newValue) {
+          $timeout(function () {
+            speechService.speak("Output: " + document.getElementById("clisis-output").innerText);
+          }, 0);
+        }
       });
     }]);

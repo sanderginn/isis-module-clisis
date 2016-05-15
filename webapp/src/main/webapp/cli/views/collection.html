@@ -1,6 +1,7 @@
 <div>
-    <h3>Collection of {{actionResults.length}} items</h3>
-    <div ng-repeat="actionResult in actionResults">
-        {{actionResult.title}}
+    <h3 ng-show="actionResults && !show">Collection of {{actionResults.length}} items</h3>
+    <h3 ng-show="actionResults && show">Showing page {{currentPage + 1}} of {{numberOfPages}}, total {{actionResults.length}} items</h3>
+    <div ng-show="show" ng-repeat="actionResult in actionResults | startFrom:currentPage*pageSize | limitTo:pageSize">
+        {{$index}}: {{actionResult.title}}<span class="pause">:</span>
     </div>
 </div>

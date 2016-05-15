@@ -1,7 +1,5 @@
-<h3>{{title}} menu</h3>
-<div ng-show="show">
+<h3 id="service-title" ng-show="title">{{title}} menu</h3>
+<div id="service-actions" ng-show="show">
     <p>Actions:</p>
-    <ul>
-        <li ng-repeat="(action, id) in actions">{{action}}</li>
-    </ul>
+    <div ng-repeat="(action, id) in actions">{{$index}}: {{action | splitToLowerCase}}<span class="pause">:</span></div>
 </div>

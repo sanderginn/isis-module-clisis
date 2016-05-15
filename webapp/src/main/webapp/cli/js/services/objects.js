@@ -22,10 +22,7 @@ app.factory('objects', ['$resource', '$q', 'errorService',
         $resource(collectionHref).get().$promise.then(function (collectionResponse) {
           deferred.resolve(collectionResponse);
         }, function (error) {
-          // try again
           if (error.status === 500) {
-            console.log(error);
-            console.log('500, retrying');
             deferred.reject(error);
           }
         });

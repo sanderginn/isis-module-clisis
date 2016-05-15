@@ -1,6 +1,6 @@
 app.controller('ActionController',
-  ['$scope', 'services', 'actions', '$stateParams', 'objects', '$rootScope', 'rootScopeSanitiser', '$state',
-    function ($scope, services, actions, $stateParams, objects, $rootScope, rootScopeSanitiser, $state) {
+  ['$scope', 'services', 'actions', '$stateParams', 'objects', '$rootScope', 'rootScopeSanitiser', '$state', 'errorService',
+    function ($scope, services, actions, $stateParams, objects, $rootScope, rootScopeSanitiser, $state, errorService) {
       var parentType;
       var actionPromise;
 
@@ -11,6 +11,12 @@ app.controller('ActionController',
       }
 
       var actionParams = JSON.parse($stateParams.params);
+      var backIndex;
+      if (Object.keys(actionParams).length === 0) {
+        backIndex = -2;
+      } else {
+        backIndex = -3;
+      }
 
       if (parentType === "service") {
         actionPromise = actions.invokeAction($stateParams.serviceId, $stateParams.actionId, actionParams);
@@ -24,8 +30,10 @@ app.controller('ActionController',
           $state.go('base.object',
             {
               "objectType": objects.getObjectType(actionsResponse.result.links[0].href),
-              "objectId": objects.getObjectId(actionsResponse.result.links[0].href)
-            });
+              "objectId": objects.getObjectId(actionsResponse.result.links[0].href),
+              "backIndex": backIndex
+            }
+          );
 
           // action returned list
         } else if (actionsResponse.resulttype === "list") {
@@ -35,8 +43,10 @@ app.controller('ActionController',
             $state.go('base.object',
               {
                 "objectType": objects.getObjectType(actionResults[0].href),
-                "objectId": objects.getObjectId(actionResults[0].href)
-              });
+                "objectId": objects.getObjectId(actionResults[0].href),
+                "backIndex": backIndex
+              }
+            );
           } else {
             // assign object type to all action results
             for (var actionResult in actionResults) {
@@ -44,11 +54,14 @@ app.controller('ActionController',
               actionResults[actionResult].objectId = objects.getObjectId(actionResults[actionResult].href);
             }
 
-            $state.go('base.collection', {"actionResults": actionResults});
+            $state.go('base.collection', {"actionResults": actionResults, "backIndex": backIndex});
           }
         }
 
         $rootScope.actionResults = angular.copy(actionResults);
         rootScopeSanitiser.sanitiseRootScope(['actionResults', 'services']);
+      }, function (err) {
+        errorService.throwError(JSON.stringify(err));
       });
+
     }]);

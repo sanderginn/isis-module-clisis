@@ -1,25 +1,19 @@
-<h3>{{domainType}}:{{instanceId}}, {{title}}</h3>
+<h3 ng-show="domainType && title">{{domainType | substringAfterChar:'.'}}: {{title}}</h3>
 
-<div ng-show="showProperties">
+<div id="object-properties" ng-show="showProperties">
     <b>Properties:</b>
-    <ul>
-        <li ng-repeat="(property, data) in properties">
-            <span ng-if="typeOf(data.value) != 'object'">{{data.id}}: {{data.value}}</span>
-            <span ng-if="typeOf(data.value) == 'object'">{{data.id}}: {{data.value.title}}</span>
-        </li>
-    </ul>
+    <div ng-repeat="(property, data) in properties">
+        <span ng-if="typeOf(data.value) != 'object'">{{$index}}: {{data.id}}: {{data.value}}<span class="pause">:</span></span>
+        <span ng-if="typeOf(data.value) == 'object'">{{$index}}: {{data.id}}: {{data.value.title}}<span class="pause">:</span></span>
+    </div>
 </div>
 
-<div ng-show="showCollections">
+<div id="object-collections" ng-show="showCollections">
     <b>Collections:</b>
-    <ul>
-        <li ng-repeat="(collection, data) in collections">{{collection}} (items: {{data.length}})</li>
-    </ul>
+    <div ng-repeat="(collection, data) in collections">{{$index}}: {{collection}} (items: {{data.length}})<span class="pause">:</span></div>
 </div>
 
-<div ng-show="showActions">
+<div id="object-actions" ng-show="showActions">
     <b>Actions:</b>
-    <ul>
-        <li ng-repeat="(action, data) in actions">{{data.id}}</li>
-    </ul>
+    <div ng-repeat="(action, data) in actions">{{$index}}: {{data.id}}<span class="pause">:</span></div>
 </div>

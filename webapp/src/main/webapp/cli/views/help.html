@@ -1,53 +1,57 @@
 <h3>Available commands:</h3>
 <ul class="clisis-help">
     <li>
-        <b>menus</b><br>
-        Shows the available menus
+        <b>menus<span class="pause">:</span></b><br>
+        Shows the available menus<span class="pause">:</span>
+    </li>
+    <li ng-show="home">
+        <b>menu &#60;choice&#62;<span class="pause">:</span></b><br>
+        Open the menu of choice. The menu index can be used<span class="pause">:</span>
+    </li>
+    <li ng-show="object || services">
+        <b>actions</b><span class="pause">:</span><br>
+        Show the available actions<span class="pause">:</span>
+    </li>
+    <li ng-show="object || services">
+        <b>action &#60;choice&#62;<span class="pause">:</span></b><br>
+        Invoke the action of choice<span class="pause">:</span>
+    </li>
+    <li ng-show="serviceActionParams || objectActionParams">
+        <b>field &#60;choice&#62; &#60;value&#62;<span class="pause">:</span></b><br>
+        Fill out action parameter field of choice with value<span class="pause">:</span>
+    </li>
+    <li ng-show="serviceActionParams || objectActionParams">
+        <b>submit<span class="pause">:</span></b><br>
+        Submit action parameters<span class="pause">:</span>
+    </li>
+    <li ng-show="collection">
+        <b>show &#60;next/previous&#62;<span class="pause">:</span></b><br>
+        Show paginated contents of a collection. Include next or previous to switch page<span class="pause">:</span>
+    </li>
+    <li ng-show="object || collection">
+        <b>get &#60;choice&#62;<span class="pause">:</span></b><br>
+        Get the object or collection of choice. On collections the index can be used<span class="pause">:</span>
+    </li>
+    <li ng-show="object">
+        <b>properties<span class="pause">:</span></b><br>
+        Show the available properties<span class="pause">:</span>
+    </li>
+    <li ng-show="object">
+        <b>collections<span class="pause">:</span></b><br>
+        Show the available collections<span class="pause">:</span>
     </li>
     <li>
-        <b>menu &#60;choice&#62;</b><br>
-        Open the menu of choice
+        <b>back<span class="pause">:</span></b>
     </li>
     <li>
-        <b>actions</b><br>
-        Show the available actions
+        <b>forward<span class="pause">:</span></b>
     </li>
     <li>
-        <b>action &#60;choice&#62;</b><br>
-        Invoke the action of choice
+        <b>help<span class="pause">:</span></b><br>
+        Shows this help menu<span class="pause">:</span>
     </li>
     <li>
-        <b>field &#60;choice&#62; &#60;value&#62;</b><br>
-        Fill out action parameter field of choice with value
-    </li>
-    <li>
-        <b>submit</b><br>
-        Submit action parameters
-    </li>
-    <li>
-        <b>get &#60;choice&#62;</b><br>
-        Get the object or collection of choice
-    </li>
-    <li>
-        <b>properties</b><br>
-        Show the available properties
-    </li>
-    <li>
-        <b>ollections</b><br>
-        Show the available collections
-    </li>
-    <li>
-        <b>back</b>
-    </li>
-    <li>
-        <b>forward</b>
-    </li>
-    <li>
-        <b>help</b><br>
-        Shows this help menu
-    </li>
-    <li>
-        <b>quit</b><br>
-        Exit the application
+        <b>quit<span class="pause">:</span></b><br>
+        Exit the application<span class="pause">:</span>
     </li>
 </ul>

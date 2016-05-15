@@ -1,3 +1,5 @@
+[ng\:cloak],[ng-cloak],.ng-cloak{display:none !important}
+
 body {
     background-color: black;
     font-family: "Courier New", Courier, monospace;
@@ -7,6 +9,11 @@ body {
 
 a {
     color: white;
+}
+
+/* added to a span with semicolon in lists to enforce tts pauses */
+.pause {
+    color: black;
 }
 
 /* remove input field highlight */

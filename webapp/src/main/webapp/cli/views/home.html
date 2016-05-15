@@ -1,4 +1,2 @@
-<h3>Menus:</h3>
-<ul>
-    <li ng-repeat="service in services">{{service.title}}</li>
-</ul>
+<h3 ng-show="services">Menus:</h3>
+<div ng-repeat="service in services">{{$index}}: {{service.title | splitToLowerCase}}<span class="pause">:</span></div>

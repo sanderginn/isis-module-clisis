@@ -86,6 +86,9 @@ app.config(
         })
         .state('base.object', {
           url: '/objects/:objectType/:objectId',
+          params: {
+            backIndex: null
+          },
           views: {
             input: input,
 
@@ -125,7 +128,8 @@ app.config(
         .state('base.collection', {
           url: '/collection',
           params: {
-            actionResults: null
+            actionResults: null,
+            backIndex: null
           },
           views: {
             input: input,
@@ -165,17 +169,48 @@ app.config(
         })
         .state('base.help', {
           url: '/help',
+          params: {"previousState": null},
           views: {
             input: input,
 
             output: {
+              controller: 'HelpController as ctrl',
               templateUrl: 'views/help.html'
             }
           }
         });
 
-      $urlRouterProvider.otherwise(function ($injector, $location) {
+      $urlRouterProvider.otherwise(function ($injector) {
         var $state = $injector.get("$state");
         $state.go("base.home");
       });
     }]);
+
+app.filter('substringAfterChar', function() {
+  return function(input, splitChar) {
+    if (input !== undefined) {
+      return input.split(splitChar).pop();
+    } else {
+      return null;
+    }
+  }
+});
+
+app.filter('splitToLowerCase', function() {
+  return function(input) {
+    if (input !== undefined) {
+      return input.split(/(?=[A-Z])/).join(" ").toLowerCase();
+    } else {
+      return null;
+    }
+  }
+});
+
+app.filter('startFrom', function() {
+  return function(input, start) {
+    if (input !== undefined && input !== null) {
+      start = +start;
+      return input.slice(start);
+    }
+  }
+});

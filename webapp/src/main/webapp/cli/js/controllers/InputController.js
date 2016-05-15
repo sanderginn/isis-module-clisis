@@ -1,11 +1,15 @@
 app.controller('InputController',
-  ['$scope', '$injector', '$rootScope', '$state', '$filter', 'actions', 'objects', 'errorService', '$stateParams',
-    function ($scope, $injector, $rootScope, $state, $filter, actions, objects, errorService, $stateParams) {
+  ['$scope', '$injector', '$rootScope', '$state', '$filter', 'actions', 'objects', 'errorService', '$stateParams', 'speechService', '$timeout',
+    function ($scope, $injector, $rootScope, $state, $filter, actions, objects, errorService, $stateParams, speechService, $timeout) {
 
       $scope.master = "";
       $scope.update = function () {
         $scope.master = $scope.inputfield;
-        if ($scope.master !== undefined) evaluateInput();
+        if ($scope.master !== undefined && $scope.master !== "") {
+          speechService.cancelSpeech();
+          speechService.speak("Input: " + $scope.master);
+          evaluateInput();
+        }
       };
 
       $scope.reset = function () {
@@ -175,7 +179,10 @@ app.controller('InputController',
             for (var parameter in $rootScope.parameters) {
               if ($rootScope.parameters[parameter].hasOwnProperty('choices')) {
                 var choice = $rootScope.parameters[parameter].value;
-                if (typeof $rootScope.parameters[parameter].choices[choice] === 'object') {
+
+                if (choice === null) {
+                  $rootScope.parameters[parameter].value = null;
+                } else if (typeof $rootScope.parameters[parameter].choices[choice] === 'object') {
                   $rootScope.parameters[parameter].value = {"href": $rootScope.parameters[parameter].choices[choice].href };
                 } else {
                   $rootScope.parameters[parameter].value = $rootScope.parameters[parameter].choices[choice];
@@ -218,53 +225,79 @@ app.controller('InputController',
               errorService.throwError("Get object requires a selection parameter");
               break;
             } else {
-              var getParam = input.slice(1).join(" ").toLowerCase();
+              if (isInt(input[1])) {
+                var index = parseInt(input[1]);
 
-              if ($state.current.name === "base.collection") {
-                var filter = $filter('filter');
-                $rootScope.filteredActionResults = filter($rootScope.actionResults, {"title": getParam});
-
-                // no results
-                if ($rootScope.filteredActionResults.length === 0) {
-                  errorService.throwError("Object \'" + getParam + "\' not found");
-                  break;
-
-                // single result
-                } else if ($rootScope.filteredActionResults.length === 1) {
-                  $state.go('base.object',
-                    {
-                      "objectType": $rootScope.filteredActionResults[0].objectType,
-                      "objectId": $rootScope.filteredActionResults[0].objectId
-                    });
-
-                  break;
-
-                // multiple results
-                } else {
-                  $state.go('base.collection', {"actionResults": $rootScope.filteredActionResults});
-                  break;
-                }
-              } else if ($state.current.name === "base.object") {
-                var keyFound = false;
-
-                for (var key in $rootScope.properties) {
-                  if (key.toLowerCase() === getParam) {
-                    keyFound = true;
-
-                    var objectType = objects.getObjectType($rootScope.properties[key].value.href);
-                    var objectId = objects.getObjectId($rootScope.properties[key].value.href);
-
-                    $state.go('base.object', {"objectType": objectType, "objectId": objectId});
-                    break;
+                if ($state.current.name === "base.collection") {
+                  if (index >= Object.keys($rootScope.actionResults).length) {
+                    errorService.throwError("Index out of range");
+                  } else {
+                    $state.go('base.object',
+                      {
+                        "objectType": $rootScope.actionResults[index].objectType,
+                        "objectId": $rootScope.actionResults[index].objectId,
+                        "backIndex": -2
+                      }
+                    );
                   }
                 }
+              } else {
+                var getParam = input.slice(1).join(" ").toLowerCase();
 
-                if (keyFound === false) {
-                  for (var key in $rootScope.collections) {
+                if ($state.current.name === "base.collection") {
+                  var filter = $filter('filter');
+                  $rootScope.filteredActionResults = filter($rootScope.actionResults, {"title": getParam});
+
+                  // no results
+                  if ($rootScope.filteredActionResults.length === 0) {
+                    errorService.throwError("Object \'" + getParam + "\' not found");
+                    break;
+
+                    // single result
+                  } else if ($rootScope.filteredActionResults.length === 1) {
+                    $state.go('base.object',
+                      {
+                        "objectType": $rootScope.filteredActionResults[0].objectType,
+                        "objectId": $rootScope.filteredActionResults[0].objectId,
+                        "backIndex": -2
+                      }
+                    );
+
+                    break;
+
+                    // multiple results
+                  } else {
+                    $state.go('base.collection', {"actionResults": $rootScope.filteredActionResults, "backIndex": -2});
+                    break;
+                  }
+                } else if ($state.current.name === "base.object") {
+                  var keyFound = false;
+
+                  for (var key in $rootScope.properties) {
                     if (key.toLowerCase() === getParam) {
                       keyFound = true;
-                      $state.go('base.collection', {"actionResults": $rootScope.collections[key]});
+
+                      var objectType = objects.getObjectType($rootScope.properties[key].value.href);
+                      var objectId = objects.getObjectId($rootScope.properties[key].value.href);
+
+                      $state.go('base.object',
+                        {
+                          "objectType": objectType,
+                          "objectId": objectId,
+                          "backIndex": -2
+                        }
+                      );
                       break;
+                    }
+                  }
+
+                  if (keyFound === false) {
+                    for (var key in $rootScope.collections) {
+                      if (key.toLowerCase() === getParam) {
+                        keyFound = true;
+                        $state.go('base.collection', {"actionResults": $rootScope.collections[key], "backIndex": -2});
+                        break;
+                      }
                     }
                   }
                 }
@@ -272,6 +305,20 @@ app.controller('InputController',
 
               break;
             }
+
+          /**************************
+          * SHOW COLLECTION RESULTS *
+          **************************/
+          case "show":
+            if (input[1] === undefined) {
+              $rootScope.$broadcast('$showCollectionResults');
+            } else if (input[1].toLowerCase() === "next") {
+              $rootScope.$broadcast('$showNextCollectionResults');
+            } else if (input[1].toLowerCase() === "previous") {
+              $rootScope.$broadcast('$showPreviousCollectionResults');
+            }
+
+            break;
 
           /******************
           * LIST PROPERTIES *
@@ -291,7 +338,13 @@ app.controller('InputController',
           * GO BACK ONE STEP *
           *******************/
           case "back":
-            window.history.back();
+
+            // Collections and actions use POST parameters, so skip invocations to prevent errors
+            if ($stateParams.hasOwnProperty('backIndex')) {
+              window.history.go($stateParams.backIndex);
+            } else {
+              window.history.back();
+            }
             break;
 
           /**********************
@@ -305,7 +358,11 @@ app.controller('InputController',
           * LIST HELP MENU *
           *****************/
           case "help":
-            $state.go('base.help');
+            $state.go('base.help', {"previousState": $state.current.name}).then(function() {
+              $timeout(function() {
+                speechService.speak("Output: " + document.getElementById("clisis-output").innerText);
+              }, 0);
+            });
             break;
 
           /*******************
@@ -338,14 +395,22 @@ app.controller('InputController',
         }
       }
 
-      function checkTabPress(e) {
+      function isInt(value) {
+        return !isNaN(value) &&
+          parseInt(Number(value)) == value &&
+          !isNaN(parseInt(value, 10));
+      }
+
+      function checkKeyPress(e) {
         if (e.keyCode === 9) {
           e.preventDefault();
+        } else if (e.keyCode === 27) {
+          speechService.cancelSpeech();
         }
       }
 
       document.addEventListener('keydown', function (e) {
-        checkTabPress(e);
+        checkKeyPress(e);
       }, false);
 
     }]);
