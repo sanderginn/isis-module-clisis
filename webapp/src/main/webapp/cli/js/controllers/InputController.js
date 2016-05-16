@@ -32,10 +32,18 @@ app.controller('InputController',
           * SELECT MENU *
           **************/
           case "menu":
+
             // no menu parameter provided
             if (input[1] === undefined) {
               errorService.throwError("Opening menu requires a selection parameter");
               break;
+            } else if (isInt(input[1])) {
+              var index = parseInt(input[1]);
+              if (index >= Object.keys($rootScope.services).length) {
+                errorService.throwError("Index out of range");
+              } else {
+                $state.go('base.services', {"serviceId": index});
+              }
             } else {
               var menuParam = input.slice(1).join(" ");
               var servicePresent = false;
@@ -62,6 +70,7 @@ app.controller('InputController',
           * LIST ACTIONS *
           ***************/
           case "actions":
+            console.log($rootScope.actions);
             $rootScope.$broadcast('$showActions');
             break;
 
@@ -157,7 +166,7 @@ app.controller('InputController',
               errorService.throwError("Filling out a field requires a selection and value parameter");
               break;
             } else {
-              if (isNaN(parseInt(input[1]))) {
+              if (!isInt(input[1])) {
                 errorService.throwError("Selection parameter must be an integer");
                 break;
               } else {
@@ -372,6 +381,10 @@ app.controller('InputController',
             var AuthService = $injector.get("AuthService");
             AuthService.logout();
             $state.go("base.login");
+            break;
+
+          case "listen":
+            speechService.listen();
             break;
 
           /**********************
