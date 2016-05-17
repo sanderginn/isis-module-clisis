@@ -6,7 +6,6 @@ app.factory('speechService',
 
       speechSynthesis.onvoiceschanged = function() {
         synth.voice = speechSynthesis.getVoices().filter(function(voice) {
-          //return voice.name === 'Google UK English Male';
           return voice.name === 'native';
         })[0];
       };

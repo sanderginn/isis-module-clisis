@@ -1,8 +1,21 @@
 app.controller('InputController',
-  ['$scope', '$injector', '$rootScope', '$state', '$filter', 'actions', 'objects', 'errorService', '$stateParams', 'speechService', '$timeout',
-    function ($scope, $injector, $rootScope, $state, $filter, actions, objects, errorService, $stateParams, speechService, $timeout) {
+  ['$scope', '$injector', '$rootScope', '$state', '$filter', 'actions', 'objects', 'errorService', '$stateParams', 'speechService', '$timeout', 'previousState',
+    function ($scope, $injector, $rootScope, $state, $filter, actions, objects, errorService, $stateParams, speechService, $timeout, previousState) {
 
+      // state management for going back
+      $rootScope.addPreviousState = true;
+
+      if ($rootScope.previousStates === undefined) {
+        $rootScope.previousStates = [];
+      }
+
+      if (previousState !== undefined) {
+        $rootScope.previousStates.push(previousState);
+      }
+
+      // input management
       $scope.master = "";
+
       $scope.update = function () {
         $scope.master = $scope.inputfield;
         if ($scope.master !== undefined && $scope.master !== "") {
@@ -41,8 +54,10 @@ app.controller('InputController',
               var index = parseInt(input[1]);
               if (index >= Object.keys($rootScope.services).length) {
                 errorService.throwError("Index out of range");
+                break
               } else {
                 $state.go('base.services', {"serviceId": index});
+                break;
               }
             } else {
               var menuParam = input.slice(1).join(" ");
@@ -70,7 +85,6 @@ app.controller('InputController',
           * LIST ACTIONS *
           ***************/
           case "actions":
-            console.log($rootScope.actions);
             $rootScope.$broadcast('$showActions');
             break;
 
@@ -104,7 +118,7 @@ app.controller('InputController',
                           {
                             "serviceId": $rootScope.serviceId,
                             "actionId": action,
-                            "params": JSON.stringify({})
+                            "parameters": JSON.stringify({})
                           }
                         );
                       } else {
@@ -210,7 +224,7 @@ app.controller('InputController',
                 {
                   "serviceId": $rootScope.serviceId,
                   "actionId": $rootScope.actionId,
-                  "params": JSON.stringify($rootScope.parameters)
+                  "parameters": JSON.stringify($rootScope.parameters)
                 }
               );
             } else if ($rootScope.hasOwnProperty('objectType')) {
@@ -244,8 +258,7 @@ app.controller('InputController',
                     $state.go('base.object',
                       {
                         "objectType": $rootScope.actionResults[index].objectType,
-                        "objectId": $rootScope.actionResults[index].objectId,
-                        "backIndex": -2
+                        "objectId": $rootScope.actionResults[index].objectId
                       }
                     );
                   }
@@ -267,8 +280,7 @@ app.controller('InputController',
                     $state.go('base.object',
                       {
                         "objectType": $rootScope.filteredActionResults[0].objectType,
-                        "objectId": $rootScope.filteredActionResults[0].objectId,
-                        "backIndex": -2
+                        "objectId": $rootScope.filteredActionResults[0].objectId
                       }
                     );
 
@@ -276,7 +288,7 @@ app.controller('InputController',
 
                     // multiple results
                   } else {
-                    $state.go('base.collection', {"actionResults": $rootScope.filteredActionResults, "backIndex": -2});
+                    $state.go('base.collection', {"actionResults": $rootScope.filteredActionResults});
                     break;
                   }
                 } else if ($state.current.name === "base.object") {
@@ -292,8 +304,7 @@ app.controller('InputController',
                       $state.go('base.object',
                         {
                           "objectType": objectType,
-                          "objectId": objectId,
-                          "backIndex": -2
+                          "objectId": objectId
                         }
                       );
                       break;
@@ -304,7 +315,7 @@ app.controller('InputController',
                     for (var key in $rootScope.collections) {
                       if (key.toLowerCase() === getParam) {
                         keyFound = true;
-                        $state.go('base.collection', {"actionResults": $rootScope.collections[key], "backIndex": -2});
+                        $state.go('base.collection', {"actionResults": $rootScope.collections[key]});
                         break;
                       }
                     }
@@ -347,27 +358,22 @@ app.controller('InputController',
           * GO BACK ONE STEP *
           *******************/
           case "back":
-
-            // Collections and actions use POST parameters, so skip invocations to prevent errors
-            if ($stateParams.hasOwnProperty('backIndex')) {
-              window.history.go($stateParams.backIndex);
-            } else {
-              window.history.back();
+            var lastState = $rootScope.previousStates.pop();
+            if (lastState !== undefined && (lastState.name === 'base.serviceAction' || lastState.name === 'base.objectAction')) {
+              lastState = $rootScope.previousStates.pop();
             }
-            break;
 
-          /**********************
-          * GO FORWARD ONE STEP *
-          **********************/
-          case "forward":
-            window.history.forward();
+            if (lastState !== undefined) {
+              $rootScope.addPreviousState = false;
+              $state.go(lastState.name, lastState.params);
+            }
             break;
 
           /*****************
           * LIST HELP MENU *
           *****************/
           case "help":
-            $state.go('base.help', {"previousState": $state.current.name}).then(function() {
+            $state.go('base.help').then(function() {
               $timeout(function() {
                 speechService.speak("Output: " + document.getElementById("clisis-output").innerText);
               }, 0);
@@ -414,6 +420,7 @@ app.controller('InputController',
           !isNaN(parseInt(value, 10));
       }
 
+      // prevents from tabbing out of input field and cancels speech on escape
       function checkKeyPress(e) {
         if (e.keyCode === 9) {
           e.preventDefault();

@@ -47,7 +47,7 @@ app.controller('ObjectController',
 
         $rootScope.properties = angular.copy($scope.properties);
         $rootScope.actions = angular.copy($scope.actions);
-        rootScopeSanitiser.sanitiseRootScope(['domainType', 'instanceId', 'title', 'properties', 'collections', 'actions', 'services']);
+        rootScopeSanitiser.sanitiseRootScope(['domainType', 'instanceId', 'title', 'properties', 'collections', 'actions']);
 
       });
 

@@ -1,6 +1,20 @@
 var input = {
   controller: 'InputController as ctrl',
-  templateUrl: 'views/input.html'
+  templateUrl: 'views/input.html',
+  resolve: {
+    previousState: [
+      "$state", "$rootScope",
+      function ($state, $rootScope) {
+        if ($rootScope.addPreviousState) {
+          var currentStateData = {
+            name: $state.current.name,
+            params: $state.params
+          };
+          return currentStateData;
+        }
+      }
+    ]
+  }
 };
 
 var welcomeTemplate = "<h3>Welcome to CLIsis.</h3>";
@@ -13,7 +27,7 @@ app.value('AppConfig', {
 });
 
 app.config(
-  ["$stateProvider", "$urlRouterProvider",
+  ['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
       $stateProvider
         .state('base', {
@@ -60,7 +74,7 @@ app.config(
         .state('base.serviceAction', {
           url: '/services/:serviceId/:actionId/invoke',
           params: {
-            params: null
+            parameters: null
           },
           views: {
             input: input,
@@ -86,9 +100,6 @@ app.config(
         })
         .state('base.object', {
           url: '/objects/:objectType/:objectId',
-          params: {
-            backIndex: null
-          },
           views: {
             input: input,
 
@@ -129,7 +140,6 @@ app.config(
           url: '/collection',
           params: {
             actionResults: null,
-            backIndex: null
           },
           views: {
             input: input,
@@ -169,7 +179,6 @@ app.config(
         })
         .state('base.help', {
           url: '/help',
-          params: {"previousState": null},
           views: {
             input: input,
 
@@ -186,8 +195,8 @@ app.config(
       });
     }]);
 
-app.filter('substringAfterChar', function() {
-  return function(input, splitChar) {
+app.filter('substringAfterChar', function () {
+  return function (input, splitChar) {
     if (input !== undefined) {
       return input.split(splitChar).pop();
     } else {
@@ -196,8 +205,8 @@ app.filter('substringAfterChar', function() {
   }
 });
 
-app.filter('splitToLowerCase', function() {
-  return function(input) {
+app.filter('splitToLowerCase', function () {
+  return function (input) {
     if (input !== undefined) {
       return input.split(/(?=[A-Z])/).join(" ").toLowerCase();
     } else {
@@ -206,8 +215,8 @@ app.filter('splitToLowerCase', function() {
   }
 });
 
-app.filter('startFrom', function() {
-  return function(input, start) {
+app.filter('startFrom', function () {
+  return function (input, start) {
     if (input !== undefined && input !== null) {
       start = +start;
       return input.slice(start);

@@ -13,7 +13,7 @@ app.controller('ServiceController',
       $rootScope.actions = angular.copy($scope.actions);
       $rootScope.serviceId = angular.copy($scope.serviceId);
 
-      rootScopeSanitiser.sanitiseRootScope(['actions', 'serviceId', 'services']);
+      rootScopeSanitiser.sanitiseRootScope(['actions', 'serviceId']);
     });
 
     $scope.$on('$showActions', function() {

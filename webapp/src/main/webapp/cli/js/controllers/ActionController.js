@@ -10,13 +10,7 @@ app.controller('ActionController',
         parentType = "object"
       }
 
-      var actionParams = JSON.parse($stateParams.params);
-      var backIndex;
-      if (Object.keys(actionParams).length === 0) {
-        backIndex = -2;
-      } else {
-        backIndex = -3;
-      }
+      var actionParams = JSON.parse($stateParams.parameters);
 
       if (parentType === "service") {
         actionPromise = actions.invokeAction($stateParams.serviceId, $stateParams.actionId, actionParams);
@@ -30,8 +24,7 @@ app.controller('ActionController',
           $state.go('base.object',
             {
               "objectType": objects.getObjectType(actionsResponse.result.links[0].href),
-              "objectId": objects.getObjectId(actionsResponse.result.links[0].href),
-              "backIndex": backIndex
+              "objectId": objects.getObjectId(actionsResponse.result.links[0].href)
             }
           );
 
@@ -43,8 +36,7 @@ app.controller('ActionController',
             $state.go('base.object',
               {
                 "objectType": objects.getObjectType(actionResults[0].href),
-                "objectId": objects.getObjectId(actionResults[0].href),
-                "backIndex": backIndex
+                "objectId": objects.getObjectId(actionResults[0].href)
               }
             );
           } else {
@@ -54,12 +46,12 @@ app.controller('ActionController',
               actionResults[actionResult].objectId = objects.getObjectId(actionResults[actionResult].href);
             }
 
-            $state.go('base.collection', {"actionResults": actionResults, "backIndex": backIndex});
+            $state.go('base.collection', {"actionResults": actionResults});
           }
         }
 
         $rootScope.actionResults = angular.copy(actionResults);
-        rootScopeSanitiser.sanitiseRootScope(['actionResults', 'services']);
+        rootScopeSanitiser.sanitiseRootScope(['actionResults']);
       }, function (err) {
         errorService.throwError(JSON.stringify(err));
       });

@@ -8,7 +8,7 @@ app.controller('CollectionsController',
 
       $scope.actionResults = $stateParams.actionResults;
       $rootScope.actionResults = angular.copy($scope.actionResults);
-      rootScopeSanitiser.sanitiseRootScope(['actionResults', 'services']);
+      rootScopeSanitiser.sanitiseRootScope(['actionResults']);
 
       if ($scope.actionResults !== null) {
         $scope.numberOfPages = Math.ceil(Object.keys($scope.actionResults).length / $scope.pageSize);

@@ -27,12 +27,12 @@ app.controller('ActionParamController',
           if ($stateParams.serviceId !== undefined) {
             $rootScope.serviceId = $stateParams.serviceId;
             $rootScope.actionId = $stateParams.actionId;
-            rootScopeSanitiser.sanitiseRootScope(['serviceId', 'actionId', 'parameters', 'services']);
+            rootScopeSanitiser.sanitiseRootScope(['serviceId', 'actionId', 'parameters']);
           } else if ($stateParams.objectType !== undefined) {
             $rootScope.objectType = $stateParams.objectType;
             $rootScope.objectId = $stateParams.objectId;
             $rootScope.actionId = $stateParams.actionId;
-            rootScopeSanitiser.sanitiseRootScope(['objectType', 'objectId', 'actionId', 'parameters', 'services']);
+            rootScopeSanitiser.sanitiseRootScope(['objectType', 'objectId', 'actionId', 'parameters']);
           }
         }
       });
