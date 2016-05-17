@@ -1,0 +1,62 @@
+\documentclass{uva_bachelor_thesis}
+\usepackage{hyperref} % for bibtex urls
+\usepackage{csquotes} % for quotes
+\usepackage[acronym, nonumberlist]{glossaries}
+\usepackage{tikz}
+\usepackage{newclude} % include without page break
+\usetikzlibrary{positioning,%
+  shapes.geometric,%
+  shapes.misc,%
+  calc,%
+  fit,%
+  decorations,%
+  decorations.pathreplacing,%
+  backgrounds,%
+  arrows,%
+  automata,%
+  trees%
+}
+
+\xdefinecolor{bordeaux}{RGB}{128,0,50}
+\xdefinecolor{niceblue}{RGB}{13,41,79}
+\xdefinecolor{nicegreen}{RGB}{13,79,18}
+\xdefinecolor{niceviolet}{RGB}{79,13,74}
+\colorlet{maincolor}{niceviolet}
+\colorlet{alertedcolor}{red}
+\colorlet{examplecolor}{green!50!black}
+
+% Glossary items
+\makeglossaries
+\newacronym{gui}{GUI}{graphical user interface}
+\newacronym{mvc}{MVC}{model-view-controller}
+
+% Title Page
+\title{CLIsis: An Interface for Visually Impaired Users of Apache Isis Applications}
+\author{Sander Ginn}
+\supervisors{Maarten Marx (UvA), Dan Haywood (Apache)}
+\signedby{Maarten Marx (UvA)}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This will be the abstract.
+\end{abstract}
+
+\tableofcontents
+
+\input{introduction}
+\input{theoreticalbackground}
+\input{methods}
+\input{implementation}
+\input{evaluation}
+\input{conclusion}
+\bibliography{bibliography/bibliography}
+\bibliographystyle{ieeetr}
+%\nocite{*}
+
+\printglossaries
+\input{appendices}
+
+\end{document}

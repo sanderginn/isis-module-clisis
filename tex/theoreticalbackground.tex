@@ -1,0 +1,33 @@
+\chapter{Theoretical background}
+\label{chapter:theoreticalbackground}
+User interface design is a thoroughly studied discipline with strong roots in psychology. In the 1980s \acrshort{gui} development exploded due to better hardware\cite{myers1998brief}. This meant that traditional user interfaces had to be redesigned to accommodate to the graphical features of the modern computer. In section~\ref{section:userinterfacemigrationinhistory} we will provide a brief history on how this was achieved and what sort of issues arose when migrating a user interface. Furthermore, section~\ref{section:apacheisis} will describe what Apache Isis entails.
+
+\section{Apache Isis}
+\label{section:apacheisis}
+As a software engineer, picking a framework for developing web applications can be a tedious process. There are dozens of frameworks for Java alone, with the oldest and most adopted one being Spring\cite{Sprin96:online}. The vast majority of these frameworks are based on the \textit{\acrlong{mvc}} (\acrshort{mvc}) pattern, where the view displays information to the user, the controller processes interaction between the user and the view, and the model contains the information and logic that manipulates this information\cite{leff2001web}. The relations between the components are depicted in figure~\ref{figure:mvc}.
+
+While the \acrshort{mvc} pattern itself has a lot of advantages, it has received criticism in the context of web development. The concept of separating business logic from presentation logic is often not adhered to in web applications, resulting in controllers that are contaminated with logic that should live in the model\cite{Fulfi2:online}.
+
+This is where Apache Isis differs from more classic \acrshort{mvc}-based frameworks.
+
+\begin{figure}[h]
+	\center
+	\include*{figures/mvc}
+	\caption{Interaction between the components of an MVC application}
+	\label{figure:mvc}
+\end{figure}
+
+\subsection{Domain Driven Design}
+\label{subsection:domaindrivendesign}
+As Apache Isis is a framework based on Domain Driven Design, I will briefly describe the core concepts of DDD.
+
+\subsection{Naked Objects pattern}
+\label{subsection:nakedobjectspattern}
+Apache Isis implements the Naked Objects Pattern, which is related to DDD.
+
+\section{User interface migration in history}
+\label{section:userinterfacemigrationinhistory}
+This section will provide some context around the issues that arise when implementing a new interface.
+
+\subsection{Issues and caveats}
+\label{subsection:issuesandcaveats}

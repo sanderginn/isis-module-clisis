@@ -1,0 +1,75 @@
+\begin{thebibliography}{10}
+
+\bibitem{inter87:online}
+``interface, n. : Oxford english dictionary.''
+  \url{http://www.oed.com/view/Entry/97747?result=1&rskey=X7p96Q&}.
+\newblock (Accessed on 05/16/2016).
+
+\bibitem{nielsen1994usability}
+J.~Nielsen, {\em Usability engineering}.
+\newblock Elsevier, 1994.
+
+\bibitem{paap1986optimal}
+K.~R. Paap and R.~J. Roske-Hofstrand, ``The optimal number of menu options per
+  panel,'' {\em Human Factors: The Journal of the Human Factors and Ergonomics
+  Society}, vol.~28, no.~4, pp.~377--385, 1986.
+
+\bibitem{landauer1985selection}
+T.~K. Landauer and D.~Nachbar, ``Selection from alphabetic and numeric menu
+  trees using a touch screen: breadth, depth, and width,'' {\em ACM SIGCHI
+  Bulletin}, vol.~16, no.~4, pp.~73--78, 1985.
+
+\bibitem{fisher1990optimal}
+D.~L. Fisher, E.~J. Yungkurth, and S.~M. Moss, ``Optimal menu hierarchy design:
+  syntax and semantics,'' {\em Human Factors: The Journal of the Human Factors
+  and Ergonomics Society}, vol.~32, no.~6, pp.~665--683, 1990.
+
+\bibitem{miller1956magical}
+G.~A. Miller, ``The magical number seven, plus or minus two: some limits on our
+  capacity for processing information.,'' {\em Psychological review}, vol.~63,
+  no.~2, p.~81, 1956.
+
+\bibitem{boyd1990graphical}
+L.~H. Boyd {\em et~al.}, ``The graphical user interface crisis: Danger and
+  opportunity.,'' 1990.
+
+\bibitem{Secti81:online}
+``Section 508 of the rehabilitation act.''
+  \url{http://www.section508.gov/section-508-of-the-rehabilitation-act}.
+\newblock (Accessed on 05/16/2016).
+
+\bibitem{WebCo83:online}
+``Web content accessibility guidelines (wcag) 2.0.''
+  \url{https://www.w3.org/TR/WCAG20/}.
+\newblock (Accessed on 05/16/2016).
+
+\bibitem{leuthold2008beyond}
+S.~Leuthold, J.~A. Bargas-Avila, and K.~Opwis, ``Beyond web content
+  accessibility guidelines: Design of enhanced text user interfaces for blind
+  internet users,'' {\em International Journal of Human-Computer Studies},
+  vol.~66, no.~4, pp.~257--270, 2008.
+
+\bibitem{Apach60:online}
+``Apache isis.'' \url{http://isis.apache.org/}.
+\newblock (Accessed on 05/16/2016).
+
+\bibitem{myers1998brief}
+B.~A. Myers, ``A brief history of human-computer interaction technology,'' {\em
+  interactions}, vol.~5, no.~2, pp.~44--54, 1998.
+
+\bibitem{Sprin96:online}
+``Spring.'' \url{https://spring.io/}.
+\newblock (Accessed on 05/16/2016).
+
+\bibitem{leff2001web}
+A.~Leff and J.~T. Rayfield, ``Web-application development using the
+  model/view/controller design pattern,'' in {\em Enterprise Distributed Object
+  Computing Conference, 2001. EDOC'01. Proceedings. Fifth IEEE International},
+  pp.~118--127, IEEE, 2001.
+
+\bibitem{Fulfi2:online}
+``Fulfilling the promise of mvc.''
+  \url{https://www.infoq.com/articles/Nacked-MVC}.
+\newblock (Accessed on 05/17/2016).
+
+\end{thebibliography}

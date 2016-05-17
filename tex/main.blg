@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: ieeetr.bst
+Database file #1: bibliography/bibliography.bib
+Warning--empty journal in boyd1990graphical
+You've used 15 entries,
+            1876 wiz_defined-function locations,
+            562 strings with 5617 characters,
+and the built_in function-call counts, 3126 in all, are:
+= -- 333
+> -- 72
+< -- 0
++ -- 32
+- -- 17
+* -- 182
+:= -- 407
+add.period$ -- 22
+call.type$ -- 15
+change.case$ -- 14
+chr.to.int$ -- 0
+cite$ -- 16
+duplicate$ -- 157
+empty$ -- 347
+format.name$ -- 17
+if$ -- 799
+int.to.chr$ -- 0
+int.to.str$ -- 15
+missing$ -- 10
+newline$ -- 55
+num.names$ -- 9
+pop$ -- 73
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 109
+stack$ -- 0
+substring$ -- 180
+swap$ -- 56
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 28
+width$ -- 17
+write$ -- 142
+(There was 1 warning)
