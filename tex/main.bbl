@@ -72,4 +72,67 @@ A.~Leff and J.~T. Rayfield, ``Web-application development using the
   \url{https://www.infoq.com/articles/Nacked-MVC}.
 \newblock (Accessed on 05/17/2016).
 
+\bibitem{Estat40:online}
+``Estatio.'' \url{http://www.estatio.org/}.
+\newblock (Accessed on 05/18/2016).
+
+\bibitem{Apach4:online}
+``Apache isis add-ons.'' \url{http://www.isisaddons.org/}.
+\newblock (Accessed on 05/18/2016).
+
+\bibitem{linberg1999software}
+K.~R. Linberg, ``Software developer perceptions about software project failure:
+  a case study,'' {\em Journal of Systems and Software}, vol.~49, no.~2,
+  pp.~177--192, 1999.
+
+\bibitem{rubinstein2007standish}
+D.~Rubinstein, ``Standish group report: There’s less development chaos
+  today,'' {\em Software Development Times}, vol.~1, 2007.
+
+\bibitem{keil2000software}
+M.~Keil, J.~Mann, and A.~Rai, ``Why software projects escalate: An empirical
+  analysis and test of four theoretical models,'' {\em Mis Quarterly},
+  pp.~631--664, 2000.
+
+\bibitem{evans2004domain}
+E.~Evans, {\em Domain-driven design: tackling complexity in the heart of
+  software}.
+\newblock Addison-Wesley Professional, 2004.
+
+\bibitem{pawson2002naked}
+R.~Pawson and R.~Matthews, ``Naked objects,'' in {\em Companion of the 17th
+  annual ACM SIGPLAN conference on Object-oriented programming, systems,
+  languages, and applications}, pp.~36--37, ACM, 2002.
+
+\bibitem{merlo1995reengineering}
+E.~Merlo, P.-Y. Gagn{\'e}, J.-F. Girard, K.~Kontogiannis, L.~Hendren,
+  P.~Panangaden, and R.~De~Mori, ``Reengineering user interfaces,'' {\em IEEE
+  Software}, vol.~12, no.~1, p.~64, 1995.
+
+\bibitem{moore1994knowledge}
+M.~Moore, S.~Rugaber, and P.~Seaver, ``Knowledge-based user interface
+  migration,'' in {\em Software Maintenance, 1994. Proceedings., International
+  Conference on}, pp.~72--79, IEEE, 1994.
+
+\bibitem{de1997migrating}
+A.~De~Lucia, G.~Lucca, A.~R. Fasolino, P.~Guerra, and S.~Petruzzelli,
+  ``Migrating legacy systems towards object-oriented platforms,'' in {\em
+  Software Maintenance, 1997. Proceedings., International Conference on},
+  pp.~122--129, IEEE, 1997.
+
+\bibitem{TypeL20:online}
+``Type less. talk more. make skype calls directly from your inbox.''
+  \url{http://blogs.skype.com/2013/04/29/type-less-talk-more-make-skype-calls-directly-from-your-outlook-com-inbox/}.
+\newblock (Accessed on 05/21/2016).
+
+\bibitem{aversano2001migrating}
+L.~Aversano, G.~Canfora, A.~Cimitile, and A.~De~Lucia, ``Migrating legacy
+  systems to the web: an experience report,'' in {\em Software Maintenance and
+  Reengineering, 2001. Fifth European Conference on}, pp.~148--157, IEEE, 2001.
+
+\bibitem{stroulia2003user}
+E.~Stroulia, M.~El-Ramly, P.~Iglinski, and P.~Sorenson, ``User interface
+  reverse engineering in support of interface migration to the web,'' {\em
+  Automated Software Engineering}, vol.~10, no.~3, pp.~271--301, 2003.
+
 \end{thebibliography}

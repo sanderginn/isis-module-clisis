@@ -1,0 +1,27 @@
+\begin{tikzpicture}[
+    >=stealth,
+    node distance=.5cm,
+    database/.style={
+      cylinder,
+      fill=maincolor!18,
+      shape border rotate=90,
+      aspect=0.25,
+      draw=maincolor
+    },
+    box/.style={
+    	draw=black,
+    	minimum height=2em,
+    	minimum width=12em,
+    	rounded corners=5pt,
+    	fill=gray!18
+    }
+  ]
+    \node[box] (presentation) {Presentation layer};
+    \node[box, below=of presentation] (business) {Business logic layer};
+  	\node[box, below=of business] (persistence) {Persistence layer};
+    \node[database, below=of persistence] (database) {Database};
+
+	\draw[->] (presentation) -- (business);
+	\draw[->] (business) -- (persistence);
+	\draw[->] (persistence) -- (database);
+\end{tikzpicture}

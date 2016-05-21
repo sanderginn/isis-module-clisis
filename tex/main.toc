@@ -1,40 +1,41 @@
 \contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}
 \contentsline {section}{\numberline {1.1}Research questions}{6}{section.1.1}
-\contentsline {section}{\numberline {1.2}Overview of thesis}{6}{section.1.2}
-\contentsline {chapter}{\numberline {2}Theoretical background}{7}{chapter.2}
+\contentsline {section}{\numberline {1.2}Overview of thesis}{7}{section.1.2}
+\contentsline {chapter}{\numberline {2}Theoretical background}{8}{chapter.2}
 \contentsline {section}{\numberline {2.1}Apache Isis}{9}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Domain Driven Design}{9}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Naked Objects pattern}{9}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}User interface migration in history}{10}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Issues and caveats}{10}{subsection.2.2.1}
-\contentsline {chapter}{\numberline {3}Methods}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}User interface migration}{13}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Detection}{13}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Representation}{13}{subsection.3.1.2}
-\contentsline {subsubsection}{Specifications}{13}{subsubsection*.2}
-\contentsline {subsection}{\numberline {3.1.3}Transformation}{13}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Experiments}{13}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}GOMS}{13}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Time trial}{13}{subsection.3.2.2}
-\contentsline {chapter}{\numberline {4}Implementation}{14}{chapter.4}
-\contentsline {section}{\numberline {4.1}Frameworks and tools}{15}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}REST API}{15}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}AngularJS}{15}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Web Speech API}{15}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Functionality}{15}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Main module}{15}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Controllers}{15}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Views}{15}{subsection.4.2.3}
-\contentsline {chapter}{\numberline {5}Evaluation}{16}{chapter.5}
-\contentsline {section}{\numberline {5.1}Specification requirements}{17}{section.5.1}
-\contentsline {section}{\numberline {5.2}Experiments}{17}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}GOMS}{17}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Time trial}{17}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Performance difference}{17}{subsection.5.2.3}
-\contentsline {chapter}{\numberline {6}Conclusion}{18}{chapter.6}
-\contentsline {section}{\numberline {6.1}Future work}{19}{section.6.1}
-\contentsline {section}{\numberline {6.2}Acknowledgements}{19}{section.6.2}
-\contentsline {chapter}{\numberline {A}Application manual}{26}{appendix.A}
-\contentsline {section}{\numberline {A.1}Installation}{27}{section.A.1}
-\contentsline {section}{\numberline {A.2}User manual}{27}{section.A.2}
-\contentsline {chapter}{\numberline {B}Time trial test class}{28}{appendix.B}
+\contentsline {subsection}{\numberline {2.1.1}Domain-Driven Design}{10}{subsection.2.1.1}
+\contentsline {subsubsection}{Ubiquitous language}{10}{subsubsection*.5}
+\contentsline {subsubsection}{Model-driven design}{11}{subsubsection*.6}
+\contentsline {subsection}{\numberline {2.1.2}Naked Objects pattern}{11}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}User interface migration in history}{12}{section.2.2}
+\contentsline {chapter}{\numberline {3}Methods}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}User interface migration}{15}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Detection}{15}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Representation}{15}{subsection.3.1.2}
+\contentsline {subsubsection}{Specifications}{15}{subsubsection*.8}
+\contentsline {subsection}{\numberline {3.1.3}Transformation}{15}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Experiments}{15}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}GOMS}{15}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Time trial}{15}{subsection.3.2.2}
+\contentsline {chapter}{\numberline {4}Implementation}{16}{chapter.4}
+\contentsline {section}{\numberline {4.1}Frameworks and tools}{17}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}REST API}{17}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}AngularJS}{17}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Web Speech API}{17}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Functionality}{17}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Main module}{17}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Controllers}{17}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Views}{17}{subsection.4.2.3}
+\contentsline {chapter}{\numberline {5}Evaluation}{18}{chapter.5}
+\contentsline {section}{\numberline {5.1}Specification requirements}{19}{section.5.1}
+\contentsline {section}{\numberline {5.2}Experiments}{19}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}GOMS}{19}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Time trial}{19}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Performance difference}{19}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {6}Conclusion}{20}{chapter.6}
+\contentsline {section}{\numberline {6.1}Future work}{21}{section.6.1}
+\contentsline {section}{\numberline {6.2}Acknowledgements}{21}{section.6.2}
+\contentsline {chapter}{\numberline {A}Application manual}{28}{appendix.A}
+\contentsline {section}{\numberline {A.1}Installation}{29}{section.A.1}
+\contentsline {section}{\numberline {A.2}User manual}{29}{section.A.2}
+\contentsline {chapter}{\numberline {B}Time trial test class}{30}{appendix.B}

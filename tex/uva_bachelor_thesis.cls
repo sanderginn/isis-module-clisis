@@ -31,7 +31,7 @@
 			% doesn't work)
 	\begin{textblock*}{10cm}(6cm,4cm)
 		\noindent\large\scshape Bachelor Informatica\\[2em]
-		\includegraphics[height=2cm]{UVACENTR}
+		\includegraphics[height=1cm]{figures/uva}
 		%\Large Universiteit van Amsterdam
 	\end{textblock*}
 	\begin{textblock*}{10cm}(6cm,12cm)

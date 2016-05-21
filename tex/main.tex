@@ -1,9 +1,13 @@
 \documentclass{uva_bachelor_thesis}
 \usepackage{hyperref} % for bibtex urls
 \usepackage{csquotes} % for quotes
-\usepackage[acronym, nonumberlist]{glossaries}
-\usepackage{tikz}
+\usepackage[acronym]{glossaries} % acronyms 
+\usepackage{subcaption} % side by side subfigures
 \usepackage{newclude} % include without page break
+\usepackage{minted} % code listings
+\newminted{java}{fontsize=\tiny, frame=lines, bgcolor=LightGray!18}
+
+\usepackage{tikz}
 \usetikzlibrary{positioning,%
   shapes.geometric,%
   shapes.misc,%
@@ -29,6 +33,8 @@
 \makeglossaries
 \newacronym{gui}{GUI}{graphical user interface}
 \newacronym{mvc}{MVC}{model-view-controller}
+\newacronym{rest}{REST}{representational state transfer}
+\newacronym{ddd}{DDD}{domain-driven design}
 
 % Title Page
 \title{CLIsis: An Interface for Visually Impaired Users of Apache Isis Applications}
