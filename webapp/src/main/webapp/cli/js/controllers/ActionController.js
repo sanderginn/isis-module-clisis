@@ -10,10 +10,11 @@ app.controller('ActionController',
         parentType = "object"
       }
 
+      console.log($stateParams);
       var actionParams = JSON.parse($stateParams.parameters);
 
       if (parentType === "service") {
-        actionPromise = actions.invokeAction($stateParams.serviceId, $stateParams.actionId, actionParams);
+        actionPromise = actions.invokeAction($stateParams.serviceHref, $stateParams.actionId, actionParams);
       } else if (parentType === "object") {
         actionPromise = actions.invokeObjectAction(objects.buildObjectHref($stateParams.objectType, $stateParams.objectId) + "/actions/" + $stateParams.actionId, actionParams);
       }

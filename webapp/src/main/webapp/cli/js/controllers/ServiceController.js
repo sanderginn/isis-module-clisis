@@ -4,16 +4,16 @@ app.controller('ServiceController',
     $scope.show = false;
 
     // service title and actions
-    services.getServices().then(function(servicesResponse) {
-      return actions.getActions(servicesResponse.data.value[$stateParams.serviceId].href);
-    }).then(function(data) {
+    actions.getActions($stateParams.serviceHref).then(function(data) {
       $scope.title = data.data.title;
       $scope.actions = data.data.members;
       $scope.serviceId = $stateParams.serviceId;
+      $scope.serviceHref = $stateParams.serviceHref;
       $rootScope.actions = angular.copy($scope.actions);
       $rootScope.serviceId = angular.copy($scope.serviceId);
+      $rootScope.serviceHref = angular.copy($scope.serviceHref);
 
-      rootScopeSanitiser.sanitiseRootScope(['actions', 'serviceId']);
+      rootScopeSanitiser.sanitiseRootScope(['actions', 'serviceId', 'serviceHref']);
     });
 
     $scope.$on('$showActions', function() {

@@ -6,9 +6,14 @@ app.controller('ActionParamController',
       for (var param in params) {
         params[param].value = null;
         if (params[param].hasOwnProperty('choices')) {
+          console.log(params[param]);
           var choicesText = "<ol start='0'>";
           for (var choice in params[param].choices) {
-            choicesText += "<li>" + params[param].choices[choice].title + "</li>";
+            if (typeof params[param].choices[choice] === "object") {
+              choicesText += "<li>" + params[param].choices[choice].title + "</li>";
+            } else {
+              choicesText += "<li>" + params[param].choices[choice] + "</li>";
+            }
           }
           choicesText += "</ol>";
           params[param].choicesText = $sce.trustAsHtml(choicesText);
@@ -27,7 +32,7 @@ app.controller('ActionParamController',
           if ($stateParams.serviceId !== undefined) {
             $rootScope.serviceId = $stateParams.serviceId;
             $rootScope.actionId = $stateParams.actionId;
-            rootScopeSanitiser.sanitiseRootScope(['serviceId', 'actionId', 'parameters']);
+            rootScopeSanitiser.sanitiseRootScope(['serviceId', 'serviceHref', 'actionId', 'parameters']);
           } else if ($stateParams.objectType !== undefined) {
             $rootScope.objectType = $stateParams.objectType;
             $rootScope.objectId = $stateParams.objectId;

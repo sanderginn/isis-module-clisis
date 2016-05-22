@@ -1,1 +1,2 @@
-<input type="text" class="clisis-input-field" id="clisis-input-field" ng-model="inputfield" ng-enter="update(); reset();">
+<input type="text" class="clisis-input-field" id="clisis-input-field" ng-model="inputfield" ng-enter="update(); reset();" ng-show="!httpPending">
+<div ng-show="httpPending">Loading...</div>

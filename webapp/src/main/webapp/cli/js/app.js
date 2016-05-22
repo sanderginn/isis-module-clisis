@@ -23,7 +23,7 @@ var app = angular.module("clisis", ['ngResource', 'http-auth-interceptor', "ui.r
 
 app.value('AppConfig', {
   appPrefix: 'clisis',
-  baseUrl: "http://127.0.0.1:8080"
+  baseUrl: "http://localhost:8080"
 });
 
 app.config(
@@ -62,6 +62,7 @@ app.config(
         })
         .state('base.services', {
           url: '/services/:serviceId',
+          params: {serviceHref: null},
           views: {
             input: input,
 
@@ -74,6 +75,7 @@ app.config(
         .state('base.serviceAction', {
           url: '/services/:serviceId/:actionId/invoke',
           params: {
+            serviceHref: null,
             parameters: null
           },
           views: {
@@ -87,6 +89,7 @@ app.config(
         .state('base.serviceActionParams', {
           url: '/services/:serviceId/:actionId',
           params: {
+            serviceHref: null,
             parameters: null
           },
           views: {
@@ -112,7 +115,7 @@ app.config(
         .state('base.objectAction', {
           url: '/objects/:objectType/:objectId/actions/:actionId/invoke',
           params: {
-            params: null
+            parameters: null
           },
           views: {
             input: input,
@@ -193,6 +196,7 @@ app.config(
         var $state = $injector.get("$state");
         $state.go("base.home");
       });
+
     }]);
 
 app.filter('substringAfterChar', function () {

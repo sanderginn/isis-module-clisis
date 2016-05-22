@@ -15,13 +15,9 @@ app.factory('actions', ['$http', '$q', 'services', '$resource', 'errorService',
       return deferred.promise;
     },
 
-    invokeAction: function (serviceId, actionId, parameters) {
-
-      // get services list
-      return services.getServices().then(function (servicesResponse) {
-        // get actions for queried service
-        return obj.getActions(servicesResponse.data.value[serviceId].href);
-      }).then(function (actionsResponse) {
+    invokeAction: function (serviceHref, actionId, parameters) {
+      // get actions for queried service
+      return obj.getActions(serviceHref).then(function (actionsResponse) {
         // get invocation url for queried action
         var actionHref = actionsResponse.data.members[actionId].links[0].href;
         return obj.invokeObjectAction(actionHref, parameters);

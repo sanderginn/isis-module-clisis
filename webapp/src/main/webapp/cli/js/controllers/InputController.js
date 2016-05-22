@@ -1,6 +1,8 @@
 app.controller('InputController',
-  ['$scope', '$injector', '$rootScope', '$state', '$filter', 'actions', 'objects', 'errorService', '$stateParams', 'speechService', '$timeout', 'previousState',
-    function ($scope, $injector, $rootScope, $state, $filter, actions, objects, errorService, $stateParams, speechService, $timeout, previousState) {
+  ['$scope', '$injector', '$rootScope', '$state', '$filter', 'actions', 'objects', 'errorService', '$stateParams', 'speechService', '$timeout', 'previousState', '$http',
+    function ($scope, $injector, $rootScope, $state, $filter, actions, objects, errorService, $stateParams, speechService, $timeout, previousState, $http) {
+      // pending http requests;
+      $scope.httpPending = true;
 
       // state management for going back
       $rootScope.addPreviousState = true;
@@ -56,7 +58,9 @@ app.controller('InputController',
                 errorService.throwError("Index out of range");
                 break
               } else {
-                $state.go('base.services', {"serviceId": index});
+                var serviceHref = $rootScope.services[index].href;
+                var serviceTitle = $rootScope.services[index].title;
+                $state.go('base.services', {"serviceId": serviceTitle.replace(/\s+/g, ''), "serviceHref": serviceHref});
                 break;
               }
             } else {
@@ -66,8 +70,9 @@ app.controller('InputController',
               for (var service in $rootScope.services) {
                 if ($rootScope.services[service].title.toLowerCase() === menuParam) {
                   servicePresent = true;
-
-                  $state.go('base.services', {"serviceId": service});
+                  var serviceHref = $rootScope.services[service].href;
+                  var serviceTitle = $rootScope.services[service].title;
+                  $state.go('base.services', {"serviceId": serviceTitle.replace(/\s+/g, ''), "serviceHref": serviceHref});
                   break;
                 }
               }
@@ -118,6 +123,7 @@ app.controller('InputController',
                           {
                             "serviceId": $rootScope.serviceId,
                             "actionId": action,
+                            "serviceHref": $rootScope.serviceHref,
                             "parameters": JSON.stringify({})
                           }
                         );
@@ -138,6 +144,7 @@ app.controller('InputController',
                           {
                             "serviceId": $rootScope.serviceId,
                             "actionId": action,
+                            "serviceHref": $rootScope.serviceHref,
                             "parameters": JSON.stringify(paramData)
                           }
                         );
@@ -224,6 +231,7 @@ app.controller('InputController',
                 {
                   "serviceId": $rootScope.serviceId,
                   "actionId": $rootScope.actionId,
+                  "serviceHref": $rootScope.serviceHref,
                   "parameters": JSON.stringify($rootScope.parameters)
                 }
               );
@@ -234,7 +242,7 @@ app.controller('InputController',
                   "domainType": $rootScope.domainType,
                   "objectId": $rootScope.objectId,
                   "actionId": $rootScope.actionId,
-                  "params": JSON.stringify($rootScope.parameters)
+                  "parameters": JSON.stringify($rootScope.parameters)
                 }
               );
             }
@@ -433,4 +441,15 @@ app.controller('InputController',
         checkKeyPress(e);
       }, false);
 
+      $scope.$watch(function() {
+        return $http.pendingRequests.length > 0;
+      }, function(hasPending) {
+        if (!hasPending) {
+          $scope.httpPending = false;
+          $timeout(function() {
+            var element = document.getElementById('clisis-input-field');
+            element.focus();
+          }, 0);
+        }
+      });
     }]);
