@@ -6,7 +6,6 @@ app.controller('ActionParamController',
       for (var param in params) {
         params[param].value = null;
         if (params[param].hasOwnProperty('choices')) {
-          console.log(params[param]);
           var choicesText = "<ol start='0'>";
           for (var choice in params[param].choices) {
             if (typeof params[param].choices[choice] === "object") {

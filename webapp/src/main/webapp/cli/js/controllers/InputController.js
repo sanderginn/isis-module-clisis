@@ -287,6 +287,31 @@ app.controller('InputController',
                       }
                     );
                   }
+                } else if ($state.current.name === "base.object") {
+                  // get property if properties are shown
+                  if (!document.getElementById("object-properties").classList.contains('ng-hide')) {
+                    if (index >= Object.keys($rootScope.properties).length) {
+                      errorService.throwError("Index out of range");
+                    } else {
+                      if (typeof $rootScope.properties[index].value === 'object') {
+                        var objectType = objects.getObjectType($rootScope.properties[index].value.href);
+                        var objectId = objects.getObjectId($rootScope.properties[index].value.href);
+
+                        $state.go('base.object',
+                          {
+                            "objectType": objectType,
+                            "objectId": objectId
+                          }
+                        );
+                      }
+                    }
+                  } else  if (!document.getElementById("object-collections").classList.contains('ng-hide')) {
+                    if (index >= Object.keys($rootScope.collections).length) {
+                      errorService.throwError("Index out of range");
+                    } else {
+                      $state.go('base.collection', {"actionResults": $rootScope.collections[index][Object.keys($rootScope.collections[index])[0]]});
+                    }
+                  }
                 }
               } else {
                 var getParam = input.slice(1).join(" ").toLowerCase();
@@ -320,7 +345,7 @@ app.controller('InputController',
                   var keyFound = false;
 
                   for (var key in $rootScope.properties) {
-                    if (key.toLowerCase() === getParam) {
+                    if ($rootScope.properties[key].id.toLowerCase() === getParam.split(' ').join('')) {
                       keyFound = true;
 
                       var objectType = objects.getObjectType($rootScope.properties[key].value.href);
@@ -337,11 +362,13 @@ app.controller('InputController',
                   }
 
                   if (keyFound === false) {
-                    for (var key in $rootScope.collections) {
-                      if (key.toLowerCase() === getParam) {
-                        keyFound = true;
-                        $state.go('base.collection', {"actionResults": $rootScope.collections[key]});
-                        break;
+                    for (var index in $rootScope.collections) {
+                      for (var key in $rootScope.collections[index]) {
+                        if (key.toLowerCase() === getParam.split(' ').join('')) {
+                          keyFound = true;
+                          $state.go('base.collection', {"actionResults": $rootScope.collections[index][key]});
+                          break;
+                        }
                       }
                     }
                   }

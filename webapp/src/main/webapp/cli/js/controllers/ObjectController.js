@@ -10,15 +10,15 @@ app.controller('ObjectController',
         $scope.instanceId = objectResponse.instanceId;
         $scope.title = objectResponse.title;
 
-        $scope.properties = {};
-        $scope.collections = {};
+        $scope.properties = [];
+        $scope.collections = [];
         $scope.actions = [];
 
         var collectionPromises = [];
 
         for (var member in objectResponse.members) {
           if (objectResponse.members[member].memberType === "property") {
-            $scope.properties[member] = objectResponse.members[member];
+            $scope.properties.push(objectResponse.members[member]);
           } else if (objectResponse.members[member].memberType === "collection") {
             collectionPromises.push(objects.getCollection(objectResponse.members[member].links[0].href));
           } else if (objectResponse.members[member].memberType === "action") {
@@ -30,12 +30,20 @@ app.controller('ObjectController',
 
         $q.all(collectionPromises).then(function (collectionResponses) {
           for (var collectionResponse in collectionResponses) {
-            $scope.collections[collectionResponses[collectionResponse].id] = collectionResponses[collectionResponse].value;
-            for (var col in $scope.collections[collectionResponses[collectionResponse].id]) {
-              $scope.collections[collectionResponses[collectionResponse].id][col].objectType = objects.getObjectType($scope.collections[collectionResponses[collectionResponse].id][col].href);
-              $scope.collections[collectionResponses[collectionResponse].id][col].objectId = objects.getObjectId($scope.collections[collectionResponses[collectionResponse].id][col].href);
+            var collectionObject = {};
+            var collectionId = collectionResponses[collectionResponse].id
+
+            collectionObject[collectionId] = collectionResponses[collectionResponse].value;
+            $scope.collections.push(collectionObject);
+
+            var lastIndex = $scope.collections.length - 1;
+
+            for (var key in $scope.collections[lastIndex][collectionId]) {
+              $scope.collections[lastIndex][collectionId][key].objectType = objects.getObjectType($scope.collections[lastIndex][collectionId][key].href);
+              $scope.collections[lastIndex][collectionId][key].objectId = objects.getObjectId($scope.collections[lastIndex][collectionId][key].href);
             }
           }
+
           $rootScope.collections = angular.copy($scope.collections);
         }, function (err) {
           errorService.throwError(err.data["x-ro-invalidReason"]);
