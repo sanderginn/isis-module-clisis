@@ -71,7 +71,9 @@ app.factory('actions', ['$http', '$q', 'services', '$resource', 'errorService',
       var deferred = $q.defer();
 
       $resource(objectActionHref).get().$promise.then(function (result) {
-        if (Object.keys(result.parameters).length === 0) {
+        if (result.hasOwnProperty('disabledReason')) {
+          deferred.resolve({"disabledReason": result.disabledReason});
+        } else if (Object.keys(result.parameters).length === 0) {
           deferred.resolve({});
         } else {
           deferred.resolve(result.parameters);

@@ -114,7 +114,6 @@ app.controller('InputController',
                 errorService.throwError("Index out of range");
                 break;
               } else {
-                console.log($rootScope.actions);
                 var actionId = $rootScope.actions[index].id;
                 actionPresent = true;
               }
@@ -134,8 +133,13 @@ app.controller('InputController',
             if (actionPresent) {
               actions.getActionParams($rootScope.actions[index].links[0].href).then(function (paramData) {
 
+                // action is disabled
+                if (paramData.hasOwnProperty('disabledReason')) {
+                  errorService.throwError(paramData.disabledReason);
+                }
+
                 // action has no parameters, invoke
-                if (Object.keys(paramData).length === 0) {
+                else if (Object.keys(paramData).length === 0) {
                   if ($rootScope.hasOwnProperty('serviceId')) {
                     $state.go('base.serviceAction',
                       {
