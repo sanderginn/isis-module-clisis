@@ -56,7 +56,7 @@ app.controller('InputController',
               var index = parseInt(input[1]);
               if (index >= Object.keys($rootScope.services).length) {
                 errorService.throwError("Index out of range");
-                break
+                break;
               } else {
                 var serviceHref = $rootScope.services[index].href;
                 var serviceTitle = $rootScope.services[index].title;
@@ -97,6 +97,7 @@ app.controller('InputController',
           * INVOKE ACTION *
           ****************/
           case "action":
+            var index;
             // actions are only available on services and objects
             if ($state.current.name !== "base.services" && $state.current.name !== "base.object") {
               break;
@@ -106,72 +107,84 @@ app.controller('InputController',
             if (input[1] === undefined) {
               errorService.throwError("Invoking action requires a selection parameter");
               break;
+            } else if (isInt(input[1])) {
+              index = parseInt(input[1]);
+
+              if (index >= Object.keys($rootScope.actions).length) {
+                errorService.throwError("Index out of range");
+                break;
+              } else {
+                console.log($rootScope.actions);
+                var actionId = $rootScope.actions[index].id;
+                actionPresent = true;
+              }
             } else {
-              var actionParam = input[1];
+              var actionParam = input.slice(1).join(' ');
               var actionPresent = false;
 
               for (var action in $rootScope.actions) {
-                if ($rootScope.actions[action].id.toLowerCase() === actionParam) {
+                if ($rootScope.actions[action].id.toLowerCase() === actionParam.split(' ').join('')) {
+                  var actionId = $rootScope.actions[action].id;
+                  index = action;
                   actionPresent = true;
-
-                  actions.getActionParams($rootScope.actions[action].links[0].href).then(function (paramData) {
-
-                    // action has no parameters, invoke
-                    if (Object.keys(paramData).length === 0) {
-                      if ($rootScope.hasOwnProperty('serviceId')) {
-                        $state.go('base.serviceAction',
-                          {
-                            "serviceId": $rootScope.serviceId,
-                            "actionId": action,
-                            "serviceHref": $rootScope.serviceHref,
-                            "parameters": JSON.stringify({})
-                          }
-                        );
-                      } else {
-                        $state.go('base.objectAction',
-                          {
-                            "objectType": $rootScope.domainType,
-                            "objectId": $rootScope.instanceId,
-                            "actionId": action
-                          }
-                        );
-                      }
-
-                    // action has parameters, ask user for input
-                    } else {
-                      if ($rootScope.hasOwnProperty('serviceId')) {
-                        $state.go('base.serviceActionParams',
-                          {
-                            "serviceId": $rootScope.serviceId,
-                            "actionId": action,
-                            "serviceHref": $rootScope.serviceHref,
-                            "parameters": JSON.stringify(paramData)
-                          }
-                        );
-                      } else {
-                        $state.go('base.objectActionParams',
-                          {
-                            "objectType": $rootScope.domainType,
-                            "objectId": $rootScope.instanceId,
-                            "actionId": action,
-                            "parameters": JSON.stringify(paramData)
-                          }
-                        );
-                      }
-                    }
-                  });
-                  break;
                 }
               }
-
-              if (actionPresent) {
-                break;
-              } else {
-                // unknown action
-                errorService.throwError("Action \'" + actionParam + "\' not found");
-                break;
-              }
             }
+
+            if (actionPresent) {
+              actions.getActionParams($rootScope.actions[index].links[0].href).then(function (paramData) {
+
+                // action has no parameters, invoke
+                if (Object.keys(paramData).length === 0) {
+                  if ($rootScope.hasOwnProperty('serviceId')) {
+                    $state.go('base.serviceAction',
+                      {
+                        "serviceId": $rootScope.serviceId,
+                        "actionId": actionId,
+                        "serviceHref": $rootScope.serviceHref,
+                        "parameters": JSON.stringify({})
+                      }
+                    );
+                  } else {
+                    $state.go('base.objectAction',
+                      {
+                        "objectType": $rootScope.domainType,
+                        "objectId": $rootScope.instanceId,
+                        "actionId": actionId
+                      }
+                    );
+                  }
+
+                // action has parameters, ask user for input
+                } else {
+                  if ($rootScope.hasOwnProperty('serviceId')) {
+                    $state.go('base.serviceActionParams',
+                      {
+                        "serviceId": $rootScope.serviceId,
+                        "actionId": actionId,
+                        "serviceHref": $rootScope.serviceHref,
+                        "parameters": JSON.stringify(paramData)
+                      }
+                    );
+                  } else {
+                    $state.go('base.objectActionParams',
+                      {
+                        "objectType": $rootScope.domainType,
+                        "objectId": $rootScope.instanceId,
+                        "actionId": actionId,
+                        "parameters": JSON.stringify(paramData)
+                      }
+                    );
+                  }
+                }
+              });
+              break;
+            } else {
+              // unknown action
+              errorService.throwError("Action \'" + actionParam + "\' not found");
+              break;
+            }
+
 
           /*****************
           * FILL OUT FIELD *

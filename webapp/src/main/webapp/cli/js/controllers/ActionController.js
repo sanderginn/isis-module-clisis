@@ -10,7 +10,6 @@ app.controller('ActionController',
         parentType = "object"
       }
 
-      console.log($stateParams);
       var actionParams = JSON.parse($stateParams.parameters);
 
       if (parentType === "service") {

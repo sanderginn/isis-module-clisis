@@ -6,7 +6,11 @@ app.controller('ServiceController',
     // service title and actions
     actions.getActions($stateParams.serviceHref).then(function(data) {
       $scope.title = data.data.title;
-      $scope.actions = data.data.members;
+      $scope.actions = [];
+      for (var action in data.data.members) {
+        $scope.actions.push(data.data.members[action]);
+      }
+
       $scope.serviceId = $stateParams.serviceId;
       $scope.serviceHref = $stateParams.serviceHref;
       $rootScope.actions = angular.copy($scope.actions);

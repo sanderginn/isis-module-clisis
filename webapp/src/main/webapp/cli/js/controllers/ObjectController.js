@@ -12,7 +12,7 @@ app.controller('ObjectController',
 
         $scope.properties = {};
         $scope.collections = {};
-        $scope.actions = {};
+        $scope.actions = [];
 
         var collectionPromises = [];
 
@@ -22,7 +22,7 @@ app.controller('ObjectController',
           } else if (objectResponse.members[member].memberType === "collection") {
             collectionPromises.push(objects.getCollection(objectResponse.members[member].links[0].href));
           } else if (objectResponse.members[member].memberType === "action") {
-            $scope.actions[member] = objectResponse.members[member];
+            $scope.actions.push(objectResponse.members[member]);
           } else {
             errorService.throwError("Unknown memberType " + member.memberType);
           }
