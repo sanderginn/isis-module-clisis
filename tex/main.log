@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.3)  30 MAY 2016 20:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.3)  30 MAY 2016 22:33
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1089,7 +1089,7 @@ Package textpos Warning: environment textblock* not in vertical mode.
 (textpos)                or printable material appearing before it.
 (textpos)                Alignment may work out wrongly. on input line 50.
 
-<figures/uva.jpg, id=167, 1082.0425pt x 120.45pt>
+<figures/uva.jpg, id=163, 1082.0425pt x 120.45pt>
 File: figures/uva.jpg Graphic file (type jpg)
  <use figures/uva.jpg>
 Package pdftex.def Info: figures/uva.jpg used on input line 50.
@@ -1152,7 +1152,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
-<figures/simpleobjectui.png, id=364, 785.93625pt x 399.4925pt>
+<figures/simpleobjectui.png, id=360, 785.93625pt x 399.4925pt>
 File: figures/simpleobjectui.png Graphic file (type png)
 
 <use figures/simpleobjectui.png>
@@ -1169,30 +1169,25 @@ Chapter 3.
 
 ] [14
 
-]
-
-LaTeX Warning: Reference `subsection:userinterfacemigrationinhistory' on page 1
-5 undefined on input line 7.
-
-) (./implementation.tex [15]
+]) (./implementation.tex [15] [16]
 Chapter 4.
-[16
+[17
 
-]) (./evaluation.tex [17
+] [18
 
-]
+]) (./evaluation.tex [19]
 Chapter 5.
-[18
+[20
 
-]) (./conclusion.tex [19
+]) (./conclusion.tex [21
 
 ]
 Chapter 6.
-[20
+[22
 
-]) (./main.bbl [21
+]) (./main.bbl [23
 
-] [22
+] [24
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 19--23
@@ -1203,27 +1198,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--23
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ” in font cmr10!
+[25
 
-Underfull \hbox (badness 3492) in paragraph at lines 109--114
+]
+Underfull \hbox (badness 3492) in paragraph at lines 128--133
 []\OT1/cmr/m/n/10 Leff, A. and Ray-field, J. T. (2001).  Web-application de-vel
 -op-ment us-ing the
  []
 
-[23
-
-]) (./main.gls) (./main.acr [24] [25
+) (./main.gls) (./main.acr [26] [27
 
 
-] [26
+] [28
 
-]) (./appendices.tex [27]
+]) (./appendices.tex [29]
 Appendix A.
-[28
-
-] [29
-
-]
-Appendix B.
 [30
 
 ])
@@ -1236,18 +1225,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: ECDA464AC904005A45D5E6A0CD96F713;2475.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: 86D3F6F0AC2EB2D9814B0F606C73EEC4;2420.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
  ) 
 Here is how much of TeX's memory you used:
- 23690 strings out of 493315
- 428286 string characters out of 6137905
- 586805 words of memory out of 5000000
- 26491 multiletter control sequences out of 15000+600000
+ 23702 strings out of 493315
+ 428558 string characters out of 6137905
+ 586883 words of memory out of 5000000
+ 26500 multiletter control sequences out of 15000+600000
  10077 words of font info for 37 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  59i,10n,94p,1488b,871s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1264,10 +1249,10 @@ exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on main.pdf (33 pages, 321664 bytes).
+Output written on main.pdf (33 pages, 322751 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
- 519 compressed objects within 6 object streams
- 121 named destinations out of 1000 (max. 500000)
- 343 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 585 PDF objects out of 1000 (max. 8388607)
+ 527 compressed objects within 6 object streams
+ 124 named destinations out of 1000 (max. 500000)
+ 335 words of extra memory for PDF output out of 10000 (max. 10000000)
 

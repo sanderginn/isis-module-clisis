@@ -16,45 +16,45 @@ Warning--empty year in Secti81:online
 Warning--empty year in Sprin96:online
 Warning--empty year in WebCo83:online
 Warning--empty journal in boyd1990graphical
-You've used 31 entries,
+You've used 35 entries,
             1940 wiz_defined-function locations,
-            644 strings with 8713 characters,
-and the built_in function-call counts, 11153 in all, are:
-= -- 1138
-> -- 315
-< -- 26
-+ -- 110
-- -- 100
-* -- 886
-:= -- 1842
-add.period$ -- 99
-call.type$ -- 31
-change.case$ -- 198
-chr.to.int$ -- 31
-cite$ -- 50
-duplicate$ -- 496
-empty$ -- 849
-format.name$ -- 140
-if$ -- 2251
+            663 strings with 9354 characters,
+and the built_in function-call counts, 12850 in all, are:
+= -- 1314
+> -- 365
+< -- 31
++ -- 126
+- -- 116
+* -- 1010
+:= -- 2114
+add.period$ -- 113
+call.type$ -- 35
+change.case$ -- 225
+chr.to.int$ -- 35
+cite$ -- 54
+duplicate$ -- 580
+empty$ -- 979
+format.name$ -- 162
+if$ -- 2609
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 29
-newline$ -- 157
-num.names$ -- 75
-pop$ -- 212
+missing$ -- 32
+newline$ -- 177
+num.names$ -- 87
+pop$ -- 247
 preamble$ -- 1
-purify$ -- 204
+purify$ -- 232
 quote$ -- 0
-skip$ -- 366
+skip$ -- 428
 stack$ -- 0
-substring$ -- 757
-swap$ -- 113
-text.length$ -- 8
+substring$ -- 869
+swap$ -- 139
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 176
+type$ -- 200
 warning$ -- 13
-while$ -- 89
+while$ -- 103
 width$ -- 0
-write$ -- 390
+write$ -- 443
 (There were 13 warnings)

@@ -1,10 +1,12 @@
 \chapter{Methods}
 \label{chapter:methods}
-We have selected several methods for implementing the new interface. First, section~\ref{section:userinterfacemigration} will describe the method applied to the existing interface in order to form a theoretical basis for the implementation. Section~\ref{section:experiments_methods} then outlines what experiment methods are used to evaluate the interface.
+We have selected several methods for implementing the new interface. First, section~\ref{section:userinterfaceadaptation} will describe the method applied to the existing interface in order to form a theoretical basis for the implementation. Section~\ref{section:experiments_methods} then outlines what experiment methods are used to evaluate the interface.
 
-\section{User interface migration}
-\label{section:userinterfacemigration}
+\section{User interface adaptation}
+\label{section:userinterfaceadaptation}
+Adapting an existing user interface to a new version has been described extensively\cite{classen1997cui, csaba1997experience, kong2000legacy}, but virtually all research that concretely describes the legacy and novel user interface aims at implementing a 'next generation' user interface, whereas our goal could be interpreted as moving back one generation, as we will remove any visual aspects from the existing interface. Therefore, we have opted to apply a more abstract method of adapting a user interface.
 
+In \textit{Issues in User Interface Migration}, Moore describes migration as \textit{"the activity of moving software away from its original environment, including hardware platform, operating environment or implementation language to a new environment"}\cite{moore1993issues}. Although not all of these characteristics apply to our situation, the article proposes a method for systematic user interface migration that fits our purpose. The migration process is partitioned in three stages which are each described in subsections~\ref{subsection:detection},~\ref{subsection:representation} and~\ref{subsection:transformation}.
 
 \subsection{Detection}
 \label{subsection:detection}

@@ -35,6 +35,19 @@ Web content accessibility guidelines (wcag) 2.0.
 Boyd, L.~H. et~al. (1990).
 \newblock The graphical user interface crisis: Danger and opportunity.
 
+\bibitem[\protect\astroncite{Classen et~al.}{1997}]{classen1997cui}
+Classen, I., Hennig, K., Mohr, I., and Schulz, M. (1997).
+\newblock Cui to gui migration: Static analysis of character-based panels.
+\newblock In {\em Software Maintenance and Reengineering, 1997. EUROMICRO 97.,
+  First Euromicro Conference on}, pages 144--149. IEEE.
+
+\bibitem[\protect\astroncite{Csaba}{1997}]{csaba1997experience}
+Csaba, L. (1997).
+\newblock Experience with user interface reengineering: Transferring dos panels
+  to windows.
+\newblock In {\em Software Maintenance and Reengineering, 1997. EUROMICRO 97.,
+  First Euromicro Conference on}, pages 150--155. IEEE.
+
 \bibitem[\protect\astroncite{Edwards et~al.}{1994}]{edwards1994providing}
 Edwards, W.~K., Mynatt, E.~D., and Stockton, K. (1994).
 \newblock Providing access to graphical user interfaces—not graphical
@@ -85,6 +98,12 @@ Kaye, J.~N. (2001).
 \newblock {\em Symbolic olfactory display}.
 \newblock PhD thesis, Citeseer.
 
+\bibitem[\protect\astroncite{Kong}{2000}]{kong2000legacy}
+Kong, L. (2000).
+\newblock {\em Legacy interface migration: From generic ascii UIs to
+  task-centered GUIs}.
+\newblock PhD thesis, University of Alberta.
+
 \bibitem[\protect\astroncite{Kortum}{2008}]{kortum2008hci}
 Kortum, P. (2008).
 \newblock {\em HCI beyond the GUI: Design for haptic, speech, olfactory, and
@@ -124,6 +143,12 @@ Miller, G.~A. (1956).
 \newblock The magical number seven, plus or minus two: some limits on our
   capacity for processing information.
 \newblock {\em Psychological review}, 63(2):81.
+
+\bibitem[\protect\astroncite{Moore and Rugaber}{1993}]{moore1993issues}
+Moore, M.~M. and Rugaber, S. (1993).
+\newblock Issues in user interface migration.
+\newblock In {\em Proceedings of the Third Software Engineering Research
+  Forum}.
 
 \bibitem[\protect\astroncite{Myers}{1998}]{myers1998brief}
 Myers, B.~A. (1998).
