@@ -23,6 +23,7 @@ app.controller('InputController',
         if ($scope.master !== undefined && $scope.master !== "") {
           speechService.cancelSpeech();
           speechService.speak("Input: " + $scope.master);
+          logActivity($scope.master);
           evaluateInput();
         }
       };
@@ -441,10 +442,6 @@ app.controller('InputController',
             $state.go("base.login");
             break;
 
-          case "listen":
-            speechService.listen();
-            break;
-
           /**********************
           * ENTER WITHOUT INPUT *
           **********************/
@@ -490,6 +487,7 @@ app.controller('InputController',
       }, function(hasPending) {
         if (!hasPending) {
           $scope.httpPending = false;
+          $rootScope.$broadcast('$noOutputSpeechEvent');
           $timeout(function() {
             var element = document.getElementById('clisis-input-field');
             element.focus();

@@ -34,9 +34,12 @@
     (Controller) -| node[fill=white, near end]{update} (Model);
     
   \draw[->, rounded corners=5pt]
-    (View) -| node[fill=white, near end, left, xshift=10pt]{user action} ($(Controller.south west)!0.5!(Controller.south)$);
+    (View.north east) -| node[fill=white, near end]{user action} (Controller.south);
+    
+  \draw[->,]
+  	(View.south east) -- node[fill=white]{get changed state} (Model.south west);
   
   \draw[->, rounded corners=5pt]
-    (Model) -| node[fill=white, near end, right, xshift=-10pt, yshift=-0.5pt]{notify} ($(Controller.south east)!0.5!(Controller.south)$);
+    (Model) -- node[fill=white, yshift=-0.5pt]{notify} (View.east);
 
 \end{tikzpicture}

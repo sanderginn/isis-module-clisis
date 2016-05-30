@@ -1,138 +1,187 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{}
 
-\bibitem{inter87:online}
-``interface, n. : Oxford english dictionary.''
-  \url{http://www.oed.com/view/Entry/97747?result=1&rskey=X7p96Q&}.
+\bibitem[\protect\astroncite{Apa}{}]{Apach60:online}
+Apache isis.
+\newblock \url{http://isis.apache.org/}.
 \newblock (Accessed on 05/16/2016).
 
-\bibitem{nielsen1994usability}
-J.~Nielsen, {\em Usability engineering}.
-\newblock Elsevier, 1994.
+\bibitem[\protect\astroncite{Est}{}]{Estat40:online}
+Estatio.
+\newblock \url{http://www.estatio.org/}.
+\newblock (Accessed on 05/18/2016).
 
-\bibitem{paap1986optimal}
-K.~R. Paap and R.~J. Roske-Hofstrand, ``The optimal number of menu options per
-  panel,'' {\em Human Factors: The Journal of the Human Factors and Ergonomics
-  Society}, vol.~28, no.~4, pp.~377--385, 1986.
+\bibitem[\protect\astroncite{Ful}{}]{Fulfi2:online}
+Fulfilling the promise of mvc.
+\newblock \url{https://www.infoq.com/articles/Nacked-MVC}.
+\newblock (Accessed on 05/17/2016).
 
-\bibitem{landauer1985selection}
-T.~K. Landauer and D.~Nachbar, ``Selection from alphabetic and numeric menu
-  trees using a touch screen: breadth, depth, and width,'' {\em ACM SIGCHI
-  Bulletin}, vol.~16, no.~4, pp.~73--78, 1985.
-
-\bibitem{fisher1990optimal}
-D.~L. Fisher, E.~J. Yungkurth, and S.~M. Moss, ``Optimal menu hierarchy design:
-  syntax and semantics,'' {\em Human Factors: The Journal of the Human Factors
-  and Ergonomics Society}, vol.~32, no.~6, pp.~665--683, 1990.
-
-\bibitem{miller1956magical}
-G.~A. Miller, ``The magical number seven, plus or minus two: some limits on our
-  capacity for processing information.,'' {\em Psychological review}, vol.~63,
-  no.~2, p.~81, 1956.
-
-\bibitem{boyd1990graphical}
-L.~H. Boyd {\em et~al.}, ``The graphical user interface crisis: Danger and
-  opportunity.,'' 1990.
-
-\bibitem{Secti81:online}
-``Section 508 of the rehabilitation act.''
+\bibitem[\protect\astroncite{Sec}{}]{Secti81:online}
+Section 508 of the rehabilitation act.
+\newblock
   \url{http://www.section508.gov/section-508-of-the-rehabilitation-act}.
 \newblock (Accessed on 05/16/2016).
 
-\bibitem{WebCo83:online}
-``Web content accessibility guidelines (wcag) 2.0.''
-  \url{https://www.w3.org/TR/WCAG20/}.
+\bibitem[\protect\astroncite{Spr}{}]{Sprin96:online}
+Spring.
+\newblock \url{https://spring.io/}.
 \newblock (Accessed on 05/16/2016).
 
-\bibitem{leuthold2008beyond}
-S.~Leuthold, J.~A. Bargas-Avila, and K.~Opwis, ``Beyond web content
-  accessibility guidelines: Design of enhanced text user interfaces for blind
-  internet users,'' {\em International Journal of Human-Computer Studies},
-  vol.~66, no.~4, pp.~257--270, 2008.
-
-\bibitem{Apach60:online}
-``Apache isis.'' \url{http://isis.apache.org/}.
+\bibitem[\protect\astroncite{Web}{}]{WebCo83:online}
+Web content accessibility guidelines (wcag) 2.0.
+\newblock \url{https://www.w3.org/TR/WCAG20/}.
 \newblock (Accessed on 05/16/2016).
 
-\bibitem{myers1998brief}
-B.~A. Myers, ``A brief history of human-computer interaction technology,'' {\em
-  interactions}, vol.~5, no.~2, pp.~44--54, 1998.
+\bibitem[\protect\astroncite{Boyd et~al.}{1990}]{boyd1990graphical}
+Boyd, L.~H. et~al. (1990).
+\newblock The graphical user interface crisis: Danger and opportunity.
 
-\bibitem{Sprin96:online}
-``Spring.'' \url{https://spring.io/}.
-\newblock (Accessed on 05/16/2016).
+\bibitem[\protect\astroncite{Edwards et~al.}{1994}]{edwards1994providing}
+Edwards, W.~K., Mynatt, E.~D., and Stockton, K. (1994).
+\newblock Providing access to graphical user interfaces—not graphical
+  screens.
+\newblock In {\em Proceedings of the first annual ACM conference on Assistive
+  technologies}, pages 47--54. ACM.
 
-\bibitem{leff2001web}
-A.~Leff and J.~T. Rayfield, ``Web-application development using the
-  model/view/controller design pattern,'' in {\em Enterprise Distributed Object
-  Computing Conference, 2001. EDOC'01. Proceedings. Fifth IEEE International},
-  pp.~118--127, IEEE, 2001.
+\bibitem[\protect\astroncite{Emiliani and
+  Stephanidis}{2000}]{emiliani2000adaptations}
+Emiliani, P.~L. and Stephanidis, C. (2000).
+\newblock From adaptations to user interfaces for all.
+\newblock In {\em 6th ERCIM workshop CNR-IROE, Florence, Italy}.
 
-\bibitem{Fulfi2:online}
-``Fulfilling the promise of mvc.''
-  \url{https://www.infoq.com/articles/Nacked-MVC}.
-\newblock (Accessed on 05/17/2016).
-
-\bibitem{Estat40:online}
-``Estatio.'' \url{http://www.estatio.org/}.
-\newblock (Accessed on 05/18/2016).
-
-\bibitem{Apach4:online}
-``Apache isis add-ons.'' \url{http://www.isisaddons.org/}.
-\newblock (Accessed on 05/18/2016).
-
-\bibitem{linberg1999software}
-K.~R. Linberg, ``Software developer perceptions about software project failure:
-  a case study,'' {\em Journal of Systems and Software}, vol.~49, no.~2,
-  pp.~177--192, 1999.
-
-\bibitem{rubinstein2007standish}
-D.~Rubinstein, ``Standish group report: There’s less development chaos
-  today,'' {\em Software Development Times}, vol.~1, 2007.
-
-\bibitem{keil2000software}
-M.~Keil, J.~Mann, and A.~Rai, ``Why software projects escalate: An empirical
-  analysis and test of four theoretical models,'' {\em Mis Quarterly},
-  pp.~631--664, 2000.
-
-\bibitem{evans2004domain}
-E.~Evans, {\em Domain-driven design: tackling complexity in the heart of
+\bibitem[\protect\astroncite{Evans}{2004}]{evans2004domain}
+Evans, E. (2004).
+\newblock {\em Domain-driven design: tackling complexity in the heart of
   software}.
-\newblock Addison-Wesley Professional, 2004.
+\newblock Addison-Wesley Professional.
 
-\bibitem{pawson2002naked}
-R.~Pawson and R.~Matthews, ``Naked objects,'' in {\em Companion of the 17th
-  annual ACM SIGPLAN conference on Object-oriented programming, systems,
-  languages, and applications}, pp.~36--37, ACM, 2002.
+\bibitem[\protect\astroncite{Fisher et~al.}{1990}]{fisher1990optimal}
+Fisher, D.~L., Yungkurth, E.~J., and Moss, S.~M. (1990).
+\newblock Optimal menu hierarchy design: syntax and semantics.
+\newblock {\em Human Factors: The Journal of the Human Factors and Ergonomics
+  Society}, 32(6):665--683.
 
-\bibitem{merlo1995reengineering}
-E.~Merlo, P.-Y. Gagn{\'e}, J.-F. Girard, K.~Kontogiannis, L.~Hendren,
-  P.~Panangaden, and R.~De~Mori, ``Reengineering user interfaces,'' {\em IEEE
-  Software}, vol.~12, no.~1, p.~64, 1995.
+\bibitem[\protect\astroncite{Frauenberger
+  et~al.}{2004}]{frauenberger2004spatial}
+Frauenberger, C., Putz, V., and Holdrich, R. (2004).
+\newblock Spatial auditory displays-a study on the use of virtual audio
+  environments as interfaces for users with visual disabilities.
+\newblock {\em DAFx04 Proceedings}, pages 5--8.
 
-\bibitem{moore1994knowledge}
-M.~Moore, S.~Rugaber, and P.~Seaver, ``Knowledge-based user interface
-  migration,'' in {\em Software Maintenance, 1994. Proceedings., International
-  Conference on}, pp.~72--79, IEEE, 1994.
+\bibitem[\protect\astroncite{Galitz}{2007}]{galitz2007essential}
+Galitz, W.~O. (2007).
+\newblock {\em The essential guide to user interface design: an introduction to
+  GUI design principles and techniques}.
+\newblock John Wiley \& Sons.
 
-\bibitem{de1997migrating}
-A.~De~Lucia, G.~Lucca, A.~R. Fasolino, P.~Guerra, and S.~Petruzzelli,
-  ``Migrating legacy systems towards object-oriented platforms,'' in {\em
-  Software Maintenance, 1997. Proceedings., International Conference on},
-  pp.~122--129, IEEE, 1997.
+\bibitem[\protect\astroncite{Kane et~al.}{2008}]{kane2008slide}
+Kane, S.~K., Bigham, J.~P., and Wobbrock, J.~O. (2008).
+\newblock Slide rule: making mobile touch screens accessible to blind people
+  using multi-touch interaction techniques.
+\newblock In {\em Proceedings of the 10th international ACM SIGACCESS
+  conference on Computers and accessibility}, pages 73--80. ACM.
 
-\bibitem{TypeL20:online}
-``Type less. talk more. make skype calls directly from your inbox.''
-  \url{http://blogs.skype.com/2013/04/29/type-less-talk-more-make-skype-calls-directly-from-your-outlook-com-inbox/}.
-\newblock (Accessed on 05/21/2016).
+\bibitem[\protect\astroncite{Kaye}{2001}]{kaye2001symbolic}
+Kaye, J.~N. (2001).
+\newblock {\em Symbolic olfactory display}.
+\newblock PhD thesis, Citeseer.
 
-\bibitem{aversano2001migrating}
-L.~Aversano, G.~Canfora, A.~Cimitile, and A.~De~Lucia, ``Migrating legacy
-  systems to the web: an experience report,'' in {\em Software Maintenance and
-  Reengineering, 2001. Fifth European Conference on}, pp.~148--157, IEEE, 2001.
+\bibitem[\protect\astroncite{Kortum}{2008}]{kortum2008hci}
+Kortum, P. (2008).
+\newblock {\em HCI beyond the GUI: Design for haptic, speech, olfactory, and
+  other nontraditional interfaces}.
+\newblock Morgan Kaufmann.
 
-\bibitem{stroulia2003user}
-E.~Stroulia, M.~El-Ramly, P.~Iglinski, and P.~Sorenson, ``User interface
-  reverse engineering in support of interface migration to the web,'' {\em
-  Automated Software Engineering}, vol.~10, no.~3, pp.~271--301, 2003.
+\bibitem[\protect\astroncite{Landauer and
+  Nachbar}{1985}]{landauer1985selection}
+Landauer, T.~K. and Nachbar, D. (1985).
+\newblock Selection from alphabetic and numeric menu trees using a touch
+  screen: breadth, depth, and width.
+\newblock {\em ACM SIGCHI Bulletin}, 16(4):73--78.
+
+\bibitem[\protect\astroncite{Lazar et~al.}{2007}]{lazar2007frustrates}
+Lazar, J., Allen, A., Kleinman, J., and Malarkey, C. (2007).
+\newblock What frustrates screen reader users on the web: A study of 100 blind
+  users.
+\newblock {\em International Journal of human-computer interaction},
+  22(3):247--269.
+
+\bibitem[\protect\astroncite{Leff and Rayfield}{2001}]{leff2001web}
+Leff, A. and Rayfield, J.~T. (2001).
+\newblock Web-application development using the model/view/controller design
+  pattern.
+\newblock In {\em Enterprise Distributed Object Computing Conference, 2001.
+  EDOC'01. Proceedings. Fifth IEEE International}, pages 118--127. IEEE.
+
+\bibitem[\protect\astroncite{Leuthold et~al.}{2008}]{leuthold2008beyond}
+Leuthold, S., Bargas-Avila, J.~A., and Opwis, K. (2008).
+\newblock Beyond web content accessibility guidelines: Design of enhanced text
+  user interfaces for blind internet users.
+\newblock {\em International Journal of Human-Computer Studies},
+  66(4):257--270.
+
+\bibitem[\protect\astroncite{Miller}{1956}]{miller1956magical}
+Miller, G.~A. (1956).
+\newblock The magical number seven, plus or minus two: some limits on our
+  capacity for processing information.
+\newblock {\em Psychological review}, 63(2):81.
+
+\bibitem[\protect\astroncite{Myers}{1998}]{myers1998brief}
+Myers, B.~A. (1998).
+\newblock A brief history of human-computer interaction technology.
+\newblock {\em interactions}, 5(2):44--54.
+
+\bibitem[\protect\astroncite{Mynatt}{1995}]{mynatt1995transforming}
+Mynatt, E.~D. (1995).
+\newblock Transforming graphical interfaces into auditory interfaces.
+\newblock In {\em Conference companion on Human factors in computing systems},
+  pages 67--68. ACM.
+
+\bibitem[\protect\astroncite{Nielsen}{1994}]{nielsen1994usability}
+Nielsen, J. (1994).
+\newblock {\em Usability engineering}.
+\newblock Elsevier.
+
+\bibitem[\protect\astroncite{Paap and Roske-Hofstrand}{1986}]{paap1986optimal}
+Paap, K.~R. and Roske-Hofstrand, R.~J. (1986).
+\newblock The optimal number of menu options per panel.
+\newblock {\em Human Factors: The Journal of the Human Factors and Ergonomics
+  Society}, 28(4):377--385.
+
+\bibitem[\protect\astroncite{Pawson and Matthews}{2002}]{pawson2002naked}
+Pawson, R. and Matthews, R. (2002).
+\newblock Naked objects.
+\newblock In {\em Companion of the 17th annual ACM SIGPLAN conference on
+  Object-oriented programming, systems, languages, and applications}, pages
+  36--37. ACM.
+
+\bibitem[\protect\astroncite{Poll}{1996}]{poll1996visualising}
+Poll, L. H.~D. (1996).
+\newblock {\em Visualising Graphical User Interfaces for Blindusers}.
+\newblock Eindhoven University.
+
+\bibitem[\protect\astroncite{Reenskaug}{2007}]{reenskaug2007programming}
+Reenskaug, T. (2007).
+\newblock Programming with roles and classes: The babyuml approach.
+\newblock {\em A chapter in Computer Software Engineering Research}.
+
+\bibitem[\protect\astroncite{Savidis and
+  Stephanidis}{2004}]{savidis2004unified}
+Savidis, A. and Stephanidis, C. (2004).
+\newblock Unified user interface design: designing universally accessible
+  interactions.
+\newblock {\em Interacting with computers}, 16(2):243--270.
+
+\bibitem[\protect\astroncite{Yanagida et~al.}{2004}]{yanagida2004projection}
+Yanagida, Y., Kawato, S., Noma, H., Tomono, A., and Tesutani, N. (2004).
+\newblock Projection based olfactory display with nose tracking.
+\newblock In {\em Virtual Reality, 2004. Proceedings. IEEE}, pages 43--50.
+  IEEE.
+
+\bibitem[\protect\astroncite{Yatani and Truong}{2009}]{yatani2009semfeel}
+Yatani, K. and Truong, K.~N. (2009).
+\newblock Semfeel: a user interface with semantic tactile feedback for mobile
+  touch-screen devices.
+\newblock In {\em Proceedings of the 22nd annual ACM symposium on User
+  interface software and technology}, pages 111--120. ACM.
 
 \end{thebibliography}

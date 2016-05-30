@@ -6,12 +6,15 @@ app.controller('ActionParamController',
       for (var param in params) {
         params[param].value = null;
         if (params[param].hasOwnProperty('choices')) {
-          var choicesText = "<ol start='0'>";
+          var choicesText = "";
+          var index = 0;
           for (var choice in params[param].choices) {
             if (typeof params[param].choices[choice] === "object") {
-              choicesText += "<li>" + params[param].choices[choice].title + "</li>";
+              choicesText += "<div class='clisis-param-choices'>" + index + ": " + params[param].choices[choice].title + "<span class='pause'>: </span></div>";
+              index++;
             } else {
-              choicesText += "<li>" + params[param].choices[choice] + "</li>";
+              choicesText += "<div class='clisis-param-choices'>" + index + ": " + params[param].choices[choice] + "<span class='pause'>: </span></div>";
+              index++;
             }
           }
           choicesText += "</ol>";

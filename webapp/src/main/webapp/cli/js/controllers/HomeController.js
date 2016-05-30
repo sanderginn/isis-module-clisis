@@ -1,12 +1,6 @@
 app.controller('HomeController',
   ['$scope', 'services', '$rootScope', 'speechService', '$timeout', 'actions', '$q', '$http', '$state',
     function ($scope, services, $rootScope, speechService, $timeout, actions, $q, $http, $state) {
-      if ($state.current.name === 'base.noOutput') {
-        $timeout(function () {
-          speechService.speak("Output: " + document.getElementById("clisis-output").innerText);
-        }, 0);
-      }
-
       if ($rootScope.services === undefined && $http.pendingRequests.length === 0) {
         services.getServices().then(function (data) {
           var actionPromises = [];
@@ -37,4 +31,12 @@ app.controller('HomeController',
           }, 0);
         }
       });
+
+      $scope.$on('$noOutputSpeechEvent', function() {
+        if ($state.current.name === 'base.noOutput') {
+          $timeout(function () {
+            speechService.speak("Output: " + document.getElementById("clisis-output").innerText);
+          }, 0);
+        }
+      })
     }]);

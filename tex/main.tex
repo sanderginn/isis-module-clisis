@@ -5,6 +5,7 @@
 \usepackage{subcaption} % side by side subfigures
 \usepackage{newclude} % include without page break
 \usepackage{minted} % code listings
+\usepackage[numbers]{natbib}
 \newminted{java}{fontsize=\tiny, frame=lines, bgcolor=LightGray!18}
 
 \usepackage{tikz}
@@ -35,6 +36,7 @@
 \newacronym{mvc}{MVC}{model-view-controller}
 \newacronym{rest}{REST}{representational state transfer}
 \newacronym{ddd}{DDD}{domain-driven design}
+\newacronym{no}{NO}{Naked Objects}
 
 % Title Page
 \title{CLIsis: An Interface for Visually Impaired Users of Apache Isis Applications}
@@ -58,8 +60,8 @@ This will be the abstract.
 \input{implementation}
 \input{evaluation}
 \input{conclusion}
+\bibliographystyle{apa}
 \bibliography{bibliography/bibliography}
-\bibliographystyle{ieeetr}
 %\nocite{*}
 
 \printglossaries

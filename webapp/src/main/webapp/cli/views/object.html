@@ -3,19 +3,19 @@
 <div id="object-properties" ng-show="showProperties">
     <b>Properties:</b>
     <div ng-repeat="property in properties">
-        <span ng-if="typeOf(property.value) != 'object'">{{$index}}: {{property.id | splitToLowerCase}}: {{property.value}}<span class="pause">:</span></span>
-        <span ng-if="typeOf(property.value) == 'object'">{{$index}}: {{property.id | splitToLowerCase}}: {{property.value.title}}<span class="pause">:</span></span>
+        <span ng-if="typeOf(property.value) != 'object'">{{$index}}: {{property.id | splitToLowerCase}}: {{property.value}}<span class="pause">: </span></span>
+        <span ng-if="typeOf(property.value) == 'object'">{{$index}}: {{property.id | splitToLowerCase}}: {{property.value.title}}<span class="pause">: </span></span>
     </div>
 </div>
 
 <div id="object-collections" ng-show="showCollections">
     <b>Collections:</b>
     <div ng-repeat="collection in collections">
-        <div ng-repeat="(key, value) in collection">{{$parent.$index}}: {{key | splitToLowerCase}} (items: {{value.length}})<span class="pause">:</span></div>
+        <div ng-repeat="(key, value) in collection">{{$parent.$index}}: {{key | splitToLowerCase}} (items: {{value.length}})<span class="pause">: </span></div>
     </div>
 </div>
 
 <div id="object-actions" ng-show="showActions">
     <b>Actions:</b>
-    <div ng-repeat="(action, data) in actions">{{$index}}: {{data.id}}<span class="pause">:</span></div>
+    <div ng-repeat="(action, data) in actions">{{$index}}: {{data.id | splitToLowerCase}}<span class="pause">: </span></div>
 </div>
