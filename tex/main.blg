@@ -9,52 +9,54 @@ Warning--to sort, need author or key in Apach60:online
 Warning--to sort, need author or key in Sprin96:online
 Warning--to sort, need author or key in Fulfi2:online
 Warning--to sort, need author or key in Estat40:online
+Warning--to sort, need author or key in Docum42:online
 Warning--empty year in Apach60:online
+Warning--empty year in Docum42:online
 Warning--empty year in Estat40:online
 Warning--empty year in Fulfi2:online
 Warning--empty year in Secti81:online
 Warning--empty year in Sprin96:online
 Warning--empty year in WebCo83:online
 Warning--empty journal in boyd1990graphical
-You've used 35 entries,
+You've used 43 entries,
             1940 wiz_defined-function locations,
-            663 strings with 9354 characters,
-and the built_in function-call counts, 12850 in all, are:
-= -- 1314
-> -- 365
-< -- 31
-+ -- 126
-- -- 116
-* -- 1010
-:= -- 2114
-add.period$ -- 113
-call.type$ -- 35
-change.case$ -- 225
-chr.to.int$ -- 35
-cite$ -- 54
-duplicate$ -- 580
-empty$ -- 979
-format.name$ -- 162
-if$ -- 2609
+            705 strings with 10605 characters,
+and the built_in function-call counts, 15937 in all, are:
+= -- 1640
+> -- 432
+< -- 42
++ -- 150
+- -- 136
+* -- 1250
+:= -- 2604
+add.period$ -- 140
+call.type$ -- 43
+change.case$ -- 275
+chr.to.int$ -- 43
+cite$ -- 65
+duplicate$ -- 724
+empty$ -- 1222
+format.name$ -- 195
+if$ -- 3250
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 32
-newline$ -- 177
-num.names$ -- 87
-pop$ -- 247
+missing$ -- 39
+newline$ -- 217
+num.names$ -- 108
+pop$ -- 293
 preamble$ -- 1
-purify$ -- 232
+purify$ -- 282
 quote$ -- 0
-skip$ -- 428
+skip$ -- 541
 stack$ -- 0
-substring$ -- 869
-swap$ -- 139
-text.length$ -- 10
+substring$ -- 1109
+swap$ -- 180
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 200
-warning$ -- 13
-while$ -- 103
+type$ -- 248
+warning$ -- 15
+while$ -- 130
 width$ -- 0
-write$ -- 443
-(There were 13 warnings)
+write$ -- 548
+(There were 15 warnings)

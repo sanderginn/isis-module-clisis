@@ -4,7 +4,6 @@
 
 
 \def\supervisors#1{\gdef\@supervisors{#1}}
-\def\signedby#1{\gdef\@signedby{#1}}
 
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
@@ -30,7 +29,7 @@
 	\hspace*{1em} 	% a fake elment on the page (else texpos absolute option
 			% doesn't work)
 	\begin{textblock*}{10cm}(6cm,4cm)
-		\noindent\large\scshape Bachelor Informatica\\[2em]
+		\noindent\large\scshape Bachelor Computer Science\\[2em]
 		\includegraphics[height=1cm]{figures/uva}
 		%\Large Universiteit van Amsterdam
 	\end{textblock*}
@@ -44,7 +43,6 @@
 		\noindent\sffamily
 		\begin{description}
 		\item[\sffamily Supervisor(s):] \@supervisors
-		\item[\sffamily Signed:] \@signedby
 		\end{description}
 	\end{textblock*}
 	\textblockcolor{LightGray}

@@ -10,28 +10,201 @@ In \textit{Issues in User Interface Migration}, Moore describes migration as \te
 
 \subsection{Detection}
 \label{subsection:detection}
-Step one of the migration method.
+The first stage of the migration process is the detection stage. The goal of this stage is to identify user interface functionality in the existing code through analysis. Moore lists several techniques that can be applied to perform the analysis:
+
+\begin{enumerate}
+	\item \label{item:patternmatching} Pattern matching of an abstract syntax tree that is created by parsing source code
+	\item \label{item:syntacticanalysis} Syntactic/semantic analysis of the source code against predefined keywords that identify user interaction 
+	\item \label{item:manualdetection} Manual detection of the source code 
+\end{enumerate}
+
+The article rightfully stresses issues that might arise when utilising technique~\ref{item:manualdetection}, such as the likelihood of introducing errors and an insurmountable amount of time necessary to perform the detection. This certainly holds true in situations where a content specific user interface is going to be migrated, and (partially) automated techniques such as~\ref{item:patternmatching} and~\ref{item:syntacticanalysis} will prevent these issues to a great extent. Our research question, however, is focused on adapting a content unaware user interface and thus analysing the user interface of a specific application developed with Apache Isis is pointless, as there is no reassurance that any functionality found in this application is relevant to other applications. This invalidates techniques~\ref{item:patternmatching} and~\ref{item:syntacticanalysis} in our research scope.
+
+Fortunately, due to the property of Apache Isis that the user interface is automatically generated through reflection, functionality in the user interface can be described in a more abstract form. This reduces the size of the user interface ontology to such an extent that manual detection can be deemed a feasible technique for the detection stage. Furthermore, all relevant features are well-documented\cite{Docum42:online} and thus it can be verified that the detection results are complete and correct.
+
+We performed manual detection on the framework which resulted in the following functionality to be exposed:
+
+\begin{itemize}
+	\item 
+	\textbf{Menus} \\
+	A user can access menus in the interface. Menus are available at any point in the interface.
+	
+	\item
+	\textbf{Actions} \\
+	A user can invoke menu and object actions.
+	
+	\item
+	\textbf{Action prompts} \\
+	If an action requires parameters, a user can enter the parameters in an action prompt.
+	
+	\item
+	\textbf{Objects} \\
+	A user can access objects and their properties.
+	
+	\item
+	\textbf{Parented collections} \\
+	A user can access collections that display objects related to a single object.
+	
+	\item
+	\textbf{Standalone collections} \\
+	A user can access collections that display objects, e.g. when an invoked action returns multiple objects.
+\end{itemize}
+
+These six elements together comprise the entire abstract user interface ontology. Figure~\ref{figure:uml} illustrates the relationships between the individual elements.
+
+\begin{figure}
+	\center
+	\includegraphics[width=\textwidth]{figures/uml}
+	\caption{UML representation of the abstract user interface ontology}
+	\label{figure:uml}
+\end{figure}
+
+With the detection stage complete, we move on to the second stage.
 
 \subsection{Representation}
 \label{subsection:representation}
-Step two of the migration method.
+The second stage of the migration process is the representation stage. The objective of this stage is to describe and document the functionality that we uncovered in the detection stage. It must be described in such a way that it is not dependent on the target platform or technology while still adequately representing all requirements of the user interface.
 
-\subsubsection{Specifications}
-\label{subsubsection:specifications}
-The set of specifications that are derived from section~\ref{subsection:detection} are presented.
+We have drafted a set of specifications which represent the functionality which our new interface must implement. This stage is particularly relevant to answering research question~\ref{RQ2}, as it allows us to judge whether or not the domain model is still intact; successfully implementing all specifications implies that the integrity of the domain model is maintained.
+
+\newpage
+\noindent
+\small
+
+\begin{tabularx}{0.49\textwidth}[t]{lX}
+	\toprule
+	\multicolumn{2}{c}{\textbf{Specification S1}} \\
+	\midrule
+	\textbf{Description} & Menus can be accessed at all times \\
+	\addlinespace[0.5em]
+	\textbf{Rationale}	 & Classes annotated with \texttt{@DomainService} are menus in the \acrshort{gui}. In the new interface menu selection will be the first user interaction and menus are available at any point in the interface. \\
+	\bottomrule
+\end{tabularx}\hspace{0.02\textwidth}
+\begin{tabularx}{0.49\textwidth}[t]{lX}
+	\toprule
+	\multicolumn{2}{c}{\textbf{Specification S2}} \\
+	\midrule
+	\textbf{Description} & Objects can be accessed \newline \\
+	\addlinespace[0.5em]
+	\textbf{Rationale}	 & Classes annotated with \texttt{@DomainObject} are objects in the \acrshort{gui}. Any object that is available in the \acrshort{gui} must be accessible in the new interface. \newline \newline \\
+	\bottomrule
+\end{tabularx}
+\\[1em]
+
+\begin{tabularx}{0.49\textwidth}[t]{lX}
+	\toprule
+	\multicolumn{2}{c}{\textbf{Specification S2-A}} \\
+	\midrule
+	\textbf{Description} & Object properties can be accessed \\
+	\addlinespace[0.5em]
+	\textbf{Rationale}	 & Object variables annotated with \texttt{@Property} are properties of this object, such as names or dates. In the new interface, primitive properties must be visible and object properties must be accessible.\\
+	\bottomrule
+\end{tabularx}\hspace{0.02\textwidth}
+\begin{tabularx}{0.49\textwidth}[t]{lX}
+	\toprule
+	\multicolumn{2}{c}{\textbf{Specification S3}} \\
+	\midrule
+	\textbf{Description} & Collections can be accessed \newline \\
+	\addlinespace[0.5em]
+	\textbf{Rationale}	 & Variables annotated with \texttt{@Collection} are collections in the \acrshort{gui}. Collections should be displayed correctly depending on if they are parented or standalone (see figure~\ref{figure:uml}) and all objects must be accessible. \\
+	\bottomrule
+\end{tabularx}
+\\[1em]
+
+\begin{tabularx}{0.49\textwidth}[t]{lX}
+	\toprule
+	\multicolumn{2}{c}{\textbf{Specification S4}} \\
+	\midrule
+	\textbf{Description} & Actions can be executed \newline \\
+	\addlinespace[0.5em]
+	\textbf{Rationale}	 & Functions annotated with \texttt{@Action} are operations on a certain entity in the application, such as executing a search query. Any action that is available in the \acrshort{gui} must be available in the new interface. \\
+	\bottomrule
+\end{tabularx}\hspace{0.02\textwidth}
+\begin{tabularx}{0.49\textwidth}[t]{lX}
+	\toprule
+	\multicolumn{2}{c}{\textbf{Specification S4-A}} \\
+	\midrule
+	\textbf{Description} & Action parameters can be accessed \\
+	\addlinespace[0.5em]
+	\textbf{Rationale}	 & Actions may have parameters necessary to execute them. These parameters must be accessible. \newline \newline \newline \\
+	\bottomrule
+\end{tabularx}
+\\[1em]
+
+\begin{tabularx}{0.49\textwidth}[t]{lX}
+	\toprule
+	\multicolumn{2}{c}{\textbf{Specification S5}} \\
+	\midrule
+	\textbf{Description} & A help menu can be accessed at all times\\
+	\addlinespace[0.5em]
+	\textbf{Rationale}	 & Users must be able to get context-specific help at any point in the interface. \\
+	\bottomrule
+\end{tabularx}\hspace{0.02\textwidth}
+\begin{tabularx}{0.49\textwidth}[t]{lX}
+	\toprule
+	\multicolumn{2}{c}{\textbf{Specification S6}} \\
+	\midrule
+	\textbf{Description} & The application can be terminated \\
+	\addlinespace[0.5em]
+	\textbf{Rationale}	 & The user must be able to log out and exit the application. \newline \\
+	\bottomrule
+\end{tabularx}
+\\[2em]
+
+\begin{tabularx}{0.49\textwidth}{lX}
+	\toprule
+	\multicolumn{2}{c}{\textbf{Specification S7}} \\
+	\midrule
+	\textbf{Description} & The application provides error handling \\
+	\addlinespace[0.5em]
+	\textbf{Rationale}	 & The framework offers a lot of error feedback, such as invalidation messages after incorrect parameters. The new interface must provide a method of handling errors. \\
+	\bottomrule
+\end{tabularx}
+
+\normalsize
 
 \subsection{Transformation}
 \label{subsection:transformation}
-Step three of the migration method.
+The third and final step in the migration process is the transformation step. We found ourselves in a similar situation as in the representation step; Moore describes a number of (partially) automated techniques to perform the transformation, often relying on generating code based on mappings between a specific type of representation such as XML and the detection stage results. Again, this is tailored towards content-aware user interfaces, and thus we will simply use a manual transformation as our user ontology is concise enough to do so.
+
+The actual transformation stage is described in detail in chapter~\ref{chapter:implementation}.
 
 \section{Experiments}
 \label{section:experiments_methods}
-A description of the methods used to conduct the experiments.
+To answer research question~\ref{RQ3} and subsequently research question~\ref{RQ1}, we will conduct a series of experiments to evaluate how user performance differs from the standard user interface when the new user interface is used. First, a theoretical approach is taken by applying the GOMS method, which we will describe in section~\ref{subsection:goms_methods}. Some limitations apply to this method, however. To compensate for these limitations we will run time trials with a set of test subjects to obtain empirical results, as explained in section~\ref{subsection:timetrial_methods}. The results of these experiments are covered in chapter~\ref{chapter:evaluation}.
 
 \subsection{GOMS}
 \label{subsection:goms_methods}
-The Goals, Operators, Methods, Selection rules method is explained.
+The \textit{\acrlong{goms}} (\acrshort{goms}) method is a well-established method to model efficiency-related design issues and is often applied in early stages of user interface design evaluation\cite{schrepp1990goms, john1996goms, kieras1994goms}. It is a qualitative method that aims to predict user execution time of a goal-oriented task. There are four individual components:
+
+\begin{itemize}
+	\item The \textbf{goal} is what is expected of the user to accomplish in the task
+	\item The \textbf{operators} are physical and cognitive processes that are required to complete the task
+	\item The \textbf{methods} are series of operators that the user can execute to reach the goal
+	\item When there are multiple methods to achieve the same goal, the \textbf{selection rules} will decide which method is picked
+\end{itemize}
+
+Physical operators are processes such as moving the mouse to a target destination or pressing a key, whereas processes like deciding between two options and remembering previous information are examples of cognitive operators. For more accurate results, it is recommended to determine the operator time coefficients empirically in a controlled environment which resembles the context of the \acrshort{goms} analysis\cite{gong1994validation}. We are unable to do so within the timeframe of this research and thus will apply the coefficients posed by the inventors of the method, which have been adopted more universally\cite{kieras2001using}:
+
+\begin{itemize}
+	\item \textbf{K - keystroke}: .28 seconds for an average nonsecretarial typists
+	\item \textbf{T$_n$ - sequence of \textit{n} characters}: n $\times$ K seconds
+	\item \textbf{P - point with mouse to target}: 1.1 seconds
+	\item \textbf{B - press mouse button}: .1 seconds
+	\item \textbf{H - home hands to keyboard or mouse}: .4 seconds
+	\item \textbf{M - mental act of routine thinking or perception}: 1.2 seconds
+\end{itemize}
+
+Research has shown that typing accuracy of visually impaired users is not significantly different from sighted users\cite{ishida1993accuracy}, and thus we will use the average speed for keystrokes.
+
+The advantages of \acrshort{goms} analysis are that it is a fast and cheap way of obtaining results. It does, however, have several limitations that must be kept in mind\cite{schrepp1990goms}. First, the model applies to expert users and execution times are thus based on users who are familiar with the system; novice users will usually perform worse than the projected time. Second, it does not account for errors which in reality will occur. Third, it can only apply to serial execution of tasks, excluding parallel tasks from the analysis. Finally, it does not take user fatigue in account which will increase during extended usage.
 
 \subsection{Time trial}
 \label{subsection:timetrial_methods}
-A custom time trial method is described.
+To attain empirical results regarding user performance in the new interface, we will compose 5 test scenarios that will be executed by a small number of test subjects. All scenarios will be executed in both user interfaces, where we will avoid bias by providing them out of order and alternating between the user interfaces\cite{chen2007comparing}. All user interaction will be captured to enable analysation of every step that is required to fulfill the tasks.
+
+To log the user interaction in the standard interface, we will use an adapted form of Apache Isis' \texttt{PublisherServiceLogging} class. This is a built-in module to publish events such as action invocations or property changes to a logfile. A small adaptation was made to include logging of events such as the loading of objects or typing in a parameter field.
+
+Since the new user interface will only have one input field that is permanently in focus, all user interaction will be confirmed with pressing the enter key. This allows us to print the input text with a timestamp, logging all user interaction.
+
+For each step, we can then take the mean of time it took for each participant to get to the next step, up until completion of the task. By plotting a timeline for both user interfaces and their respective means, we will be able to visualise the performance difference between the user interfaces in a clear manner.

@@ -5,8 +5,11 @@
 \usepackage{subcaption} % side by side subfigures
 \usepackage{newclude} % include without page break
 \usepackage{minted} % code listings
-\usepackage[numbers]{natbib}
-\newminted{java}{fontsize=\tiny, frame=lines, bgcolor=LightGray!18}
+\usepackage[numbers]{natbib} % apa refs with numbers
+\usepackage{booktabs} % better tables
+\usepackage{tabularx}
+
+\newminted{java}{fontsize=\tiny, frame=lines, bgcolor=LightGray!18} % define code listing
 
 \usepackage{tikz}
 \usetikzlibrary{positioning,%
@@ -30,6 +33,11 @@
 \colorlet{alertedcolor}{red}
 \colorlet{examplecolor}{green!50!black}
 
+% Enumerated quotes
+\newcounter{quotecount}
+\newcommand{\MyQuote}[1]{\vspace{1.5em}\refstepcounter{quotecount}%
+     \parbox{10cm}{\em \textit{#1}}\hspace*{2cm}(\arabic{quotecount})\\[1em]}
+
 % Glossary items
 \makeglossaries
 \newacronym{gui}{GUI}{graphical user interface}
@@ -37,13 +45,12 @@
 \newacronym{rest}{REST}{representational state transfer}
 \newacronym{ddd}{DDD}{domain-driven design}
 \newacronym{no}{NO}{Naked Objects}
+\newacronym{goms}{GOMS}{Goals, Operators, Methods and Selection rules}
 
 % Title Page
 \title{CLIsis: An Interface for Visually Impaired Users of Apache Isis Applications}
 \author{Sander Ginn}
 \supervisors{Maarten Marx (UvA), Dan Haywood (Apache)}
-\signedby{Maarten Marx (UvA)}
-
 
 \begin{document}
 \maketitle

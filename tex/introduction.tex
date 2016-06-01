@@ -19,24 +19,21 @@ Enabling the visually impaired to use applications despite a lack of or very bad
 
 Visually impaired computer users often make use of a \textit{screen reader} to translate visual objects into a representation that can be interpreted by assistive technology, such as braille terminals or text-to-speech. However, Lazar et al. found that 4 out of 5 top causes of frustration for blind users of screen readers were related to poor design choices of the software or website developer\cite{lazar2007frustrates}. As a solution to these problems, we will implement a bespoke interface that does not require the use of a third party screen reader.
 
-This research aims to provide an alternative interface for visually impaired users for applications developed with the Apache Isis\cite{Apach60:online} framework. This interface will not serve as a replacement for the existing interface nor blend in with it. The interface is derived from the metamodel of the framework and thus content independent. This means that the interface is readily available for any Isis application and no alterations are necessary to add it to an existing application.
+This research aims to provide an alternative interface for visually impaired users for applications developed with the Apache Isis\cite{Apach60:online} framework. This interface will not serve as a replacement for the existing interface nor blend in with it. The interface is derived from the metamodel of the framework and thus content unaware. This means that the interface is readily available for any Isis application and no alterations are necessary to add it to an existing application.
 
 \section{Research questions}
 \label{section:researchquestions}
 The central research question in this thesis is:
-\begin{displayquote}
-\textit{Can a content independent graphical user interface be adapted to a non-visual interface so that visually impaired users are able to interact with the application?}
-\end{displayquote}
 
-For the non-visual interface to be useful it is imperative that it offers the same functionality as the graphical user interface. Therefore, we will also answer the following subquestion:
-\begin{displayquote}
-\textit{When implementing a non-visual interface, can the integrity of the domain model be maintained while providing an effective and simple method of interaction?}
-\end{displayquote}
+\MyQuote{Can a content unaware graphical user interface be adapted to a non-visual interface so that visually impaired users are able to interact with the application?} \label{RQ1}
 
-Finally, it is desired that the non-visual interface does not severely impact user performance, as this would imply that it is not a legitimate alternative to the existing interface. Thus, a second subquestion will be answered:
-\begin{displayquote}
-\textit{Compared to the standard interface, how is performance affected when the user employs the new interface?}
-\end{displayquote}
+\noindent For the non-visual interface to be useful it is imperative that it offers the same functionality as the graphical user interface. Therefore, we will also answer the following subquestion:
+
+\MyQuote{When implementing a non-visual interface, can the integrity of the domain model be maintained while providing an effective and simple method of interaction?} \label{RQ2}
+
+\noindent Finally, it is desired that the non-visual interface does not severely impact user performance, as this would imply that it is not a legitimate alternative to the existing interface. Thus, a second subquestion will be answered:
+
+\MyQuote{Compared to the standard interface, how is performance affected when the user employs the new interface?} \label{RQ3}
 
 \section{Overview of thesis}
 \label{section:overviewofthesis}

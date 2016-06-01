@@ -5,6 +5,11 @@ Apache isis.
 \newblock \url{http://isis.apache.org/}.
 \newblock (Accessed on 05/16/2016).
 
+\bibitem[\protect\astroncite{Doc}{}]{Docum42:online}
+Apache isis documentation.
+\newblock \url{http://isis.apache.org/documentation.html}.
+\newblock (Accessed on 05/31/2016).
+
 \bibitem[\protect\astroncite{Est}{}]{Estat40:online}
 Estatio.
 \newblock \url{http://www.estatio.org/}.
@@ -34,6 +39,13 @@ Web content accessibility guidelines (wcag) 2.0.
 \bibitem[\protect\astroncite{Boyd et~al.}{1990}]{boyd1990graphical}
 Boyd, L.~H. et~al. (1990).
 \newblock The graphical user interface crisis: Danger and opportunity.
+
+\bibitem[\protect\astroncite{Chen and Zhang}{2007}]{chen2007comparing}
+Chen, J.-W. and Zhang, J. (2007).
+\newblock Comparing text-based and graphic user interfaces for novice and
+  expert users.
+\newblock In {\em AMIA Annual Symposium Proceedings}, volume 2007, page 125.
+  American Medical Informatics Association.
 
 \bibitem[\protect\astroncite{Classen et~al.}{1997}]{classen1997cui}
 Classen, I., Hennig, K., Mohr, I., and Schulz, M. (1997).
@@ -86,6 +98,25 @@ Galitz, W.~O. (2007).
   GUI design principles and techniques}.
 \newblock John Wiley \& Sons.
 
+\bibitem[\protect\astroncite{Gong and Kieras}{1994}]{gong1994validation}
+Gong, R. and Kieras, D. (1994).
+\newblock A validation of the goms model methodology in the development of a
+  specialized, commercial software application.
+\newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, pages 351--357. ACM.
+
+\bibitem[\protect\astroncite{Ishida}{1993}]{ishida1993accuracy}
+Ishida, H. (1993).
+\newblock Accuracy and error patterns in typing of the visually handicapped.
+\newblock {\em Human Engineering}, 29(5):321--327.
+
+\bibitem[\protect\astroncite{John and Kieras}{1996}]{john1996goms}
+John, B.~E. and Kieras, D.~E. (1996).
+\newblock The goms family of user interface analysis techniques: Comparison and
+  contrast.
+\newblock {\em ACM Transactions on Computer-Human Interaction (TOCHI)},
+  3(4):320--351.
+
 \bibitem[\protect\astroncite{Kane et~al.}{2008}]{kane2008slide}
 Kane, S.~K., Bigham, J.~P., and Wobbrock, J.~O. (2008).
 \newblock Slide rule: making mobile touch screens accessible to blind people
@@ -97,6 +128,17 @@ Kane, S.~K., Bigham, J.~P., and Wobbrock, J.~O. (2008).
 Kaye, J.~N. (2001).
 \newblock {\em Symbolic olfactory display}.
 \newblock PhD thesis, Citeseer.
+
+\bibitem[\protect\astroncite{Kieras}{1994}]{kieras1994goms}
+Kieras, D. (1994).
+\newblock Goms modeling of user interfaces using ngomsl.
+\newblock In {\em Conference companion on Human factors in computing systems},
+  pages 371--372. ACM.
+
+\bibitem[\protect\astroncite{Kieras}{2001}]{kieras2001using}
+Kieras, D. (2001).
+\newblock Using the keystroke-level model to estimate execution times.
+\newblock {\em University of Michigan}.
 
 \bibitem[\protect\astroncite{Kong}{2000}]{kong2000legacy}
 Kong, L. (2000).
@@ -195,6 +237,12 @@ Savidis, A. and Stephanidis, C. (2004).
 \newblock Unified user interface design: designing universally accessible
   interactions.
 \newblock {\em Interacting with computers}, 16(2):243--270.
+
+\bibitem[\protect\astroncite{Schrepp}{1990}]{schrepp1990goms}
+Schrepp, M. (1990).
+\newblock Goms analysis as a tool to investigate the usability of web units for
+  disabled users.
+\newblock {\em Universal Access in the Information Society}, 9(1):77--86.
 
 \bibitem[\protect\astroncite{Yanagida et~al.}{2004}]{yanagida2004projection}
 Yanagida, Y., Kawato, S., Noma, H., Tomono, A., and Tesutani, N. (2004).
