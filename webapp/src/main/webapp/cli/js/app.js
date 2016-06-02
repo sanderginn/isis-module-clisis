@@ -142,7 +142,7 @@ app.config(
         .state('base.collection', {
           url: '/collection',
           params: {
-            actionResults: null,
+            actionResults: null
           },
           views: {
             input: input,

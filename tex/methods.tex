@@ -86,7 +86,7 @@ We have drafted a set of specifications which represent the functionality which 
 	\midrule
 	\textbf{Description} & Objects can be accessed \newline \\
 	\addlinespace[0.5em]
-	\textbf{Rationale}	 & Classes annotated with \texttt{@DomainObject} are objects in the \acrshort{gui}. Any object that is available in the \acrshort{gui} must be accessible in the new interface. \newline \newline \\
+	\textbf{Rationale}	 & Classes annotated with \texttt{@DomainObject} are objects in the \acrshort{gui}. Any object that is available in the \acrshort{gui} must be accessible in the new interface. \newline \\
 	\bottomrule
 \end{tabularx}
 \\[1em]
@@ -184,7 +184,7 @@ The \textit{\acrlong{goms}} (\acrshort{goms}) method is a well-established metho
 	\item When there are multiple methods to achieve the same goal, the \textbf{selection rules} will decide which method is picked
 \end{itemize}
 
-Physical operators are processes such as moving the mouse to a target destination or pressing a key, whereas processes like deciding between two options and remembering previous information are examples of cognitive operators. For more accurate results, it is recommended to determine the operator time coefficients empirically in a controlled environment which resembles the context of the \acrshort{goms} analysis\cite{gong1994validation}. We are unable to do so within the timeframe of this research and thus will apply the coefficients posed by the inventors of the method, which have been adopted more universally\cite{kieras2001using}:
+Physical operators are processes such as moving the mouse to a target destination or pressing a key, whereas processes like deciding between two options and remembering previous information are examples of cognitive operators. For more accurate results, it is recommended to determine the operator time coefficients empirically in a controlled environment which resembles the context of the \acrshort{goms} analysis\cite{gong1994validation}. We are unable to do so within the time frame of this research and thus will apply the coefficients posed by the inventors of the method, which have been adopted more universally\cite{kieras2001using}:
 
 \begin{itemize}
 	\item \textbf{K - keystroke}: .28 seconds for an average nonsecretarial typists
@@ -201,7 +201,7 @@ The advantages of \acrshort{goms} analysis are that it is a fast and cheap way o
 
 \subsection{Time trial}
 \label{subsection:timetrial_methods}
-To attain empirical results regarding user performance in the new interface, we will compose 5 test scenarios that will be executed by a small number of test subjects. All scenarios will be executed in both user interfaces, where we will avoid bias by providing them out of order and alternating between the user interfaces\cite{chen2007comparing}. All user interaction will be captured to enable analysation of every step that is required to fulfill the tasks.
+To attain empirical results regarding user performance in the new interface, we will compose 5 test scenarios that will be executed by a small number of test subjects. The scenarios are small tasks related to Incode's Contact app\cite{incod72:online}. All scenarios will be executed in both user interfaces, where we will avoid bias by providing them out of order and alternating between the user interfaces\cite{chen2007comparing}. All user interaction will be captured to enable analysation of every step that is required to fulfil the tasks.
 
 To log the user interaction in the standard interface, we will use an adapted form of Apache Isis' \texttt{PublisherServiceLogging} class. This is a built-in module to publish events such as action invocations or property changes to a logfile. A small adaptation was made to include logging of events such as the loading of objects or typing in a parameter field.
 

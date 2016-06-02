@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\astroncite{Ang}{}]{Angul50:online}
+Angularjs.
+\newblock \url{https://angularjs.org/}.
+\newblock (Accessed on 06/02/2016).
+
 \bibitem[\protect\astroncite{Apa}{}]{Apach60:online}
 Apache isis.
 \newblock \url{http://isis.apache.org/}.
@@ -10,6 +15,11 @@ Apache isis documentation.
 \newblock \url{http://isis.apache.org/documentation.html}.
 \newblock (Accessed on 05/31/2016).
 
+\bibitem[\protect\astroncite{inc}{}]{incod72:online}
+Contact app.
+\newblock \url{https://github.com/incodehq/contactapp}.
+\newblock (Accessed on 06/02/2016).
+
 \bibitem[\protect\astroncite{Est}{}]{Estat40:online}
 Estatio.
 \newblock \url{http://www.estatio.org/}.
@@ -19,6 +29,11 @@ Estatio.
 Fulfilling the promise of mvc.
 \newblock \url{https://www.infoq.com/articles/Nacked-MVC}.
 \newblock (Accessed on 05/17/2016).
+
+\bibitem[\protect\astroncite{Res}{}]{Restf62:online}
+Restful objects.
+\newblock \url{http://www.restfulobjects.org/}.
+\newblock (Accessed on 06/02/2016).
 
 \bibitem[\protect\astroncite{Sec}{}]{Secti81:online}
 Section 508 of the rehabilitation act.
@@ -31,10 +46,28 @@ Spring.
 \newblock \url{https://spring.io/}.
 \newblock (Accessed on 05/16/2016).
 
-\bibitem[\protect\astroncite{Web}{}]{WebCo83:online}
+\bibitem[\protect\astroncite{ang}{}]{angul39:online}
+Ui-router: The de-facto solution to flexible routing with nested views in
+  angularjs.
+\newblock \url{https://github.com/angular-ui/ui-router}.
+\newblock (Accessed on 06/02/2016).
+
+\bibitem[\protect\astroncite{Web}{a}]{WebCo83:online}
 Web content accessibility guidelines (wcag) 2.0.
 \newblock \url{https://www.w3.org/TR/WCAG20/}.
 \newblock (Accessed on 05/16/2016).
+
+\bibitem[\protect\astroncite{Web}{b}]{WebSp68:online}
+Web speech api specification.
+\newblock \url{https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html}.
+\newblock (Accessed on 06/02/2016).
+
+\bibitem[\protect\astroncite{Battle and Benson}{2008}]{battle2008bridging}
+Battle, R. and Benson, E. (2008).
+\newblock Bridging the semantic web and web 2.0 with representational state
+  transfer (rest).
+\newblock {\em Web Semantics: Science, Services and Agents on the World Wide
+  Web}, 6(1):61--69.
 
 \bibitem[\protect\astroncite{Boyd et~al.}{1990}]{boyd1990graphical}
 Boyd, L.~H. et~al. (1990).

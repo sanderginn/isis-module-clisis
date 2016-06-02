@@ -23,8 +23,8 @@
 \BOOKMARK [2][-]{subsection.4.1.3}{Web Speech API}{section.4.1}% 23
 \BOOKMARK [1][-]{section.4.2}{Functionality}{chapter.4}% 24
 \BOOKMARK [2][-]{subsection.4.2.1}{Main module}{section.4.2}% 25
-\BOOKMARK [2][-]{subsection.4.2.2}{Controllers}{section.4.2}% 26
-\BOOKMARK [2][-]{subsection.4.2.3}{Views}{section.4.2}% 27
+\BOOKMARK [2][-]{subsection.4.2.2}{Services}{section.4.2}% 26
+\BOOKMARK [2][-]{subsection.4.2.3}{Controllers}{section.4.2}% 27
 \BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 28
 \BOOKMARK [1][-]{section.5.1}{Specification requirements}{chapter.5}% 29
 \BOOKMARK [1][-]{section.5.2}{Experiments}{chapter.5}% 30

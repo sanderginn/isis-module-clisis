@@ -8,6 +8,14 @@
 \usepackage[numbers]{natbib} % apa refs with numbers
 \usepackage{booktabs} % better tables
 \usepackage{tabularx}
+\usepackage{soul} % highlighting
+
+\definecolor{Light}{gray}{.92}
+\sethlcolor{Light}
+
+\let\OldTexttt\texttt
+\renewcommand{\texttt}[1]{\OldTexttt{\hl{#1}}}
+\newcommand{\bfttt}[1]{\OldTexttt{\bf{#1}}}
 
 \newminted{java}{fontsize=\tiny, frame=lines, bgcolor=LightGray!18} % define code listing
 

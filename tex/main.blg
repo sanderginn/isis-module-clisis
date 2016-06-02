@@ -10,53 +10,63 @@ Warning--to sort, need author or key in Sprin96:online
 Warning--to sort, need author or key in Fulfi2:online
 Warning--to sort, need author or key in Estat40:online
 Warning--to sort, need author or key in Docum42:online
+Warning--to sort, need author or key in incod72:online
+Warning--to sort, need author or key in Restf62:online
+Warning--to sort, need author or key in Angul50:online
+Warning--to sort, need author or key in WebSp68:online
+Warning--to sort, need author or key in angul39:online
+Warning--empty year in Angul50:online
 Warning--empty year in Apach60:online
 Warning--empty year in Docum42:online
+Warning--empty year in incod72:online
 Warning--empty year in Estat40:online
 Warning--empty year in Fulfi2:online
+Warning--empty year in Restf62:online
 Warning--empty year in Secti81:online
 Warning--empty year in Sprin96:online
+Warning--empty year in angul39:online
 Warning--empty year in WebCo83:online
+Warning--empty year in WebSp68:online
 Warning--empty journal in boyd1990graphical
-You've used 43 entries,
+You've used 49 entries,
             1940 wiz_defined-function locations,
-            705 strings with 10605 characters,
-and the built_in function-call counts, 15937 in all, are:
-= -- 1640
-> -- 432
-< -- 42
-+ -- 150
-- -- 136
-* -- 1250
-:= -- 2604
-add.period$ -- 140
-call.type$ -- 43
-change.case$ -- 275
-chr.to.int$ -- 43
-cite$ -- 65
-duplicate$ -- 724
-empty$ -- 1222
-format.name$ -- 195
-if$ -- 3250
-int.to.chr$ -- 1
+            729 strings with 11310 characters,
+and the built_in function-call counts, 17371 in all, are:
+= -- 1800
+> -- 445
+< -- 43
++ -- 155
+- -- 140
+* -- 1362
+:= -- 2830
+add.period$ -- 158
+call.type$ -- 49
+change.case$ -- 307
+chr.to.int$ -- 48
+cite$ -- 86
+duplicate$ -- 788
+empty$ -- 1340
+format.name$ -- 202
+if$ -- 3535
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 39
-newline$ -- 217
-num.names$ -- 108
-pop$ -- 293
+missing$ -- 40
+newline$ -- 247
+num.names$ -- 111
+pop$ -- 322
 preamble$ -- 1
-purify$ -- 282
+purify$ -- 314
 quote$ -- 0
-skip$ -- 541
+skip$ -- 581
 stack$ -- 0
-substring$ -- 1109
-swap$ -- 180
+substring$ -- 1205
+swap$ -- 187
 text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 248
-warning$ -- 15
-while$ -- 130
+type$ -- 284
+warning$ -- 25
+while$ -- 134
 width$ -- 0
-write$ -- 548
-(There were 15 warnings)
+write$ -- 616
+(There were 25 warnings)
