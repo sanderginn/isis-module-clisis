@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.3)  5 JUN 2016 17:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.3)  5 JUN 2016 17:29
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1334,7 +1334,7 @@ Chapter 4.
 
 ] [21
 
-] [22] <figures/clisisviews.png, id=454, 1288.815pt x 366.36874pt>
+] [22] <figures/clisisviews.png, id=455, 1288.815pt x 366.36874pt>
 File: figures/clisisviews.png Graphic file (type png)
 
 <use figures/clisisviews.png>
@@ -1354,42 +1354,56 @@ Underfull \hbox (badness 1325) in paragraph at lines 26--26
 [27
 
 ] [28] [29] [30] [31]
-<figures/scenario1.png, id=554, 855.6768pt x 384.4764pt>
+<figures/scenario1.png, id=555, 855.6768pt x 384.4764pt>
 File: figures/scenario1.png Graphic file (type png)
 
 <use figures/scenario1.png>
 Package pdftex.def Info: figures/scenario1.png used on input line 357.
 (pdftex.def)             Requested size: 418.25368pt x 187.93161pt.
 
-<figures/scenario2.png, id=556, 855.6768pt x 401.0985pt>
+<figures/scenario2.png, id=557, 855.6768pt x 401.0985pt>
 File: figures/scenario2.png Graphic file (type png)
 
 <use figures/scenario2.png>
 Package pdftex.def Info: figures/scenario2.png used on input line 367.
 (pdftex.def)             Requested size: 418.25368pt x 196.05647pt.
  [32 <./figures/scenario1.png>]
-<figures/scenario3.png, id=570, 855.6768pt x 463.2507pt>
+<figures/scenario3.png, id=572, 855.6768pt x 463.2507pt>
 File: figures/scenario3.png Graphic file (type png)
 
 <use figures/scenario3.png>
 Package pdftex.def Info: figures/scenario3.png used on input line 377.
 (pdftex.def)             Requested size: 418.25368pt x 226.4364pt.
 
-<figures/scenario4.png, id=572, 855.6768pt x 463.2507pt>
+<figures/scenario4.png, id=574, 855.6768pt x 463.2507pt>
 File: figures/scenario4.png Graphic file (type png)
 
 <use figures/scenario4.png>
 Package pdftex.def Info: figures/scenario4.png used on input line 387.
 (pdftex.def)             Requested size: 418.25368pt x 226.4364pt.
  [33 <./figures/scenario2.png> <./figures/scenario3.png>] <figures/scenario5.pn
-g, id=583, 855.6768pt x 479.8728pt>
+g, id=584, 855.6768pt x 479.8728pt>
 File: figures/scenario5.png Graphic file (type png)
 
 <use figures/scenario5.png>
 Package pdftex.def Info: figures/scenario5.png used on input line 397.
 (pdftex.def)             Requested size: 418.25368pt x 234.56126pt.
- [34 <./figures/scenario4.png> <./figures/scenario5.png>]) (./conclusion.tex [3
-5]
+ [34 <./figures/scenario4.png> <./figures/scenario5.png>] <figures/paramsgui.pn
+g, id=608, 586.19pt x 222.8325pt>
+File: figures/paramsgui.png Graphic file (type png)
+
+<use figures/paramsgui.png>
+Package pdftex.def Info: figures/paramsgui.png used on input line 430.
+(pdftex.def)             Requested size: 204.9466pt x 77.90753pt.
+
+<figures/paramsclisis.png, id=609, 357.335pt x 303.1325pt>
+File: figures/paramsclisis.png Graphic file (type png)
+
+<use figures/paramsclisis.png>
+Package pdftex.def Info: figures/paramsclisis.png used on input line 431.
+(pdftex.def)             Requested size: 178.66705pt x 151.56587pt.
+) (./conclusion.tex [35 <./figures/paramsgui.png> <./figures/paramsclisis.png>]
+
 Chapter 6.
 [36
 
@@ -1660,10 +1674,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 95.
  ) 
 Here is how much of TeX's memory you used:
- 24265 strings out of 493315
- 437029 string characters out of 6137905
- 601221 words of memory out of 5000000
- 26938 multiletter control sequences out of 15000+600000
+ 24277 strings out of 493315
+ 437321 string characters out of 6137905
+ 601324 words of memory out of 5000000
+ 26947 multiletter control sequences out of 15000+600000
  12529 words of font info for 46 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  59i,13n,94p,1505b,869s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1686,10 +1700,10 @@ e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
 013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/201
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (60 pages, 746740 bytes).
+Output written on main.pdf (60 pages, 830054 bytes).
 PDF statistics:
- 873 PDF objects out of 1000 (max. 8388607)
- 748 compressed objects within 8 object streams
- 214 named destinations out of 1000 (max. 500000)
- 122 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 880 PDF objects out of 1000 (max. 8388607)
+ 751 compressed objects within 8 object streams
+ 215 named destinations out of 1000 (max. 500000)
+ 132 words of extra memory for PDF output out of 10000 (max. 10000000)
 
