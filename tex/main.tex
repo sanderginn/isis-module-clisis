@@ -9,6 +9,9 @@
 \usepackage{booktabs} % better tables
 \usepackage{tabularx}
 \usepackage{soul} % highlighting
+\usepackage{float}
+\usepackage[justification=centering]{caption}
+\usepackage{spverbatim}
 
 \definecolor{Light}{gray}{.92}
 \sethlcolor{Light}
@@ -40,6 +43,13 @@
 \colorlet{maincolor}{niceviolet}
 \colorlet{alertedcolor}{red}
 \colorlet{examplecolor}{green!50!black}
+
+\usepackage{etoolbox}
+\appto\appendix{\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}}
+
+% reinstate the correct level for list of tables and figures
+\appto\listoffigures{\addtocontents{lof}{\protect\setcounter{tocdepth}{1}}}
+\appto\listoftables{\addtocontents{lot}{\protect\setcounter{tocdepth}{1}}}
 
 % Enumerated quotes
 \newcounter{quotecount}

@@ -9,3 +9,530 @@ This appendix provides instructions on running the demo application.
 \section{User manual}
 \label{section:usermanual}
 A concise manual to use the interface.
+
+\chapter{GOMS models}
+\label{appendix:gomsmodels}
+
+\section{Scenario 1 GUI}
+\label{section:scenario1gui}
+\begin{verbatim}
+Goal: Create a new contact 
+.Goal: Invoke 'Create' action
+..Think in which menu the action resides
+..Search for 'Contacts' menu
+..Point to 'Contacts' menu
+..Search for 'Create' action
+..Point to 'Create' action
+..Click 'Create' action
+.Goal: Fill out 'Create' parameters
+..Look  at 'Name' field
+..Think of name
+..Hands to keyboard
+..Type Sander Ginn
+..Look at 'Company' field
+..Keystroke tab to next field
+..Think of company
+..Type Eurocommercial
+..Look at 'Office number' field
+..Look at 'Mobile number' field
+..Keystroke tab to next field
+..Keystroke tab to next field
+..Think of mobile number
+..Type +31 6252 5983
+..Look at 'Home number' field
+..Look at 'Email' field
+..Keystroke tab to next field
+..Keystroke tab to next field
+..Think of email
+..Type sander@ginn.it
+..Verify that input is correct
+..Hands to mouse
+..Look at 'OK' button
+..Point to 'OK' button
+..Click 'OK' button
+\end{verbatim}
+
+\section{Scenario 2 GUI}
+\label{section:scenario2gui}
+\begin{verbatim}
+Goal: Add contact to contact group
+.Goal: Go to contact 'Clarisse Bentz'
+..Goal: Invoke 'Find' action
+...Think in which menu the action resides
+...Search for 'Contacts' menu
+...Point to 'Contacts' menu
+...Search for 'Find' action
+...Point to 'Find' action.1s
+...Click 'Find' action
+..Goal: Fill out 'Find' parameters
+...Hands to keyboard
+...Look at 'Query' field
+...Think of name
+...Type Clarisse Bentz
+...Verify that input is correct
+...Hands to mouse
+...Look at 'OK' button
+...Point to 'OK' button
+...Click 'OK' button
+.Goal: Add to contact group 'Management Board' with new role 'Secretary'
+..Goal: Invoke 'Add' action
+...Think of which action
+...Search for 'Add' action
+...Point to 'Add' action
+...Click 'Add' action
+..Goal: Fill out 'Add' parameters
+...Look at 'Contact Group' field
+...Point to 'Contact Group' dropdown
+...Click 'Contact Group' dropdown
+...Think of which contact group
+...Search for 'Management Board'
+...Point to 'Management Board'
+...Click 'Management Board'
+...Look at 'Role' field
+...Look at 'New Role' field
+...Point to 'New Role' field
+...Click 'New Role' field
+...Think of what role
+...Type Secretary
+...Verify that input is correct
+...Hands to mouse
+...Look at 'OK' button
+...Point to 'OK' button
+...Click 'OK' button
+\end{verbatim}
+
+\section{Scenario 3 GUI}
+\label{section:scenario3gui}
+\begin{verbatim}
+Goal: Remove contact number from contact
+.Goal: Find contact with email ending in '@gmail.com'
+..Goal: Invoke 'Find by email' action
+...Think in which menu the action resides
+...Search for 'Contacts' menu
+...Point to 'Contacts' menu
+...Search for 'Find by email' action
+...Point to 'Find by email' actions
+...Click 'Find by email' action
+..Goal: Fill out 'Find by email' parameters
+...Hands to keyboard
+...Look at 'Query' field 
+...Think of email
+...Type @gmail.com
+...Verify that input is correct
+...Hands to mouse
+...Look at 'OK' button
+...Point to 'OK' button
+...Click 'OK' button
+.Goal: Go to contact number 'Mobile'
+..Think of which contact number
+..Search for 'Mobile' contact number
+..Point to 'Mobile' contact number
+..Click 'Mobile' contact number
+.Goal: Remove contact number
+..Think of what action
+..Search for 'Delete' button
+..Point to 'Delete' button
+..Click 'Delete' button1s
+\end{verbatim}
+
+\section{Scenario 4 GUI}
+\label{section:scenario4gui}
+\begin{verbatim}
+Goal: Create new contact group and add user
+.Goal: Create new contact group 'Amsterdam' in country 'Global'
+..Goal: Invoke 'Create' action
+...Think of what action
+...Search for 'Create' button
+...Point to 'Create' button
+...Click 'Create' button
+..Goal: Fill out 'Create' parameter
+...Look at 'Country' field
+...Point to 'Country' dropdown
+...Click 'Country' dropdown
+...Think of which country
+...Search for 'Global'
+...Point to 'Global'
+...Click 'Global'
+...Look at 'Name' field
+...Think of what name
+...Point to 'Name' field
+...Click 'Name' field
+...Hands to keyboard
+...Type Amsterdams
+...Verify that input is correct
+...Hands to mouse
+...Look at 'OK' button
+...Point to 'OK' button
+...Click 'OK' button
+.Goal: Go to contact group 'Amsterdam'
+..Think of what contact group
+..Search for 'Amsterdam' contact group
+..Point to 'Amsterdam' contact group
+..Click 'Amsterdam' contact group
+.Goal: Add user 'Anne van Hope' with role 'Technical Manager'
+..Goal: Invoke 'Add' action
+...Think of what action
+...Search for 'Add' button
+...Point to 'Add' button
+...Click 'Add' button
+..Goal: Fill out 'Add' parameters
+...Look at 'Contact' field
+...Point to 'Contact' dropdown
+...Click 'Contact' dropdown
+...Think of what contact
+...Search for 'Anne van Hope'
+...Point to 'Anne van Hope'
+...Click 'Anne van Hope'
+...Look at 'Role' field
+...Point to 'Role' dropdown
+...Click 'Role' dropdown
+...Think of what role
+...Search for 'Technical Manager'
+...Point to 'Technical Manager'
+...Click 'Technical Manager'
+...Look at 'New Role'
+...Verify that input is correct
+...Look at 'OK' button
+...Point to 'OK' button 
+...Click 'OK' button
+\end{verbatim}
+
+\section{Scenario 5 GUI}
+\label{section:scenario5gui}
+\begin{verbatim}
+Goal: Change contact role of contact
+.Goal: Go to contact 'Damien Grandjean'
+..Goal: Invoke 'Find' action
+...Think in which menu the action resides
+...Search for 'Contacts' menu
+...Point to 'Contacts' menu
+...Search for 'Find' action
+...Point to 'Find' action
+...Click 'Find' action
+..Goal: Fill out 'Find' parameters
+...Hands to keyboard
+...Look at 'Query' field
+...Think of name
+...Type Damien Grandjean
+...Verify that input is correct
+...Hands to mouse
+...Look at 'OK' button
+...Point to 'OK' button
+...Click 'OK' button
+.Goal: Go to contact role in 'Amiens Property'
+..Think of which contact role
+..Search for contact role in 'Amiens Property'
+..Point to contact role in 'Amiens Property'
+..Click contact role in 'Amiens Property' 
+.Goal: Change role type to 'Janitor'
+..Goal: Invoke 'Edit' action
+...Think of what action
+...Search for 'Edit' button
+...Point to 'Edit' button
+...Click 'Edit' button
+..Goal: Fill out 'Edit' parameters
+...Look at 'Role' field
+...Point to 'Role' dropdown
+...Click 'Role' dropdown
+...Think of what role
+...Search for empty role
+...Point to empty role
+...Click empty role
+...Look at 'New Role' field
+...Point to 'New Role' field
+...Click 'New Role' field
+...Hands to keyboard
+...Type Janitor
+...Verify that input is correct
+...Look at 'OK' button
+...Point to 'OK' button
+...Click 'OK' button
+\end{verbatim}
+
+\section{Scenario 1 CLIsis}
+\label{section:scenario1clisis}
+\begin{spverbatim}
+Goal: Create a new contact
+.Goal: Invoke 'Create' action
+..Think of 'List menus' command
+..Type menus
+..Keystroke enter
+..Hear input: menus, output: menus: zero: contacts, one: contact groups, two: contactable view model repository, three: home page service
+..Think of which menu
+..Type menu 0
+..Keystroke enter
+..Hear input: menu zero, output: contacts menu
+..Think of 'List actions' command
+..Type actions
+..Keystroke enter
+..Hear input: actions, output: actions: zero: listall, one: find, two: find by group, three: find by role, four: find by email, five: create
+..Think of which action
+..Type action 5
+..Keystroke enter
+..Hear input: action five, output: parameters: parameter zero: name field, parameter one: company field, parameter two: office number field, parameter three: mobile number field, parameter four: home number field, parameter five: email field
+.Goal: Fill out 'Create' parameters and submit
+..Think of which name
+..Type field 0 sander ginn
+..Keystroke enter
+..Hear input: field zero sander ginn
+..Think of which company
+..Type field 1 eurocommercial
+..Keystroke enter
+..Hear input: field one eurocommercial (9 syllables) 
+..Think of which mobile number
+..Type field 3 +31 6252 5983
+..Keystroke enter
+..Hear input: field three plus three one six two five two five nine eight three
+..Think of which email
+..Type field 5 sander@ginn.it
+..Keystroke enter
+..Hear input: field five sander at ginn dot i t
+..Think of submit command
+..Type submit
+..Keystroke enter
+..Hear input: submit, output: contact: sander ginn
+\end{spverbatim}
+
+\section{Scenario 2 CLIsis}
+\label{section:scenario2clisis}
+\begin{spverbatim}
+Goal: Add contact to contact group
+.Goal: Go to contact 'Clarisse Bentz'
+..Goal: Invoke 'Find' action
+...Think of 'List menus' command
+...Type menus
+...Keystroke enter
+...Hear input: menus, output: menus: zero: contacts, one: contact groups, two: contactable view model repository, three: home page service
+...Think of which menu
+...Type menu 0
+...Keystroke enter
+...Hear input: menu zero, output: contacts menu
+...Think of 'List actions' command
+...Type actions
+...Keystroke enter
+...Hear input: actions, output: actions: zero: listall, one: find, two: find by group, three: find by role, four: find by email, five: create
+...Think of which action
+...Type action 1
+...Keystroke enter
+...Hear input: action one output: parameters: parameter zero: query field
+..Goal: Fill out 'Find' parameters
+...Think of which name
+...Type field 0 clarisse bentz
+...Keystroke enter
+...Hear input: field zero clarisse bentz
+...Think of submit command
+...Type submit
+...Keystroke enter
+...Hear input: submit, output: contact: clarisse bentz
+.Goal: Add to contact group 'Management Board' with new role 'Secretary'
+...Think of 'List actions' command
+...Type actions
+...Keystroke enter
+...Hear input: actions, output: zero: create, one: delete, two: edit, three: add contact number, four: remove contact number, five: add contact role, six: remove contact role
+...Think of which action
+...Type action 5
+...Keystroke enter
+...Hear input: action five, output: parameters: parameter zero: contact group field: choices: zero: amiens property france, one: amsterdam global, two: management board global, three: regulatory global, parameter one: role field: choices: zero: centre manager, one: mayor, two: rus, three: security post, four: stock exchange, five: technical manager, parameter two: new role field
+...Think of which contact group
+...Type field 0 2
+...Keystroke enter
+...Hear input: field zero two
+...Think of which role
+...Type field 2 secretary
+...Keystroke enter
+...Hear input: field two secretary
+...Think of submit command
+...Type submit
+...Keystroke enter
+...Hear input: submit, output: contact: clarisse bentz
+\end{spverbatim}
+
+\section{Scenario 3 CLIsis}
+\label{section:scenario3clisis}
+\begin{spverbatim}
+Goal: Remove contact number from contact
+.Goal: Find contact with email ending in '@gmail.com'
+..Goal: Invoke 'Find by email' action
+...Think of 'List menus' command
+...Type menus
+...Keystroke enter
+...Hear input: menus, output: menus: zero: contacts, one: contact groups, two: contactable view model repository, three: home page service
+...Think of which menu
+...Type menu 0
+...Keystroke enter
+...Hear input: menu zero, output: contacts menu
+...Think of 'List actions' command
+...Type actions
+...Keystroke enter
+...Hear input: actions, output: actions: zero: listall, one: find, two: find by group, three: find by role, four: find by email, five: create
+...Think of which action
+...Type action 4
+...Keystroke enter
+...Hear input: action four, output: parameters: parameter 0: query field
+..Goal: Fill out 'Find  by email' parameters
+...Think of which email
+...Type field 0 @gmail.com
+...Keystroke enter
+...Hear input: field zero at gmail dot com
+...Think of submit command
+...Type submit
+...Keystroke enter
+...Hear input: submit, output: contact: benoit foure
+.Goal: Get contact number
+..Goal: Get 'Contact Numbers' collection
+...Think of 'List collections' command
+...Type collections
+...Keystroke enter
+...Hear input: collections, output: collections: zero: contact numbers, items: one, one: contact roles, items: one
+...Think of which collection
+...Type get 0
+...Keystroke enter
+...Hear input: get zero, output: collection of one items
+...Think of show command
+...Type show
+...Keystroke enter
+...Hear input: show, output: showing page one of one, total one items, zero: plus three three three two two nine nine one one seven seven, office
+..Goal: Get contact number 'Mobile'
+...Think of which number
+...Type get 0
+...Keystroke enter
+...Hear input: get zero, ouput: contact number, plus three three three two two nine nine one one seven seven, office
+.Goal: Delete contact number
+..Think of 'List actions' command
+..Type actions
+..Keystroke enter
+..Hear input: actions, output: actions, zero: create, one: edit, two: delete
+..Think of which action
+..Type action 2
+..Keystroke enter
+..Hear input: action two
+\end{spverbatim}
+
+\section{Scenario 4 CLIsis}
+\label{section:scenario4clisis}
+\begin{spverbatim}
+Goal: Create new contact group and add user
+.Goal: Create new contact group 'Amsterdam' in country 'Global'
+..Goal: Invoke 'Create' action
+...Think of 'List menus' command
+...Type menus
+...Keystroke enter
+...Hear input: menus, output: menus: zero: contacts, one: contact groups, two: contactable view model repository, three: home page service
+...Think of which menu
+...Type menu 1
+...Keystroke enter
+...Hear input: menu one output: contact groups menu
+...Think of 'List actions' command
+...Type actions
+...Keystroke enter
+...Hear input: actions, output: actions: zero: create
+...Think of which action
+...Type action 0
+...Keystroke enter
+...Hear input: action zero, output: parameters: parameter zero: country field, choices: zero: global, one: france, parameter 1: name field
+..Goal: Fill out 'Create' parameter
+...Think of what country
+...Type field 0 0
+...Keystroke enter
+...Hear input: field zero zero
+...Think of what name
+...Type field 1 amsterdam
+...Keystroke enter
+...Hear input: field one amsterdam
+...Think of submit command
+...Type submit
+...Keystroke enter
+...Hear input: submit, output: contactgroup: amsterdam, global
+.Goal: Add user 'Anne van Hope' with role 'Technical Manager'
+..Goal: Invoke 'Add' action
+...Think of 'List actions' command
+...Type actions
+...Keystroke enter
+...Hear input: actions, output: actions: zero: create, one: delete, two: edit, three: add contact number, four: remove contact number, five: add contact role, six: remove contact role, seven: fix display order
+...Think of which action
+...Type action 5
+...Keystroke enter
+...Hear input: action five, output: parameters: parameter zero: contact field: choices: zero: anne van hope, one: benoit foure, two: bill smith, three: bob mills, four: brigitte hollande, five: clarisse bentz, six: damien grandjean, seven: david goodhew, eight: guillaume maxine, nine: leo gardener, ten: mike jones, eleven: security post, twelve: zahra martinelli, parameter one: role field: choices: zero: centre manager, one: mayor, two: rus, three: security post, four: stock exchange, five: technical manager, parameter two: new role field
+..Goal: Fill out 'Add' parameters
+...Think of what contact
+...Type field 0 0
+...Keystroke enter
+...Hear input: field zero zero
+...Think of what role
+...Type field 1 5
+...Keystroke enter
+...Hear input: field one five
+...Think of submit command
+...Type submit
+...Keystroke enter
+...Hear input: submit, output: contact group: amiens property, france
+\end{spverbatim}
+
+\section{Scenario 5 CLIsis}
+\label{section:scenario5clisis}
+\begin{spverbatim}
+Goal: Change contact role of contact
+.Goal: Go to contact 'Damien Grandjean'
+..Goal: Invoke 'Find' action
+...Think of 'List menus' command
+...Type menus
+...Keystroke enter 
+...Hear input: menus, output: menus: zero: contacts, one: contact groups, two: contactable view model repository, three: home page service
+...Think of which menu
+...Type menu 0
+...Keystroke enter
+...Hear input: menu zero, output: contacts menu
+...Think of 'List actions' command
+...Type actions
+...Keystroke enter
+...Hear input: actions, output: actions: zero: listall, one: find, two: find by group, three: find by role, four: find by email, five: create
+...Think of which action
+...Type action 1
+...Keystroke enter
+...Hear input: action one output: parameters: parameter zero: query field
+..Goal: Fill out 'Find' parameters
+...Think of which name
+...Type field 0 damien grandjean
+...Keystroke enter
+...Hear input: field zero damien grandjean
+...Think of submit command
+...Type submit
+...Keystroke enter
+...Hear input: submit, output: contact: damien grandjean
+.Goal: Go to contact role in 'Amiens Property'
+..Think of 'List collections' command
+..Type collections
+..Keystroke enter
+..Hear input: collections, output: collections: zero: contact numbers, items: one, one: contact roles, items: one
+..Think of which collection
+..Type get 1
+..Keystroke enter
+..Hear input: get one, output: collection of one items
+..Think of show command
+..Type show
+..Keystroke enter
+..Hear input: show, output: showing page one of one, total one items, zero: damien grandjean: centre manager in amiens property
+..Think of which number
+..Type get 0
+..Keystroke enter
+..Hear input: get zero, ouput: contact role: damien grandjean: centre manager in amiens property
+.Goal: Change role type to 'Janitor'
+..Goal: Invoke 'Edit' action
+...Think of 'List actions' command
+...Type actions
+...Keystroke enter
+...Hear input: actions, output: actions: zero: also in group, one: also with contact, two: delete, three: edit
+...Think of what action
+...Type action 3
+...Keystroke enter
+...Hear input: action three, output: parameters: parameter zero: role field: choices: zero: centre manager, one: mayor, two: rus, three: security post, four: stock exchange, five: technical manager, parameter one: new role field
+..Goal: Fill out 'Edit' parameters
+...Think of what role
+...Type field 1 janitor
+...Keystroke enter
+...Hear input: field one janitor
+...Think of submit command
+...Type submit
+...Keystroke enter
+...Hear input: submit, output: contactrole: damien grandjean: janitor in amiens property
+\end{spverbatim}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.3)  2 JUN 2016 19:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.3)  5 JUN 2016 17:16
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -667,6 +667,9 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen181
 \SOUL@ulht=\dimen182
 )
+(/usr/local/texlive/2013/texmf-dist/tex/latex/spverbatim/spverbatim.sty
+Package: spverbatim 2009/08/10 v1.0 Verbatim with breakable spaces
+)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
@@ -1022,30 +1025,30 @@ File: tikzlibrarytrees.code.tex 2008/02/24 v2.10 (rcs-revision 1.2)
 \glo@main@file=\write7
 \openout7 = `main.glo'.
 
-Package glossaries Info: Writing glossary file main.glo on input line 50.
+Package glossaries Info: Writing glossary file main.glo on input line 60.
 \glo@acronym@file=\write8
 \openout8 = `main.acn'.
 
-Package glossaries Info: Writing glossary file main.acn on input line 50.
+Package glossaries Info: Writing glossary file main.acn on input line 60.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1112,7 +1115,7 @@ e
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box74
-Package hyperref Info: Link coloring OFF on input line 63.
+Package hyperref Info: Link coloring OFF on input line 73.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1122,9 +1125,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count195
 )
-LaTeX Info: Redefining \ref on input line 63.
-LaTeX Info: Redefining \pageref on input line 63.
-LaTeX Info: Redefining \nameref on input line 63.
+LaTeX Info: Redefining \ref on input line 73.
+LaTeX Info: Redefining \pageref on input line 73.
+LaTeX Info: Redefining \nameref on input line 73.
 
 (./main.out) (./main.out)
 \@outlinefile=\write9
@@ -1140,15 +1143,14 @@ runsystem(pygmentize -S default -f latex > main.pyg)...executed.
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 65.
+(textpos)                Alignment may work out wrongly. on input line 75.
 
-<figures/uva.jpg, id=163, 1082.0425pt x 120.45pt>
+<figures/uva.jpg, id=39, 1082.0425pt x 120.45pt>
 File: figures/uva.jpg Graphic file (type jpg)
  <use figures/uva.jpg>
-Package pdftex.def Info: figures/uva.jpg used on input line 65.
+Package pdftex.def Info: figures/uva.jpg used on input line 75.
 (pdftex.def)             Requested size: 255.60088pt x 28.45274pt.
-
-[1
+ [1
 
 \openout3 = `main.ist'.
 
@@ -1159,12 +1161,12 @@ es/uva.jpg>] [2
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.68 \end{abstract}
+l.78 \end{abstract}
                     [1]pdfTeX warning (ext4): destination with the same identif
 ier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.70 \tableofcontents
+l.80 \tableofcontents
                       [2
 
 ] (./main.toc)
@@ -1205,7 +1207,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
-<figures/simpleobjectui.png, id=363, 785.93625pt x 399.4925pt>
+<figures/simpleobjectui.png, id=267, 785.93625pt x 399.4925pt>
 File: figures/simpleobjectui.png Graphic file (type png)
 
 <use figures/simpleobjectui.png>
@@ -1230,7 +1232,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
 
-<figures/uml.png, id=436, 997.7275pt x 405.515pt>
+<figures/uml.png, id=340, 997.7275pt x 405.515pt>
 File: figures/uml.png Graphic file (type png)
  <use figures/uml.png>
 Package pdftex.def Info: figures/uml.png used on input line 57.
@@ -1332,7 +1334,7 @@ Chapter 4.
 
 ] [21
 
-] [22] <figures/clisisviews.png, id=549, 1288.815pt x 366.36874pt>
+] [22] <figures/clisisviews.png, id=454, 1288.815pt x 366.36874pt>
 File: figures/clisisviews.png Graphic file (type png)
 
 <use figures/clisisviews.png>
@@ -1343,18 +1345,60 @@ Package pdftex.def Info: figures/clisisviews.png used on input line 64.
 Chapter 5.
 [26
 
-]) (./conclusion.tex [27
-
 ]
+Underfull \hbox (badness 1325) in paragraph at lines 26--26
+[]|\OT1/cmr/m/n/10 The []\OT1/cmtt/m/n/10 help \OT1/cmr/m/n/10 com-mand opens a
+ help menu with
+ []
+
+[27
+
+] [28] [29] [30] [31]
+<figures/scenario1.png, id=554, 855.6768pt x 384.4764pt>
+File: figures/scenario1.png Graphic file (type png)
+
+<use figures/scenario1.png>
+Package pdftex.def Info: figures/scenario1.png used on input line 357.
+(pdftex.def)             Requested size: 418.25368pt x 187.93161pt.
+
+<figures/scenario2.png, id=556, 855.6768pt x 401.0985pt>
+File: figures/scenario2.png Graphic file (type png)
+
+<use figures/scenario2.png>
+Package pdftex.def Info: figures/scenario2.png used on input line 367.
+(pdftex.def)             Requested size: 418.25368pt x 196.05647pt.
+ [32 <./figures/scenario1.png>]
+<figures/scenario3.png, id=570, 855.6768pt x 463.2507pt>
+File: figures/scenario3.png Graphic file (type png)
+
+<use figures/scenario3.png>
+Package pdftex.def Info: figures/scenario3.png used on input line 377.
+(pdftex.def)             Requested size: 418.25368pt x 226.4364pt.
+
+<figures/scenario4.png, id=572, 855.6768pt x 463.2507pt>
+File: figures/scenario4.png Graphic file (type png)
+
+<use figures/scenario4.png>
+Package pdftex.def Info: figures/scenario4.png used on input line 387.
+(pdftex.def)             Requested size: 418.25368pt x 226.4364pt.
+ [33 <./figures/scenario2.png> <./figures/scenario3.png>] <figures/scenario5.pn
+g, id=583, 855.6768pt x 479.8728pt>
+File: figures/scenario5.png Graphic file (type png)
+
+<use figures/scenario5.png>
+Package pdftex.def Info: figures/scenario5.png used on input line 397.
+(pdftex.def)             Requested size: 418.25368pt x 234.56126pt.
+ [34 <./figures/scenario4.png> <./figures/scenario5.png>]) (./conclusion.tex [3
+5]
 Chapter 6.
-[28
+[36
 
-]) (./main.bbl [29
+]) (./main.bbl [37
 
-] [30
+] [38
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 39--43
+Underfull \hbox (badness 10000) in paragraph at lines 44--48
 []\OT1/cmr/m/n/10 Section 508 of the re-ha-bil-i-ta-tion act.  []$\OT1/cmtt/m/n
 /10 http : / / www . section508 . gov /
  []
@@ -1362,45 +1406,267 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--43
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ” in font cmr10!
-[31
+[39
 
 ]
-Underfull \hbox (badness 3492) in paragraph at lines 203--208
+Underfull \hbox (badness 3492) in paragraph at lines 208--213
 []\OT1/cmr/m/n/10 Leff, A. and Ray-field, J. T. (2001).  Web-application de-vel
 -op-ment us-ing the
  []
 
-[32]) (./main.gls) (./main.acr [33] [34
+[40]) (./main.gls) (./main.acr [41] [42
 
-] [35
+] [43
 
-] [36
+] [44
 
-]) (./appendices.tex [37]
+]) (./appendices.tex [45]
 Appendix A.
-[38
+[46
 
-])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 85.
- [39
+] [47
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 85.
+Appendix B.
+[48
+
+] [49
+
+] [50] [51] [52]
+Overfull \hbox (48.99225pt too wide) in paragraph at lines 294--294
+[]\OT1/cmtt/m/n/10 ..Hear[] input:[] menus,[] output:[] menus:[] zero:[] contac
+ts,[] one:[] contact[] groups,[] two:[] contactable[]
+ []
+
+
+Overfull \hbox (27.99243pt too wide) in paragraph at lines 294--294
+[]\OT1/cmtt/m/n/10 ..Hear[] input:[] actions,[] output:[] actions:[] zero:[] li
+stall,[] one:[] find,[] two:[] find[] by[] group,[]
+ []
+
+
+Overfull \hbox (22.74248pt too wide) in paragraph at lines 294--294
+[]\OT1/cmtt/m/n/10 ..Hear[] input:[] action[] five,[] output:[] parameters:[] p
+arameter[] zero:[] name[] field,[] parameter[]
+ []
+
+
+Overfull \hbox (33.24239pt too wide) in paragraph at lines 294--294
+\OT1/cmtt/m/n/10 one:[] company[] field,[] parameter[] two:[] office[] number[]
+ field,[] parameter[] three:[] mobile[] number[]
+ []
+
+[53]
+Overfull \hbox (54.2422pt too wide) in paragraph at lines 348--348
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] menus,[] output:[] menus:[] zero:[] conta
+cts,[] one:[] contact[] groups,[] two:[] contactable[]
+ []
+
+
+Overfull \hbox (33.24239pt too wide) in paragraph at lines 348--348
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] actions,[] output:[] actions:[] zero:[] l
+istall,[] one:[] find,[] two:[] find[] by[] group,[]
+ []
+
+
+Overfull \hbox (1.74266pt too wide) in paragraph at lines 348--348
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] actions,[] output:[] zero:[] create,[] on
+e:[] delete,[] two:[] edit,[] three:[] add[]
+ []
+
+
+Overfull \hbox (1.74266pt too wide) in paragraph at lines 348--348
+\OT1/cmtt/m/n/10 contact[] number,[] four:[] remove[] contact[] number,[] five:
+[] add[] contact[] role,[] six:[] remove[]
+ []
+
+
+Overfull \hbox (22.74248pt too wide) in paragraph at lines 348--348
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] action[] five,[] output:[] parameters:[] 
+parameter[] zero:[] contact[] group[] field:[]
+ []
+
+
+Overfull \hbox (17.49252pt too wide) in paragraph at lines 348--348
+\OT1/cmtt/m/n/10 choices:[] zero:[] amiens[] property[] france,[] one:[] amster
+dam[] global,[] two:[] management[] board[]
+ []
+
+
+Overfull \hbox (12.24257pt too wide) in paragraph at lines 348--348
+\OT1/cmtt/m/n/10 global,[] three:[] regulatory[] global,[] parameter[] one:[] r
+ole[] field:[] choices:[] zero:[] centre[]
+ []
+
+
+Overfull \hbox (1.74266pt too wide) in paragraph at lines 348--348
+\OT1/cmtt/m/n/10 manager,[] one:[] mayor,[] two:[] rus,[] three:[] security[] p
+ost,[] four:[] stock[] exchange,[] five:[]
+ []
+
+[54]
+Overfull \hbox (54.2422pt too wide) in paragraph at lines 409--409
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] menus,[] output:[] menus:[] zero:[] conta
+cts,[] one:[] contact[] groups,[] two:[] contactable[]
+ []
+
+
+Overfull \hbox (33.24239pt too wide) in paragraph at lines 409--409
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] actions,[] output:[] actions:[] zero:[] l
+istall,[] one:[] find,[] two:[] find[] by[] group,[]
+ []
+
+
+Overfull \hbox (17.49252pt too wide) in paragraph at lines 409--409
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] collections,[] output:[] collections:[] z
+ero:[] contact[] numbers,[] items:[] one,[]
+ []
+
+[55]
+Overfull \hbox (6.99261pt too wide) in paragraph at lines 409--409
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] show,[] output:[] showing[] page[] one[] 
+of[] one,[] total[] one[] items,[] zero:[] plus[]
+ []
+
+
+Overfull \hbox (17.49252pt too wide) in paragraph at lines 409--409
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] get[] zero,[] ouput:[] contact[] number,[
+] plus[] three[] three[] three[] two[] two[] nine[]
+ []
+
+
+Overfull \hbox (54.2422pt too wide) in paragraph at lines 469--469
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] menus,[] output:[] menus:[] zero:[] conta
+cts,[] one:[] contact[] groups,[] two:[] contactable[]
+ []
+
+
+Overfull \hbox (38.49234pt too wide) in paragraph at lines 469--469
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] action[] zero,[] output:[] parameters:[] 
+parameter[] zero:[] country[] field,[] choices:[]
+ []
+
+[56]
+Overfull \hbox (27.99243pt too wide) in paragraph at lines 469--469
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] actions,[] output:[] actions:[] zero:[] c
+reate,[] one:[] delete,[] two:[] edit,[] three:[]
+ []
+
+
+Overfull \hbox (22.74248pt too wide) in paragraph at lines 469--469
+\OT1/cmtt/m/n/10 add[] contact[] number,[] four:[] remove[] contact[] number,[]
+ five:[] add[] contact[] role,[] six:[] remove[]
+ []
+
+
+Overfull \hbox (38.49234pt too wide) in paragraph at lines 469--469
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] action[] five,[] output:[] parameters:[] 
+parameter[] zero:[] contact[] field:[] choices:[]
+ []
+
+
+Overfull \hbox (1.74266pt too wide) in paragraph at lines 469--469
+\OT1/cmtt/m/n/10 zero:[] anne[] van[] hope,[] one:[] benoit[] foure,[] two:[] b
+ill[] smith,[] three:[] bob[] mills,[] four:[]
+ []
+
+
+Overfull \hbox (27.99243pt too wide) in paragraph at lines 469--469
+\OT1/cmtt/m/n/10 brigitte[] hollande,[] five:[] clarisse[] bentz,[] six:[] dami
+en[] grandjean,[] seven:[] david[] goodhew,[]
+ []
+
+
+Overfull \hbox (22.74248pt too wide) in paragraph at lines 469--469
+\OT1/cmtt/m/n/10 eight:[] guillaume[] maxine,[] nine:[] leo[] gardener,[] ten:[
+] mike[] jones,[] eleven:[] security[] post,[]
+ []
+
+
+Overfull \hbox (17.49252pt too wide) in paragraph at lines 469--469
+\OT1/cmtt/m/n/10 twelve:[] zahra[] martinelli,[] parameter[] one:[] role[] fiel
+d:[] choices:[] zero:[] centre[] manager,[]
+ []
+
+
+Overfull \hbox (6.99261pt too wide) in paragraph at lines 469--469
+\OT1/cmtt/m/n/10 one:[] mayor,[] two:[] rus,[] three:[] security[] post,[] four
+:[] stock[] exchange,[] five:[] technical[]
+ []
+
+
+Overfull \hbox (54.2422pt too wide) in paragraph at lines 538--538
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] menus,[] output:[] menus:[] zero:[] conta
+cts,[] one:[] contact[] groups,[] two:[] contactable[]
+ []
+
+
+Overfull \hbox (33.24239pt too wide) in paragraph at lines 538--538
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] actions,[] output:[] actions:[] zero:[] l
+istall,[] one:[] find,[] two:[] find[] by[] group,[]
+ []
+
+[57]
+Overfull \hbox (12.24257pt too wide) in paragraph at lines 538--538
+[]\OT1/cmtt/m/n/10 ..Hear[] input:[] collections,[] output:[] collections:[] ze
+ro:[] contact[] numbers,[] items:[] one,[]
+ []
+
+
+Overfull \hbox (12.24257pt too wide) in paragraph at lines 538--538
+[]\OT1/cmtt/m/n/10 ..Hear[] input:[] show,[] output:[] showing[] page[] one[] o
+f[] one,[] total[] one[] items,[] zero:[] damien[]
+ []
+
+
+Overfull \hbox (1.74266pt too wide) in paragraph at lines 538--538
+[]\OT1/cmtt/m/n/10 ..Hear[] input:[] get[] zero,[] ouput:[] contact[] role:[] d
+amien[] grandjean:[] centre[] manager[] in[]
+ []
+
+
+Overfull \hbox (27.99243pt too wide) in paragraph at lines 538--538
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] actions,[] output:[] actions:[] zero:[] a
+lso[] in[] group,[] one:[] also[] with[] contact,[]
+ []
+
+
+Overfull \hbox (27.99243pt too wide) in paragraph at lines 538--538
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] action[] three,[] output:[] parameters:[]
+ parameter[] zero:[] role[] field:[] choices:[]
+ []
+
+
+Overfull \hbox (38.49234pt too wide) in paragraph at lines 538--538
+\OT1/cmtt/m/n/10 zero:[] centre[] manager,[] one:[] mayor,[] two:[] rus,[] thre
+e:[] security[] post,[] four:[] stock[] exchange,[]
+ []
+
+
+Overfull \hbox (43.7423pt too wide) in paragraph at lines 538--538
+[]\OT1/cmtt/m/n/10 ...Hear[] input:[] submit,[] output:[] contactrole:[] damien
+[] grandjean:[] janitor[] in[] amiens[] property[] 
+ []
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 95.
+ [58]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 95.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 85.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 85.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 95.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 95.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1379DB2650CCD4F197AA118D27C7A6B0;2423.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 85.
+(rerunfilecheck)             Checksum: 15F31C7EA7C6340EFC6FA23FFB114661;386.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 95.
  ) 
 Here is how much of TeX's memory you used:
- 24160 strings out of 493315
- 434965 string characters out of 6137905
- 598566 words of memory out of 5000000
- 26901 multiletter control sequences out of 15000+600000
+ 24265 strings out of 493315
+ 437029 string characters out of 6137905
+ 601221 words of memory out of 5000000
+ 26938 multiletter control sequences out of 15000+600000
  12529 words of font info for 46 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 59i,12n,94p,1488b,869s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,13n,94p,1505b,869s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
 /usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
@@ -1420,10 +1686,10 @@ e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
 013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/201
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (41 pages, 465178 bytes).
+Output written on main.pdf (60 pages, 746740 bytes).
 PDF statistics:
- 762 PDF objects out of 1000 (max. 8388607)
- 673 compressed objects within 7 object streams
- 155 named destinations out of 1000 (max. 500000)
- 345 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 873 PDF objects out of 1000 (max. 8388607)
+ 748 compressed objects within 8 object streams
+ 214 named destinations out of 1000 (max. 500000)
+ 122 words of extra memory for PDF output out of 10000 (max. 10000000)
 

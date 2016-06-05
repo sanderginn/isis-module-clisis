@@ -28,12 +28,34 @@
 \contentsline {chapter}{\numberline {5}Evaluation}{26}{chapter.5}
 \contentsline {section}{\numberline {5.1}Specification requirements}{27}{section.5.1}
 \contentsline {section}{\numberline {5.2}Experiments}{27}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}GOMS}{27}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Time trial}{27}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Performance difference}{27}{subsection.5.2.3}
-\contentsline {chapter}{\numberline {6}Conclusion}{28}{chapter.6}
-\contentsline {section}{\numberline {6.1}Future work}{29}{section.6.1}
-\contentsline {section}{\numberline {6.2}Acknowledgements}{29}{section.6.2}
-\contentsline {chapter}{\numberline {A}Application manual}{38}{appendix.A}
-\contentsline {section}{\numberline {A.1}Installation}{39}{section.A.1}
-\contentsline {section}{\numberline {A.2}User manual}{39}{section.A.2}
+\contentsline {subsection}{\numberline {5.2.1}GOMS}{28}{subsection.5.2.1}
+\contentsline {subsubsection}{Scenario 1}{28}{subsubsection*.9}
+\contentsline {subsubsection}{Scenario 2}{29}{subsubsection*.12}
+\contentsline {subsubsection}{Scenario 3}{29}{subsubsection*.15}
+\contentsline {subsubsection}{Scenario 4}{30}{subsubsection*.18}
+\contentsline {subsubsection}{Scenario 5}{31}{subsubsection*.21}
+\contentsline {subsection}{\numberline {5.2.2}Time trial}{32}{subsection.5.2.2}
+\contentsline {subsubsection}{Scenario 1}{32}{subsubsection*.24}
+\contentsline {subsubsection}{Scenario 2}{32}{subsubsection*.26}
+\contentsline {subsubsection}{Scenario 3}{33}{subsubsection*.28}
+\contentsline {subsubsection}{Scenario 4}{33}{subsubsection*.30}
+\contentsline {subsubsection}{Scenario 5}{34}{subsubsection*.32}
+\contentsline {subsection}{\numberline {5.2.3}Performance difference}{34}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {6}Conclusion}{36}{chapter.6}
+\contentsline {section}{\numberline {6.1}Future work}{37}{section.6.1}
+\contentsline {section}{\numberline {6.2}Acknowledgements}{37}{section.6.2}
+\setcounter {tocdepth}{0}
+\contentsline {chapter}{\numberline {A}Application manual}{46}{appendix.A}
+\contentsline {section}{\numberline {A.1}Installation}{47}{section.A.1}
+\contentsline {section}{\numberline {A.2}User manual}{47}{section.A.2}
+\contentsline {chapter}{\numberline {B}GOMS models}{48}{appendix.B}
+\contentsline {section}{\numberline {B.1}Scenario 1 GUI}{49}{section.B.1}
+\contentsline {section}{\numberline {B.2}Scenario 2 GUI}{49}{section.B.2}
+\contentsline {section}{\numberline {B.3}Scenario 3 GUI}{50}{section.B.3}
+\contentsline {section}{\numberline {B.4}Scenario 4 GUI}{51}{section.B.4}
+\contentsline {section}{\numberline {B.5}Scenario 5 GUI}{52}{section.B.5}
+\contentsline {section}{\numberline {B.6}Scenario 1 CLIsis}{53}{section.B.6}
+\contentsline {section}{\numberline {B.7}Scenario 2 CLIsis}{54}{section.B.7}
+\contentsline {section}{\numberline {B.8}Scenario 3 CLIsis}{55}{section.B.8}
+\contentsline {section}{\numberline {B.9}Scenario 4 CLIsis}{56}{section.B.9}
+\contentsline {section}{\numberline {B.10}Scenario 5 CLIsis}{57}{section.B.10}

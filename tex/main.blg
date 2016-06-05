@@ -15,9 +15,11 @@ Warning--to sort, need author or key in Restf62:online
 Warning--to sort, need author or key in Angul50:online
 Warning--to sort, need author or key in WebSp68:online
 Warning--to sort, need author or key in angul39:online
+Warning--to sort, need author or key in Cogul87:online
 Warning--empty year in Angul50:online
 Warning--empty year in Apach60:online
 Warning--empty year in Docum42:online
+Warning--empty year in Cogul87:online
 Warning--empty year in incod72:online
 Warning--empty year in Estat40:online
 Warning--empty year in Fulfi2:online
@@ -28,45 +30,45 @@ Warning--empty year in angul39:online
 Warning--empty year in WebCo83:online
 Warning--empty year in WebSp68:online
 Warning--empty journal in boyd1990graphical
-You've used 49 entries,
+You've used 50 entries,
             1940 wiz_defined-function locations,
-            729 strings with 11310 characters,
-and the built_in function-call counts, 17371 in all, are:
-= -- 1800
+            734 strings with 11421 characters,
+and the built_in function-call counts, 17580 in all, are:
+= -- 1824
 > -- 445
 < -- 43
 + -- 155
 - -- 140
-* -- 1362
-:= -- 2830
-add.period$ -- 158
-call.type$ -- 49
-change.case$ -- 307
-chr.to.int$ -- 48
-cite$ -- 86
-duplicate$ -- 788
-empty$ -- 1340
+* -- 1377
+:= -- 2862
+add.period$ -- 161
+call.type$ -- 50
+change.case$ -- 312
+chr.to.int$ -- 49
+cite$ -- 90
+duplicate$ -- 798
+empty$ -- 1358
 format.name$ -- 202
-if$ -- 3535
+if$ -- 3577
 int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 40
-newline$ -- 247
+newline$ -- 252
 num.names$ -- 111
-pop$ -- 322
+pop$ -- 327
 preamble$ -- 1
-purify$ -- 314
+purify$ -- 319
 quote$ -- 0
-skip$ -- 581
+skip$ -- 587
 stack$ -- 0
-substring$ -- 1205
-swap$ -- 187
+substring$ -- 1218
+swap$ -- 188
 text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 284
-warning$ -- 25
+type$ -- 290
+warning$ -- 27
 while$ -- 134
 width$ -- 0
-write$ -- 616
-(There were 25 warnings)
+write$ -- 627
+(There were 27 warnings)

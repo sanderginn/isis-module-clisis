@@ -4,7 +4,7 @@ We have selected several methods for implementing the new interface. First, sect
 
 \section{User interface adaptation}
 \label{section:userinterfaceadaptation}
-Adapting an existing user interface to a new version has been described extensively\cite{classen1997cui, csaba1997experience, kong2000legacy}, but virtually all research that concretely describes the legacy and novel user interface aims at implementing a 'next generation' user interface, whereas our goal could be interpreted as moving back one generation, as we will remove any visual aspects from the existing interface. Therefore, we have opted to apply a more abstract method of adapting a user interface.
+Adapting an existing user interface to a new version has been described extensively\cite{classen1997cui, csaba1997experience, kong2000legacy}, but virtually all research that concretely describes the source and target user interface type aims at implementing a 'next generation' user interface, e.g. from text-based to graphical. Our goal, however, could be interpreted as moving back one generation, as we will remove any visual aspects from the existing interface. Therefore, we have opted to apply a more abstract method of adapting a user interface.
 
 In \textit{Issues in User Interface Migration}, Moore describes migration as \textit{"the activity of moving software away from its original environment, including hardware platform, operating environment or implementation language to a new environment"}\cite{moore1993issues}. Although not all of these characteristics apply to our situation, the article proposes a method for systematic user interface migration that fits our purpose. The migration process is partitioned in three stages which are each described in subsections~\ref{subsection:detection},~\ref{subsection:representation} and~\ref{subsection:transformation}.
 
@@ -115,7 +115,7 @@ We have drafted a set of specifications which represent the functionality which 
 	\toprule
 	\multicolumn{2}{c}{\textbf{Specification S4}} \\
 	\midrule
-	\textbf{Description} & Actions can be executed \newline \\
+	\textbf{Description} & Actions can be invoked \newline \\
 	\addlinespace[0.5em]
 	\textbf{Rationale}	 & Functions annotated with \texttt{@Action} are operations on a certain entity in the application, such as executing a search query. Any action that is available in the \acrshort{gui} must be available in the new interface. \\
 	\bottomrule
@@ -190,18 +190,19 @@ Physical operators are processes such as moving the mouse to a target destinatio
 	\item \textbf{K - keystroke}: .28 seconds for an average nonsecretarial typists
 	\item \textbf{T$_n$ - sequence of \textit{n} characters}: n $\times$ K seconds
 	\item \textbf{P - point with mouse to target}: 1.1 seconds
-	\item \textbf{B - press mouse button}: .1 seconds
+	\item \textbf{B - press mouse button}: .2 seconds
 	\item \textbf{H - home hands to keyboard or mouse}: .4 seconds
 	\item \textbf{M - mental act of routine thinking or perception}: 1.2 seconds
+	\item \textbf{L - listen to spoken words}: .4 seconds per syllable
 \end{itemize}
 
 Research has shown that typing accuracy of visually impaired users is not significantly different from sighted users\cite{ishida1993accuracy}, and thus we will use the average speed for keystrokes.
 
-The advantages of \acrshort{goms} analysis are that it is a fast and cheap way of obtaining results. It does, however, have several limitations that must be kept in mind\cite{schrepp1990goms}. First, the model applies to expert users and execution times are thus based on users who are familiar with the system; novice users will usually perform worse than the projected time. Second, it does not account for errors which in reality will occur. Third, it can only apply to serial execution of tasks, excluding parallel tasks from the analysis. Finally, it does not take user fatigue in account which will increase during extended usage.
+The advantages of \acrshort{goms} analysis are that it is a fast and cheap way of obtaining results. It does, however, have several limitations that must be kept in mind\cite{schrepp1990goms}. First, the model applies to expert users and execution times are thus based on users who are familiar with the system; novice users will usually perform worse than the projected time. Second, it does not account for errors which in reality will occur. Third, it can only apply to serial execution of tasks, excluding parallel tasks from the analysis. Fourth, it does not (accurately) take user waiting time during system processing in consideration. Finally, it does not take user fatigue in account which will increase during extended usage.
 
 \subsection{Time trial}
 \label{subsection:timetrial_methods}
-To attain empirical results regarding user performance in the new interface, we will compose 5 test scenarios that will be executed by a small number of test subjects. The scenarios are small tasks related to Incode's Contact app\cite{incod72:online}. All scenarios will be executed in both user interfaces, where we will avoid bias by providing them out of order and alternating between the user interfaces\cite{chen2007comparing}. All user interaction will be captured to enable analysation of every step that is required to fulfil the tasks.
+To attain empirical results regarding user performance in the new interface, we will compose 5 test scenarios that will be executed by a small number of test subjects. The scenarios are small tasks related to Incode's Contact app\cite{incod72:online}. All scenarios will be executed in both user interfaces, where we will avoid bias by providing them out of order and alternating between the user interfaces\cite{chen2007comparing}. All user interaction will be captured to enable analysis of every step that is required to fulfil the tasks.
 
 To log the user interaction in the standard interface, we will use an adapted form of Apache Isis' \texttt{PublisherServiceLogging} class. This is a built-in module to publish events such as action invocations or property changes to a logfile. A small adaptation was made to include logging of events such as the loading of objects or typing in a parameter field.
 
