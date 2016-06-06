@@ -45,17 +45,17 @@
 \contentsline {section}{\numberline {6.1}Future work}{37}{section.6.1}
 \contentsline {section}{\numberline {6.2}Acknowledgements}{37}{section.6.2}
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{\numberline {A}Application manual}{46}{appendix.A}
-\contentsline {section}{\numberline {A.1}Installation}{47}{section.A.1}
-\contentsline {section}{\numberline {A.2}User manual}{47}{section.A.2}
-\contentsline {chapter}{\numberline {B}GOMS models}{48}{appendix.B}
-\contentsline {section}{\numberline {B.1}Scenario 1 GUI}{49}{section.B.1}
-\contentsline {section}{\numberline {B.2}Scenario 2 GUI}{49}{section.B.2}
-\contentsline {section}{\numberline {B.3}Scenario 3 GUI}{50}{section.B.3}
-\contentsline {section}{\numberline {B.4}Scenario 4 GUI}{51}{section.B.4}
-\contentsline {section}{\numberline {B.5}Scenario 5 GUI}{52}{section.B.5}
-\contentsline {section}{\numberline {B.6}Scenario 1 CLIsis}{53}{section.B.6}
-\contentsline {section}{\numberline {B.7}Scenario 2 CLIsis}{54}{section.B.7}
-\contentsline {section}{\numberline {B.8}Scenario 3 CLIsis}{55}{section.B.8}
-\contentsline {section}{\numberline {B.9}Scenario 4 CLIsis}{56}{section.B.9}
-\contentsline {section}{\numberline {B.10}Scenario 5 CLIsis}{57}{section.B.10}
+\contentsline {chapter}{\numberline {A}Application manual}{44}{appendix.A}
+\contentsline {section}{\numberline {A.1}Installation}{45}{section.A.1}
+\contentsline {section}{\numberline {A.2}User manual}{45}{section.A.2}
+\contentsline {chapter}{\numberline {B}GOMS models}{46}{appendix.B}
+\contentsline {section}{\numberline {B.1}Scenario 1 GUI}{47}{section.B.1}
+\contentsline {section}{\numberline {B.2}Scenario 2 GUI}{47}{section.B.2}
+\contentsline {section}{\numberline {B.3}Scenario 3 GUI}{48}{section.B.3}
+\contentsline {section}{\numberline {B.4}Scenario 4 GUI}{49}{section.B.4}
+\contentsline {section}{\numberline {B.5}Scenario 5 GUI}{50}{section.B.5}
+\contentsline {section}{\numberline {B.6}Scenario 1 CLIsis}{51}{section.B.6}
+\contentsline {section}{\numberline {B.7}Scenario 2 CLIsis}{52}{section.B.7}
+\contentsline {section}{\numberline {B.8}Scenario 3 CLIsis}{53}{section.B.8}
+\contentsline {section}{\numberline {B.9}Scenario 4 CLIsis}{54}{section.B.9}
+\contentsline {section}{\numberline {B.10}Scenario 5 CLIsis}{55}{section.B.10}

@@ -6,6 +6,7 @@ This chapter will introduce the results that have been achieved through the impl
 \label{section:specificationrequirements}
 In section~\ref{subsection:representation}, we drafted a set of specifications to which the new user interface must comply. These specifications enforce that all required functionality is implemented, and thus we will now evaluate if all specifications have been met.
 
+\todo{je kunt dat woord "specification" toch wel weghalen in die tabel steeds}
 \begin{table}[H]
 	\center
 
@@ -37,6 +38,7 @@ Since all specifications have been succesfully implemented, we can confirm that 
 This section presents the results of our two experiments. Both experiments were focused on a set of five scenarios. These scenarios describe short tasks on which we have performed \acrshort{goms} analysis in the context of both user interfaces, as outlined in section~\ref{subsection:goms_evaluation}, and in addition the tasks were executed by test subjects in timed experiments. The results of the timed experiments are shown in section~\ref{subsection:timetrial_evaluation}.
 
 The following scenarios have been used in our experiments:
+\todo{Heel mooi, dit overzicht!}
 \begin{table}[H]
 	\center
 	
@@ -69,6 +71,7 @@ The following scenarios have been used in our experiments:
 \label{subsection:goms_evaluation}
 This section presents the results of performing \acrshort{goms} analyses for each scenario in table~\ref{table:scenarios} in both user interfaces. The results are presented in a collated manner grouped by subgoals to keep them concise. The analyses were performed in Cogulator\cite{Cogul87:online}, an open source application for GOMS modeling. For the full models, refer to appendix~\ref{appendix:gomsmodels}; a description of the method and the step IDs can be found in~\ref{subsection:goms_methods}.
 
+\todo{De volgende zin gaat toch over predicted times? Kan je nog even helpen herrineren hoe die voorspelling ook alweer bepaald werd? En werkt dat dus ook voor jouw interface? Maak explicite dat het gaat om de voorspelde tijd.}
 The mean increase in execution time over all scenarios is about 308\%. The results of these analyses alone do not hold a lot of value yet; they will become more relevant once we will compare them to empirical results in section~\ref{subsection:performancedifference}.
 
 \subsubsection{Scenario 1}
@@ -343,7 +346,7 @@ For scenario 5, the predicted time is 39.54 seconds in the \acrshort{gui} and 12
 
 \subsection{Time trial}
 \label{subsection:timetrial_evaluation}
-In our time trial experiments, we formed a sample of four test subjects. They were all members of the IT department of our company, but none had any former experience with an application developed in Apache Isis. Before the experiments started, each subject received a brief introduction to the new user interface, so they were aware of the basic functionalities and what they could do if they got stuck. If the test subject asked the experimenter for help, he was responsive but non-directive. To prevent bias of repetition, the scenarios were executed nonsequentially and alternating between the user interfaces. Whenever the test subject had to perform a task in CLIsis, the user turned away the screen so that only audio feedback was available for navigation. The test subject received a booklet with one scenario per page and was instructed not to turn the page until informed to do so. The test subjects performed the tasks in the following order: S2 GUI, S1 CLIsis, S4 GUI, S5 CLIsis, S3 GUI, S2 CLIsis, S1 GUI, S4 CLIsis, S5 GUI, S3 CLIsis.
+In our time trial experiments, we formed a sample of four test subjects. They were all members of the IT department of our company\todo{"our"? Geef liever de naam ;-)}, but none had any former experience with an application developed in Apache Isis. Before the experiments started, each subject received a brief introduction to the new user interface, so they were aware of the basic functionalities and what they could do if they got stuck. If the test subject asked the experimenter for help, he was responsive but non-directive. To prevent bias of repetition, the scenarios were executed nonsequentially and alternating between the user interfaces. Whenever the test subject had to perform a task in CLIsis, the user turned away the screen so that only audio feedback was available for navigation. The test subject received a booklet with one scenario per page and was instructed not to turn the page until informed to do so. The test subjects performed the tasks in the following order: S2 GUI, S1 CLIsis, S4 GUI, S5 CLIsis, S3 GUI, S2 CLIsis, S1 GUI, S4 CLIsis, S5 GUI, S3 CLIsis.
 
 Figures~\ref{figure:scenario1timetrial},~\ref{figure:scenario2timetrial},~\ref{figure:scenario3timetrial},~\ref{figure:scenario4timetrial} and~\ref{figure:scenario5timetrial} plot timelines for each user interface per scenario. Each step represents the mean execution time. Some users were quick to learn that they did not need to list for example all menus before accessing the menu of preference; they would directly go to the menu of choice by calling the \texttt{menu} command with the name of the menu as a parameter. For each occurrence of a 'step skip' like this, a time difference of 0 was used.
 
@@ -401,7 +404,7 @@ For scenario 5, the measured time is 38.68 seconds in the \acrshort{gui} and 213
 
 \subsection{Performance difference}
 \label{subsection:performancedifference}
-With both a theoretical and empirical approach, we can now compare the results to see how accurate the \acrshort{goms} analyses were. Table~\ref{table:gomstimetrialcomparison} shows the difference between the empirical data and the predicted \acrshort{goms} data. On average, the empirical measurements were around 15\% higher than the predicted times for the \acrshort{gui}, whereas for CLIsis, the average increase in execution time compared to the predicted time was around 57\%. This can be attributed to a number of reasons, but the most likely reason is the learning curve of the new user interface. As stated in section~\ref{subsection:timetrial_evaluation}, the order in which the test subjects performed the tasks in CLIsis was S1, S5, S2, S4, S3. If we now look at the difference for CLIsis in that order, we see that the difference between empirical and predicted data is consistently decreasing: +91\%, +69\%, +64\%, +36\% and +25\%. Considering the very limited amount of time the users spent working with CLIsis yet showing a strong improvement in performance already, it is likely that once a user has more experience with CLIsis their performance will increase significantly. In addition, it is inevitable that the test subjects were familiar with \acrshortpl{gui} and thus felt more familiar with the graphical interface. This clarifies the smaller difference between the predicted and empirical data for the \acrshort{gui}.
+With both a theoretical and empirical approach, we can now compare the results to see how accurate the \acrshort{goms} analyses were. Table~\ref{table:gomstimetrialcomparison} shows the difference between the empirical data and the predicted \acrshort{goms} data. On average, the empirical measurements were around 15\% higher than the predicted times for the \acrshort{gui}, whereas for CLIsis, the average increase in execution time compared to the predicted time was around 57\%. This can be attributed to a number of reasons, but the most likely reason is the learning curve of the new user interface. As stated in section~\ref{subsection:timetrial_evaluation}, the order in which the test subjects performed the tasks in CLIsis was S1, S5, S2, S4, S3. If we now look at the difference for CLIsis in that order, we see that the difference between empirical and predicted data is consistently decreasing: +91\%, +69\%, +64\%, +36\% and +25\%. Considering the very limited amount of time the users spent working with CLIsis yet showing a strong improvement in performance already, it is likely that once a user has more experience with CLIsis their performance will increase significantly. In addition, it is inevitable that the test subjects were familiar with \acrshortpl{gui} and thus felt more familiar with the graphical interface. This clarifies the smaller difference between the predicted and empirical data for the \acrshort{gui}. \todo{Heel goed geanalyseerd! Duidelijk!}
 
 The timelines in section~\ref{subsection:timetrial_evaluation} reveal that filling out parameter fields are a major reason for the strong increase in execution time in CLIsis as compared to the \acrshort{gui}. Upon inspection of some of these parameters, it becomes clear that the equivalent of a dropdown menu in the \acrshort{gui} causes a great increase in execution time, as all options in the dropdown menu are exposed in the \acrshort{rest} API as the 'choices' of a parameter. In the new user interface, the speech synthesiser will name all of these choices, causing a delay just by the amount of speech alone. This is illustrated in figure~\ref{figure:parametercomparison}. There's also the issue of receiving too much information in one go, requiring users to reinvoke the action to hear the options again, increasing the delay even more.
 
@@ -424,6 +427,7 @@ That said, nothing obliges the user to let the speech synthesiser finish speakin
 	\caption{A comparison of the \acrshort{goms} and time trial results}
 	\label{table:gomstimetrialcomparison}
 \end{table}
+\todo{Suggestion: add here the term "predicted" in the table caption}
 
 \begin{figure}[h]
 	\center
