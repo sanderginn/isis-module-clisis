@@ -23,7 +23,6 @@ app.controller('InputController',
         if ($scope.master !== undefined && $scope.master !== "") {
           speechService.cancelSpeech();
           speechService.speak("Input: " + $scope.master);
-          logActivity($scope.master);
           evaluateInput();
         }
       };
@@ -467,6 +466,13 @@ app.controller('InputController',
         return !isNaN(value) &&
           parseInt(Number(value)) == value &&
           !isNaN(parseInt(value, 10));
+      }
+
+      function logActivity(input) {
+        console.log("****************************\n" +
+                    "* " + input + "\n" +
+                    "* " + new Date(Date.now()).toISOString() + "\n" +
+                    "****************************\n");
       }
 
       // prevents from tabbing out of input field and cancels speech on escape

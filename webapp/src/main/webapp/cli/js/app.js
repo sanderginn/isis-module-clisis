@@ -23,7 +23,7 @@ var app = angular.module("clisis", ['ngResource', 'http-auth-interceptor', "ui.r
 
 app.value('AppConfig', {
   appPrefix: 'clisis',
-  baseUrl: "http://localhost:8080"
+  baseUrl: "http://clisis.ginn.it"
 });
 
 app.config(
@@ -142,7 +142,7 @@ app.config(
         .state('base.collection', {
           url: '/collection',
           params: {
-            actionResults: null
+            actionResults: null,
           },
           views: {
             input: input,
