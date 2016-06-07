@@ -2,13 +2,29 @@
 \chapter{Application manual}
 \label{appendix:applicationmanual}
 
-\section{Installation}
-\label{section:installation}
-This appendix provides instructions on running the demo application.
+\section{Local instance}
+\label{section:localinstance}
+This section describes how to run the demo application locally.
 
-\section{User manual}
-\label{section:usermanual}
-A concise manual to use the interface.
+\subsection{Prerequisites}
+The following tools are required:
+
+\begin{itemize}
+	\item Java 8
+	\item Maven 3
+	\item Git
+\end{itemize}
+
+\subsection{Installation}
+Follow these steps to run the demo application:
+
+\begin{enumerate}
+	\item Clone the isis-module-clisis repository (\url{https://github.com/sanderginn/isis-module-clisis})
+	\item In a terminal window, go to the root directory
+	\item Run \texttt{mvn clean install -Djetty-console-war}
+	\item After the build successfully completes, run \texttt{mvn antrun:run -P self-host}
+	\item When the Jetty window opens, press start. The demo data will be installed and the application will open itself in a new browser window. 
+\end{enumerate}
 
 \chapter{GOMS models}
 \label{appendix:gomsmodels}
