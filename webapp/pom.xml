@@ -90,7 +90,7 @@ language governing permissions and limitations under the License.
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
-                    <warName>simple</warName>
+                    <warName>isis-module-clisis-${version}</warName>
                     <archive>
                         <manifest>
                             <addClasspath>false</addClasspath>

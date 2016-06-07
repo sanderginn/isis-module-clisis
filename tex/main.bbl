@@ -35,6 +35,11 @@ Fulfilling the promise of mvc.
 \newblock \url{https://www.infoq.com/articles/Nacked-MVC}.
 \newblock (Accessed on 05/17/2016).
 
+\bibitem[\protect\astroncite{san}{}]{sande54:online}
+isis-module-clisis.
+\newblock \url{https://github.com/sanderginn/isis-module-clisis}.
+\newblock (Accessed on 06/07/2016).
+
 \bibitem[\protect\astroncite{Res}{}]{Restf62:online}
 Restful objects.
 \newblock \url{http://www.restfulobjects.org/}.

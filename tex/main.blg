@@ -14,6 +14,7 @@ Warning--to sort, need author or key in incod72:online
 Warning--to sort, need author or key in Restf62:online
 Warning--to sort, need author or key in Angul50:online
 Warning--to sort, need author or key in WebSp68:online
+Warning--to sort, need author or key in sande54:online
 Warning--to sort, need author or key in angul39:online
 Warning--to sort, need author or key in Cogul87:online
 Warning--empty year in Angul50:online
@@ -23,6 +24,7 @@ Warning--empty year in Cogul87:online
 Warning--empty year in incod72:online
 Warning--empty year in Estat40:online
 Warning--empty year in Fulfi2:online
+Warning--empty year in sande54:online
 Warning--empty year in Restf62:online
 Warning--empty year in Secti81:online
 Warning--empty year in Sprin96:online
@@ -30,45 +32,45 @@ Warning--empty year in angul39:online
 Warning--empty year in WebCo83:online
 Warning--empty year in WebSp68:online
 Warning--empty journal in boyd1990graphical
-You've used 50 entries,
+You've used 51 entries,
             1940 wiz_defined-function locations,
-            734 strings with 11421 characters,
-and the built_in function-call counts, 17580 in all, are:
-= -- 1824
+            738 strings with 11531 characters,
+and the built_in function-call counts, 17789 in all, are:
+= -- 1848
 > -- 445
 < -- 43
 + -- 155
 - -- 140
-* -- 1377
-:= -- 2862
-add.period$ -- 161
-call.type$ -- 50
-change.case$ -- 312
-chr.to.int$ -- 49
-cite$ -- 90
-duplicate$ -- 798
-empty$ -- 1358
+* -- 1392
+:= -- 2894
+add.period$ -- 164
+call.type$ -- 51
+change.case$ -- 317
+chr.to.int$ -- 50
+cite$ -- 94
+duplicate$ -- 808
+empty$ -- 1376
 format.name$ -- 202
-if$ -- 3577
+if$ -- 3619
 int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 40
-newline$ -- 252
+newline$ -- 257
 num.names$ -- 111
-pop$ -- 327
+pop$ -- 332
 preamble$ -- 1
-purify$ -- 319
+purify$ -- 324
 quote$ -- 0
-skip$ -- 587
+skip$ -- 593
 stack$ -- 0
-substring$ -- 1218
-swap$ -- 188
+substring$ -- 1231
+swap$ -- 189
 text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 290
-warning$ -- 27
+type$ -- 296
+warning$ -- 29
 while$ -- 134
 width$ -- 0
-write$ -- 627
-(There were 27 warnings)
+write$ -- 638
+(There were 29 warnings)
