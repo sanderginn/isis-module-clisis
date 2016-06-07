@@ -1,2 +1,2 @@
-# isis-module-shell
-A shell interface for Apache Isis
+# isis-module-clisis
+A user interface visually impaired users of Apache Isis apps 

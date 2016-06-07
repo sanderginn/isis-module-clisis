@@ -19,8 +19,8 @@
         <relativePath />
     </parent>
 
-    <groupId>org.isisaddons.module.shell</groupId>
-    <artifactId>isis-module-shell-enhance-all</artifactId>
+    <groupId>org.isisaddons.module.clisis</groupId>
+    <artifactId>isis-module-clisis-enhance-all</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     
     <packaging>pom</packaging>

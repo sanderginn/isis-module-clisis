@@ -10,13 +10,13 @@ s  <configuration default="false" name="ShellModuleApp (enhance only)" type="App
     <option name="ENABLE_SWING_INSPECTOR" value="false" />
     <option name="ENV_VARIABLES" />
     <option name="PASS_PARENT_ENVS" value="true" />
-    <module name="isis-module-shell-webapp" />
+    <module name="isis-module-clisis-webapp" />
     <envs />
     <RunnerSettings RunnerId="Run" />
     <ConfigurationWrapper RunnerId="Run" />
     <method>
       <option name="Make" enabled="false" />
-      <option name="Maven.BeforeRunTask" enabled="true" file="C:/github/isisaddons/isis-module-shell/dom/pom.xml" goal="datanucleus:enhance -o" />
+      <option name="Maven.BeforeRunTask" enabled="true" file="C:/github/sanderginn/isis-module-clisis/dom/pom.xml" goal="datanucleus:enhance -o" />
     </method>
   </configuration>
 </component>
